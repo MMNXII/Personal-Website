@@ -1,0 +1,173 @@
+html, body {
+  background-color: #001f31;
+  background-attachment: fixed;
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.initials {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+  font-weight: bold;
+  font-size: 6em;
+  color: #ffffff;
+  border-bottom: .08em solid #00437a;
+}
+
+
+#intro-paragraph {
+  position: relative;
+  top: 4em;
+  margin: 0 auto;
+  margin-bottom: 20rem;
+  width: 39rem;
+  max-width: 39rem;
+  height: 30rem;
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.6em;
+  color: #ffff;  
+  border: 1px solid yellow;
+}
+
+#work-area, #resume-section {
+  text-align: center;
+}
+
+#graphic-design-header, #web-development-header, #resume-header {
+  border: 1px solid yellow;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+#web-development-header {
+  margin-bottom: 6rem;
+}
+
+#willmore-logo-final-image {
+  width: 500px;
+  height: 180px;
+}
+
+#willmore-logo-final-caption, #willmore-logo-drafts-caption {
+  width: 20rem;
+  margin: 0 auto;
+  padding-top: .8em;
+  padding-bottom: 4em;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.2em;
+  color: #fff;
+
+}
+
+#willmore-logo-drafts-1-image, #willmore-logo-drafts-2-image {
+  width: 300px;
+  height: 240px;
+}
+
+#willmore-logo-drafts-2-image {
+  margin-left: 20px;
+}
+
+
+#contact-link-point {
+  border: 1px solid yellow;
+}
+#contact-area {
+  position: relative;
+  top: 12rem;
+  margin: 0 auto;
+  padding: 0.4em;
+  margin-bottom: 30rem;
+  width: 26rem;
+  max-width: 30rem;
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #00182579;
+  border: 1px solid #00437a;
+  border-radius: 2em;
+}
+
+#linkedin-icon, #github-icon {
+  width: 50px;
+  height: 50px;
+  margin-top: .8em;
+}
+
+#linkedin-icon:hover, #github-icon:hover {
+  opacity: 0.4;
+}
+
+#github-icon {
+  margin-left: 20px;
+}
+
+#send-message {
+  position: relative;
+  margin-top: 1em;
+  text-align: center;
+}
+
+#message-box {
+  margin-top: 0.8em;
+  width: 180px;
+  height: 100px;
+  border-radius: 0.3em;
+
+}
+
+#submit-button {
+  border-radius: 2em;
+}
+
+
+
+#footer-navigation {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  word-spacing: 3em;
+  background-color: #00437a;
+  
+}
+#footer-navigation li {
+  display: inline;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #ffffff;
+ 
+}
+
+#submit-button {
+  margin-bottom: 2em;
+}
+  
+#resume:hover, #work:hover, #contact:hover {
+  color: orange;
+  opacity: 1;
+}
+
+a:link, a:visited, a:hover {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
