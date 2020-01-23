@@ -2,6 +2,8 @@
 
 Personal website used as a profile and platform to showcase my web development and graphic design projects.
 
+view project live: matthewmneal.com
+
 
 to view locally: 1.) download zip file
 		 2.) extract folder inside zip file to a location on your computer
