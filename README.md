@@ -22,3 +22,5 @@ sources:
 Github icon: https://www.iconfinder.com/search/?q=github&from=navbar
 
 Linkedin icon: https://www.iconfinder.com/search/?q=linkedin&from=navbar
+
+Mail icon: https://www.iconfinder.com/search/?q=mail&from=navbar

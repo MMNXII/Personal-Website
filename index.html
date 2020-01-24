@@ -2,79 +2,71 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="index.css">
-        <link href="https://fonts.googleapis.com/css?family=Dosis:200&display=swap" rel="stylesheet">
-
-        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+        <link href="https://fonts.googleapis.com/css?family=Oleo+Script:700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
         <title>Matthew Neal</title>
     </head>
 <body>
-    <h1 class="initials" id="initials">Matthew Neal</h1>
+    <div id="main-container">
+        <div id=header-container>
+            <h1 id="header">Matthew Neal</h1>
+        </div>
+        <div id="profile-container">
+            <img id="profile" src="images/profile.jpg" alt="profile pic">
+        </div>  
 
-    <section id="intro-paragraph">
-        <p> Hello, My name is <b>Matthew Neal</b> and you have reached my platform to the world wide web. I use this
-            website as a medium for advertising my web developement and design skills through various projects that you will see here. Though
-            my formal training lies in graphic design, making that design interactive through technology has always interested
-            me...thus my undertaking of a web development career.
-            
-        </p>I have worked at a rigorous pace to teach myself the concepts and principles of the web development
-            languages including but not limited to: HTML, CSS, Javascript... My work ethic and laborous
-            initiative has enabled me to create an eclectic mix of projects that I believe showcase my skills
-            at an exceptional level.</p>
+        <div id="intro-container">
+            <p> Hello, and welcome to my personal website showcasing my web development
+                and graphic design projects
+            </p>
+        </div>
 
-    </section>
+        <div id="work-container">
+            <h3 class="sub-headers" id="web-dev-header">Web Development</h3>
+                <div class="work-section" id="web-dev"></div>
+            <h3 class="sub-headers" id="graphic-des-header">Graphic Design</h3>
+                <div class="work-section" id="graphic-des"></div>
+            <h3 class="sub-headers"id="resume-header">Resume</h3>
+                <div class="work-section" id="resume"></div>
 
-    <section id="work-area">
+        </div>
 
-        <h2 id="web-development-header">Web Development</h2>   
-
-        <h2 id="graphic-design-header">Graphic Design</h2>
-            <img src="images/graphic-design-work/Willmore-logo-final.jpg" alt="Willmore Logo" id="willmore-logo-final-image">
-                <figcaption id="willmore-logo-final-caption">
-                    <b>Willmore Final Logo</b>
-                    <p>The final version of the logo I created for a local wine bar in Long Beach, CA.</p>
-                </figcaption>
-            
-            <img src="images/graphic-design-work/Willmore-logo-drafts-1.jpg" alt="Willmore Logo Drafts" id="willmore-logo-drafts-1-image">
-            <img src="images/graphic-design-work/Willmore-logo-drafts-2.jpg" alt="Willmore Logo Drafts" id="willmore-logo-drafts-2-image">
-                <figcaption id="willmore-logo-drafts-caption">
-                    <b>Willmore Logo Concept Designs</b>
-                    <p>Concept and draft designs used for brainstorming, eventually resulting in the final WIllmore logo.</p>
-                </figcaption>        
-    </section>
-
-    <section id="resume-section">
-        <h2 id="resume-header">Resume</h2>   
-
-    </section>"
-
-    <div id="contact-link-point">
-        <section id="contact-area">
+        <div id="icon-container">
             <a href="https://www.linkedin.com/in/matthewneal1202/" target="_blank">
-                <img id="linkedin-icon" src="images/contact-icons/linkedin.gif" alt="linkedin icon" >
+                <img class="icon" id="linkedin" src="images/contactIcons/linkedin.gif" alt="linkedin icon">
             </a>
-
             <a href="https://github.com/MMNXII" target="_blank">
-                <img id="github-icon" src="images/contact-icons/github.gif" alt="github icon" >
+                <img class="icon" id="github" src="images/contactIcons/github.gif" alt="github icon" >
             </a>
-            <form id="send-message">
-                <label for="message-area" id="message-box-label">send me a message!</label><br>
-                <textarea name="message-area" id="message-box"></textarea><br>
-
-                <input type="submit" id="submit-button"></input>
-            </form>
-        </section>
+            <a href="mailto:matthewneal1202@gmail.com" target="_blank">
+                <img class="icon" id="mail" src="images/contactIcons/mail.svg" alt="mail icon">
+            </a>
+        </div>
     </div>
 
-    <footer id="footer-navigation">
-        <li id="resume">Resume</li>
-        <a href="#work-area"><li id="work">Work</li></a>
-        <a href="#contact-link-point"><li id="contact">Contact</li></a>
-    </footer>
 
     <script>
+        var subHeadersArr = document.querySelectorAll(".sub-headers");
+        var webDevHead = document.getElementById("web-dev-header");
+            webDevHead.addEventListener("click", expandWebDev);
+            // webDevHead.addEventListener("mouseover", pointerOn);
+            // webDevHead.addEventListener("mouseover", pointerOff);
+        var webDevDiv = document.getElementById("web-dev");
+
+            function expandWebDev() {
+                if (webDevDiv.style.display === "none") {
+                    webDevDiv.style.display = "block";
+                } else {
+                    webDevDiv.style.display = "none";
+                }
+            }
+
+            
+ 
+
 
     </script>
-
 </body>
 </html>
 
