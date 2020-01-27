@@ -17,19 +17,30 @@
         </div>  
 
         <div id="intro-container">
-            <p> Hello, and welcome to my personal website showcasing my web development
-                and graphic design projects
+            <p> Hello, and welcome my online hub where you will find my work as a web developer and graphic designer, please enjoy!
             </p>
         </div>
 
         <div id="work-container">
             <h3 class="sub-headers" id="web-dev-header">Web Development</h3>
-                <div class="work-section" id="web-dev"></div>
+                <div class="work-section" id="web-dev-section">
+                    <div id="web-dev-content">
+                        <p>Rock, Paper, Scissors</p>
+                        <iframe>www.google.com</iframe>
+                    </div>
+                </div>
             <h3 class="sub-headers" id="graphic-des-header">Graphic Design</h3>
-                <div class="work-section" id="graphic-des"></div>
-            <h3 class="sub-headers"id="resume-header">Resume</h3>
-                <div class="work-section" id="resume"></div>
-
+                <div class="work-section" id="graphic-des-section">
+                    <div id="graphic-des-content">
+                        <p>awdadawwd</p>
+                    </div>
+                </div>
+            <h3 class="sub-headers" id="resume-header">Resume</h3>
+                <div class="work-section" id="resume-section">
+                    <div id="resume-content">
+                        <p>awdadawwd</p>
+                    </div>
+                </div>
         </div>
 
         <div id="icon-container">
@@ -47,20 +58,109 @@
 
 
     <script>
-        var subHeadersArr = document.querySelectorAll(".sub-headers");
         var webDevHead = document.getElementById("web-dev-header");
             webDevHead.addEventListener("click", expandWebDev);
-            // webDevHead.addEventListener("mouseover", pointerOn);
-            // webDevHead.addEventListener("mouseover", pointerOff);
-        var webDevDiv = document.getElementById("web-dev");
+        var webDevDiv = document.getElementById("web-dev-section");
+            webDevDiv.style.height = "0em";
+        var webDevContent = document.getElementById("web-dev-content");
+            webDevContent.style.visibility = "hidden";
+            webDevContent.style.opacity = "0";
 
             function expandWebDev() {
-                if (webDevDiv.style.display === "none") {
-                    webDevDiv.style.display = "block";
+                if (webDevDiv.style.height == "0em") {
+                    
+                    webDevDiv.style.height = "10em";
+                    webDevDiv.style.transitionProperty = "height";
+                    webDevDiv.style.transitionDuration = ".25s";
+                    webDevDiv.style.marginBottom = "1em";
+                    webDevContent.style.opacity = "1";
+                    webDevContent.style.transitionProperty = "opacity";
+                    webDevContent.style.transitionDuration = "2s";
+                    webDevContent.style.visibility = "visible";
+
+
                 } else {
-                    webDevDiv.style.display = "none";
+                    webDevDiv.style.height = "0em";
+                    webDevDiv.style.transitionProperty = "height";
+                    webDevDiv.style.transitionDuration = ".25s";
+                    webDevDiv.style.marginBottom = "0em";
+                    webDevContent.style.visibility = "hidden";
+                    webDevContent.style.opacity = "0";
                 }
             }
+
+        var graphicDesHead = document.getElementById("graphic-des-header");
+            graphicDesHead.addEventListener("click", expandGraphicDes);
+        var graphicDesDiv = document.getElementById("graphic-des-section");
+            graphicDesDiv.style.height = "0em";
+        var graphicDesContent = document.getElementById("graphic-des-content");
+            graphicDesContent.style.visibility = "hidden";
+            graphicDesContent.style.opacity = "0";
+
+            function expandGraphicDes() {
+                if (graphicDesDiv.style.height == "0em") {
+                    
+                    graphicDesDiv.style.height = "10em";
+                    graphicDesDiv.style.transitionProperty = "height";
+                    graphicDesDiv.style.transitionDuration = ".25s";
+                    graphicDesDiv.style.marginBottom = "1em";
+                    graphicDesContent.style.opacity = "1";
+                    graphicDesContent.style.transitionProperty = "opacity";
+                    graphicDesContent.style.transitionDuration = "2s";
+                    graphicDesContent.style.visibility = "visible";
+
+
+                } else {
+                    graphicDesDiv.style.height = "0em";
+                    graphicDesDiv.style.transitionProperty = "height";
+                    graphicDesDiv.style.transitionDuration = ".25s";
+                    graphicDesDiv.style.marginBottom = "0em";
+                    graphicDesContent.style.visibility = "hidden";
+                    graphicDesContent.style.opacity = "0";
+                    
+                }
+            }
+
+        var resumeHead = document.getElementById("resume-header");
+            resumeHead.addEventListener("click", expandResume);
+        var resumeDiv = document.getElementById("resume-section");
+            resumeDiv.style.height = "0em";
+        var resumeContent = document.getElementById("resume-content");
+            resumeContent.style.visibility = "hidden";
+            resumeContent.style.opacity = "0";
+
+            function expandResume() {
+                if (resumeDiv.style.height == "0em") {
+                    
+                    resumeDiv.style.height = "10em";
+                    resumeDiv.style.transitionProperty = "height";
+                    resumeDiv.style.transitionDuration = ".25s";
+                    resumeDiv.style.marginBottom = "1em";
+                    resumeContent.style.visibility = "visible";
+                    resumeContent.style.opacity = "1";
+                    resumeContent.style.transitionProperty = "opacity";
+                    resumeContent.style.transitionDuration = "2s";
+
+                } else {
+                    resumeDiv.style.height = "0em";
+                    resumeDiv.style.transitionProperty = "height";
+                    resumeDiv.style.transitionDuration = ".25s";
+                    resumeDiv.style.marginBottom = "0em";
+                    resumeContent.style.visibility = "hidden";
+                    resumeContent.style.opacity = "0";
+                }
+            }
+
+
+
+                
+
+                
+
+            
+
+
+            
 
             
  
