@@ -99,13 +99,8 @@ body {
 #icon-container {
   position: fixed;
   bottom: 0;
-<<<<<<< HEAD
   background-color: rgb(24, 100, 155);
   width:100%;
-=======
-  background-color: rgba(35, 148, 228, 0.301);
-  width: 100%;
->>>>>>> 1a169a7176efeb1145ada17b9e5594897814ab1e
   text-align: center;
 }
 
