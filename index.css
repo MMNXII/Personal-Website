@@ -79,7 +79,7 @@ body {
 }
 
 .sub-headers:hover {
-  color: orange;
+  color: rgb(255, 136, 0);
   font-size: 1.5rem;
 }
 
@@ -92,11 +92,42 @@ body {
   background-color: rgb(33, 128, 168);
 }
 
-#rps-image, #italy-image, #etchasketch-image {
+#rps-image {
   margin-top: .5em;
   width: 20em;
-  height: 14em;
+  height: 15em;
 }
+
+#rps-image:hover {
+  border: 1px solid rgb(255, 136, 0);
+  transition: .3s ease-in-out;
+}
+
+#italy-image {
+  margin-top: .6em;
+  width: 20em;
+  height: 12em;
+}
+
+#italy-image:hover {
+  border: 1px solid rgb(255, 136, 0);
+  transition: .3s ease-in-out;
+}
+
+
+#etchasketch-image {
+  margin-top: .6em;
+  width: 20em;
+  height: 14em;
+
+}
+
+#etchasketch-image:hover {
+  border: 1px solid rgb(255, 136, 0);
+  transition: .3s ease-in-out;
+}
+
+
 
 #willmore-image1, #willmore-image2 {
   margin-top: .5em;
@@ -132,14 +163,14 @@ body {
 }
 
 #prev-image:hover, #next-image:hover {
-  color: red;
+  color: rgb(255, 136, 0);
 }
 
 
 
 
 .captions {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   font-size: 1.4em;
   text-align: center;
   font-family: 'Oleo Script', cursive;
@@ -149,7 +180,7 @@ body {
   margin: 0 auto;
   margin-bottom: 2em;
   width: 96%;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   font-size: .9em;
   text-align: center;
   font-family: 'Oleo Script', cursive;
