@@ -75,6 +75,7 @@ body {
   font-family: 'Oleo Script', cursive;
   background-color: rgb(33, 128, 168);
   transition-duration: .5s;
+  cursor: pointer;
 }
 
 .sub-headers:hover {
@@ -96,6 +97,46 @@ body {
   width: 20em;
   height: 14em;
 }
+
+#willmore-image1, #willmore-image2 {
+  margin-top: .5em;
+  width: 18em;
+  height: 14em;
+}
+
+#willmore-image3 {
+  margin-top: .5em;
+  width: 18em;
+  height: 8em;
+
+}
+
+#prev-image {
+  cursor: pointer;
+  position: absolute;
+  padding: 1em;
+  left: 1%;
+  margin-top: -11em;
+  font-size: 1.3em;
+  transition: .6s linear;
+}
+
+#next-image {
+  cursor: pointer;
+  position: absolute;
+  padding: 1em;
+  right: 1%;
+  margin-top: -11em;
+  font-size: 1.3em;
+  transition: .6s linear;
+}
+
+#prev-image:hover, #next-image:hover {
+  color: red;
+}
+
+
+
 
 .captions {
   color: #ffffff;

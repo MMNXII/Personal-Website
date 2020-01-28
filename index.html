@@ -41,14 +41,30 @@
                             <figcaption class="captions">Etch-A-Sketch</figcaption>
                                 <figcaption class="sub-captions">Digital Etch-A-Sketch project</figcaption>
 
-
-                        
                     </div>
                 </div>
             <h3 class="sub-headers" id="graphic-des-header">Graphic Design</h3>
                 <div class="work-section" id="graphic-des-section">
                     <div id="graphic-des-content">
-                        <p>awdadawwd</p>
+                        <div id="willmore-slide-show">
+                            <div class="willmore-image-container">
+                                <img class="willmore-images" id="willmore-image1" src="images/graphic-design-work/willmore-drafts-1.jpg">
+                                <figcaption class="captions">Willmore Drafs 1</figcaption>
+                                    <figcaption class="sub-captions">First stage of drafts used for the Willmore Wine Bar logo</figcaption>
+                            </div>
+                            <div class="willmore-image-container">
+                                <img class="willmore-images" id="willmore-image2" src="images/graphic-design-work/willmore-drafts-2.jpg">
+                                <figcaption class="captions">Willmore Drafs 2</figcaption>
+                                    <figcaption class="sub-captions">Second stage of drafts used for the Willmore Wine Bar logo</figcaption>
+                            </div>
+                            <div class="willmore-image-container">
+                                <img class="willmore-images" id="willmore-image3" src="images/graphic-design-work/willmore-final.jpg">
+                                <figcaption class="captions">Willmore Final Logo</figcaption>
+                                    <figcaption class="sub-captions">Final version of the logo used</figcaption>
+                            </div>
+                            <a id="prev-image" onclick="slides(-1)"><</a>
+                            <a id="next-image" onclick="slides(+1)">></a>
+                        </div>
                     </div>
                 </div>
             <h3 class="sub-headers" id="resume-header">Resume</h3>
@@ -87,6 +103,7 @@
                     
                     webDevHead.style.fontSize = "1.5rem";
                     webDevHead.style.color = "orange";
+                    webDevHead.style.marginBottom = "0em";
                     webDevDiv.style.height = "61em";                    
                     webDevDiv.style.transitionProperty = "height";
                     webDevDiv.style.transitionDuration = ".25s";
@@ -99,7 +116,8 @@
 
                 } else {
                     webDevHead.style.fontSize = null;
-                    webDevHead.style.color = null;                    
+                    webDevHead.style.color = null;
+                    webDevHead.style.marginBottom = null;                    
                     webDevDiv.style.height = "0em";
                     webDevDiv.style.transitionProperty = "height";
                     webDevDiv.style.transitionDuration = ".25s";
@@ -121,8 +139,9 @@
                 if (graphicDesDiv.style.height == "0em") {
                     
                     graphicDesHead.style.fontSize = "1.5rem";
-                    graphicDesHead.style.color = "orange";   
-                    graphicDesDiv.style.height = "10em";
+                    graphicDesHead.style.color = "orange";
+                    graphicDesHead.style.marginBottom = "0em";
+                    graphicDesDiv.style.height = "30em";
                     graphicDesDiv.style.transitionProperty = "height";
                     graphicDesDiv.style.transitionDuration = ".25s";
                     graphicDesDiv.style.marginBottom = "1em";
@@ -135,6 +154,7 @@
                 } else {
                     graphicDesHead.style.fontSize = null;
                     graphicDesHead.style.color = null;
+                    graphicDesHead.style.marginBottom = null;
                     graphicDesDiv.style.height = "0em";
                     graphicDesDiv.style.transitionProperty = "height";
                     graphicDesDiv.style.transitionDuration = ".25s";
@@ -157,7 +177,8 @@
                 if (resumeDiv.style.height == "0em") {
 
                     resumeHead.style.fontSize = "1.5rem";
-                    resumeHead.style.color = "orange";  
+                    resumeHead.style.color = "orange";
+                    resumeHead.style.marginBottom = "0em";                      
                     resumeDiv.style.height = "10em";
                     resumeDiv.style.transitionProperty = "height";
                     resumeDiv.style.transitionDuration = ".25s";
@@ -170,6 +191,7 @@
                 } else {
                     resumeHead.style.fontSize = null;
                     resumeHead.style.color = null;
+                    resumeHead.style.marginBottom = null;                      
                     resumeDiv.style.height = "0em";
                     resumeDiv.style.transitionProperty = "height";
                     resumeDiv.style.transitionDuration = ".25s";
@@ -179,21 +201,28 @@
                 }
             }
 
+            let a;
+            let index = 1;
+            showSlides(index);
 
+                function slides(n) {
+                    showSlides(index += n);
+                }
 
-                
+                    function showSlides(n) {
+                        let images = document.getElementsByClassName("willmore-image-container");
+                            if (n > images.length) {
+                                index = 1;
 
-                
+                            } if (n < 1) {
+                                index = images.length;
 
-            
+                            } for (a = 0; a < images.length; a++) {
+                                images[a].style.display = "none";
+                            }
 
-
-            
-
-            
- 
-
-
+                            images[index-1].style.display = "block";
+                    }
     </script>
 </body>
 </html>
