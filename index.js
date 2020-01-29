@@ -50,7 +50,7 @@ var graphicDesContent = document.getElementById("graphic-des-content");
             graphicDesHead.style.fontSize = "1.5rem";
             graphicDesHead.style.color = "orange";
             graphicDesHead.style.marginBottom = "0em";
-            graphicDesDiv.style.height = "30em";
+            graphicDesDiv.style.height = "50em";
             graphicDesDiv.style.transitionProperty = "height";
             graphicDesDiv.style.transitionDuration = ".25s";
             graphicDesDiv.style.marginBottom = "1em";
@@ -113,24 +113,47 @@ var resumeContent = document.getElementById("resume-content");
     }
 
     let a;
-    let index = 1;
-    showSlides(index);
+    let reportIndex = 1;
+    showSlides(reportIndex);
 
-        function slides(n) {
-            showSlides(index += n);
+        function reportSlides(n) {
+            showSlides(reportIndex += n);
         }
 
             function showSlides(n) {
-                let images = document.getElementsByClassName("willmore-image-container");
+                let images = document.getElementsByClassName("report-image-container");
                     if (n > images.length) {
-                        index = 1;
+                        reportIndex = 1;
 
                     } if (n < 1) {
-                        index = images.length;
+                        reportIndex = images.length;
 
                     } for (a = 0; a < images.length; a++) {
                         images[a].style.display = "none";
                     }
 
-                    images[index-1].style.display = "block";
+                    images[reportIndex-1].style.display = "block";
+            }
+
+    let b;
+    let willmoreIndex = 1;
+    willmoreShowSlides(willmoreIndex);
+
+        function willmoreSlides(n) {
+            willmoreShowSlides(willmoreIndex += n);
+        }
+
+            function willmoreShowSlides(n) {
+                let images = document.getElementsByClassName("willmore-image-container");
+                    if (n > images.length) {
+                        willmoreIndex = 1;
+
+                    } if (n < 1) {
+                        willmoreIndex = images.length;
+
+                    } for (b = 0; b < images.length; b++) {
+                        images[b].style.display = "none";
+                    }
+
+                    images[willmoreIndex-1].style.display = "block";
             }

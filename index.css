@@ -86,37 +86,37 @@ body {
 
 #web-dev-header, #graphic-des-header, #resume-header {
   margin-bottom: 1em;
+  border-radius: 14em;
 }
 
 #web-dev-section, #graphic-des-section, #resume-section {
   background-color: rgb(33, 128, 168);
+  border-radius: 1em;
 }
 
 #rps-image {
-  margin-top: .5em;
+  margin-top: 1.1em;
   width: 20em;
   height: 15em;
 }
 
 #rps-image:hover {
   border: 1px solid rgb(255, 136, 0);
-  transition: .3s ease-in-out;
 }
 
 #italy-image {
-  margin-top: .6em;
+  margin-top: 1.1em;
   width: 20em;
   height: 12em;
 }
 
 #italy-image:hover {
   border: 1px solid rgb(255, 136, 0);
-  transition: .3s ease-in-out;
 }
 
 
 #etchasketch-image {
-  margin-top: .6em;
+  margin-top: 1.1em;
   width: 20em;
   height: 14em;
 
@@ -124,45 +124,74 @@ body {
 
 #etchasketch-image:hover {
   border: 1px solid rgb(255, 136, 0);
-  transition: .3s ease-in-out;
+}
+
+.report-image-container {
+  width: fit-content;
 }
 
 
 
+.report-images {
+  margin-top: 1.1em;
+  width: 80%;
+  height: auto;
+}
+
 #willmore-image1, #willmore-image2 {
-  margin-top: .5em;
-  width: 18em;
-  height: 14em;
+  margin-top: 1.1em;
+  width: auto;
+  height: 20em;
 }
 
 #willmore-image3 {
-  margin-top: .5em;
-  width: 18em;
-  height: 8em;
-
+  margin-top: 1.1em;
+  width: 80%;
+  height: auto;
 }
 
-#prev-image {
+
+#prev-image-report {
   cursor: pointer;
   position: absolute;
   padding: 1em;
   left: 1%;
-  margin-top: -11em;
+  margin-top: -10em;
   font-size: 1.3em;
   transition: .6s linear;
 }
 
-#next-image {
+#next-image-report {
   cursor: pointer;
   position: absolute;
   padding: 1em;
   right: 1%;
-  margin-top: -11em;
+  margin-top: -10em;
   font-size: 1.3em;
   transition: .6s linear;
 }
 
-#prev-image:hover, #next-image:hover {
+#prev-image-willmore {
+  cursor: pointer;
+  position: absolute;
+  padding: 1em;
+  left: 1%;
+  margin-top: -10em;
+  font-size: 1.3em;
+  transition: .6s linear;
+}
+
+#next-image-willmore {
+  cursor: pointer;
+  position: absolute;
+  padding: 1em;
+  right: 1%;
+  margin-top: -10em;
+  font-size: 1.3em;
+  transition: .6s linear;
+}
+
+#prev-image-report:hover, #next-image-report:hover, #prev-image-willmore:hover, #next-image-willmore:hover {
   color: rgb(255, 136, 0);
 }
 
