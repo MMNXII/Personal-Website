@@ -9,10 +9,10 @@ var webDevContent = document.getElementById("web-dev-content");
     function expandWebDev() {
         if (webDevDiv.style.height == "0em") {
             
-            webDevHead.style.fontSize = "1.5rem";
+            webDevHead.style.fontSize = "1.8rem";
             webDevHead.style.color = "orange";
             webDevHead.style.marginBottom = "0em";
-            webDevDiv.style.height = "61em";                    
+            webDevDiv.style.height = "63em";                    
             webDevDiv.style.transitionProperty = "height";
             webDevDiv.style.transitionDuration = ".25s";
             webDevDiv.style.marginBottom = "1em";
@@ -47,10 +47,10 @@ var graphicDesContent = document.getElementById("graphic-des-content");
     function expandGraphicDes() {
         if (graphicDesDiv.style.height == "0em") {
             
-            graphicDesHead.style.fontSize = "1.5rem";
+            graphicDesHead.style.fontSize = "1.8rem";
             graphicDesHead.style.color = "orange";
             graphicDesHead.style.marginBottom = "0em";
-            graphicDesDiv.style.height = "50em";
+            graphicDesDiv.style.height = "65em";
             graphicDesDiv.style.transitionProperty = "height";
             graphicDesDiv.style.transitionDuration = ".25s";
             graphicDesDiv.style.marginBottom = "1em";
@@ -86,10 +86,10 @@ var resumeContent = document.getElementById("resume-content");
     function expandResume() {
         if (resumeDiv.style.height == "0em") {
 
-            resumeHead.style.fontSize = "1.5rem";
+            resumeHead.style.fontSize = "1.8rem";
             resumeHead.style.color = "orange";
             resumeHead.style.marginBottom = "0em";                      
-            resumeDiv.style.height = "10em";
+            resumeDiv.style.height = "55em";
             resumeDiv.style.transitionProperty = "height";
             resumeDiv.style.transitionDuration = ".25s";
             resumeDiv.style.marginBottom = "1em";

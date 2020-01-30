@@ -13,6 +13,7 @@ body {
   margin-top: .49em;
 }
 
+
 #main-container {
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +24,7 @@ body {
 
 #header-container {
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 1.1em;
 }
 
 #header {
@@ -38,8 +39,9 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 1.1em;
 }
+
 
 #profile {
   width: 22%;
@@ -48,18 +50,21 @@ body {
 }
 
 #intro-container {
-  display: flex;
-  width: 96%;
+  width: 98%;
   margin: 0 auto;
   margin-bottom: 2em;
   color: #ffffff;
-  font-size: 1.4em;
   text-align: center;
-  font-family: 'Oleo Script', cursive;
+  font-family: 'Roboto Condensed', sans-serif;}
+
+#intro-container > h2 {
+  font-size: 1.5em;
+  width: 40%;
+  margin: 0 auto;
 }
 
 #intro-container > p {
-  margin: 0 auto;
+  font-size: 1.2em;
 }
 
 
@@ -72,6 +77,7 @@ body {
 
 .sub-headers {
   color: #ffffff;
+  font-size: 1.5em;
   font-family: 'Oleo Script', cursive;
   background-color: rgb(33, 128, 168);
   transition-duration: .5s;
@@ -80,7 +86,7 @@ body {
 
 .sub-headers:hover {
   color: rgb(255, 136, 0);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 
@@ -90,7 +96,7 @@ body {
 }
 
 #web-dev-section, #graphic-des-section, #resume-section {
-  background-color: rgb(33, 128, 168);
+  background-color: rgba(33, 128, 168, 0.315);
   border-radius: 1em;
 }
 
@@ -100,43 +106,33 @@ body {
   height: 15em;
 }
 
-#rps-image:hover {
-  border: 1px solid rgb(255, 136, 0);
-}
-
 #italy-image {
   margin-top: 1.1em;
   width: 20em;
   height: 12em;
 }
 
-#italy-image:hover {
-  border: 1px solid rgb(255, 136, 0);
-}
-
-
 #etchasketch-image {
   margin-top: 1.1em;
   width: 20em;
   height: 14em;
-
 }
 
-#etchasketch-image:hover {
+#rps-image:hover, #italy-image:hover, #etchasketch-image:hover, .report-images:hover, .willmore-images:hover, #aoe-image:hover {
   border: 1px solid rgb(255, 136, 0);
 }
+
 
 .report-image-container {
   width: fit-content;
 }
-
-
 
 .report-images {
   margin-top: 1.1em;
   width: 80%;
   height: auto;
 }
+
 
 #willmore-image1, #willmore-image2 {
   margin-top: 1.1em;
@@ -145,55 +141,41 @@ body {
 }
 
 #willmore-image3 {
-  margin-top: 1.1em;
+  margin-top: 6.2em;
   width: 80%;
   height: auto;
 }
 
+#aoe-image {
+  margin-top: 1.1em;
+  width: auto;
+  height: 15em;
+}
 
-#prev-image-report {
+#prev-image-report, #next-image-report, #prev-image-willmore, #next-image-willmore {
   cursor: pointer;
   position: absolute;
   padding: 1em;
+  font-size: 1.5em;
+  transition: .6s linear;
+  margin-top: -10em;
+
+}
+
+
+#prev-image-report, #prev-image-willmore {
   left: 1%;
-  margin-top: -10em;
-  font-size: 1.3em;
-  transition: .6s linear;
 }
 
-#next-image-report {
-  cursor: pointer;
-  position: absolute;
-  padding: 1em;
+#next-image-report, #next-image-willmore {
   right: 1%;
-  margin-top: -10em;
-  font-size: 1.3em;
-  transition: .6s linear;
-}
-
-#prev-image-willmore {
-  cursor: pointer;
-  position: absolute;
-  padding: 1em;
-  left: 1%;
-  margin-top: -10em;
-  font-size: 1.3em;
-  transition: .6s linear;
-}
-
-#next-image-willmore {
-  cursor: pointer;
-  position: absolute;
-  padding: 1em;
-  right: 1%;
-  margin-top: -10em;
-  font-size: 1.3em;
-  transition: .6s linear;
 }
 
 #prev-image-report:hover, #next-image-report:hover, #prev-image-willmore:hover, #next-image-willmore:hover {
   color: rgb(255, 136, 0);
 }
+
+
 
 .captions {
   color: rgb(255, 255, 255);
@@ -207,14 +189,49 @@ body {
   margin-bottom: 2em;
   width: 96%;
   color: rgb(255, 255, 255);
-  font-size: .9em;
+  font-size: 1.1em;
   text-align: center;
-  font-family: 'Oleo Script', cursive;
+  font-family: 'Roboto Condensed', sans-serif;}
 }
 
+
 #resume-content {
+  text-align: left;
   margin-bottom: 3em;
 }
+
+#summary > h2 {
+  padding-top: 1em;
+}
+
+#summary > h2, #prof-exp > h2, #education > h2, #technical > h2, #traits > h2 {
+  padding-left: .8em;
+  text-align: left;
+}
+
+
+#summary > p {
+  width: 100%;
+  padding-left: 1em;
+  text-align: left;
+}
+
+
+#prof-exp > h3, #education > h3 {
+  padding-top: .5em;
+  margin-left: 1em;
+  margin-bottom: .5em;
+  text-align: left;
+}
+
+
+
+
+#prof-list, #edu-list, #tech-list {
+  padding-left: 1em;
+  text-align: left;
+}
+
 
 
 #icon-container {
