@@ -6,6 +6,7 @@ var webDevContent = document.getElementById("web-dev-content");
     webDevContent.style.visibility = "hidden";
     webDevContent.style.opacity = "0";
 
+
     function expandWebDev() {
         if (webDevDiv.style.height == "0em") {
             
@@ -89,7 +90,7 @@ var resumeContent = document.getElementById("resume-content");
             resumeHead.style.fontSize = "1.8rem";
             resumeHead.style.color = "orange";
             resumeHead.style.marginBottom = "0em";                      
-            resumeDiv.style.height = "55em";
+            resumeDiv.style.height = "75em";
             resumeDiv.style.transitionProperty = "height";
             resumeDiv.style.transitionDuration = ".25s";
             resumeDiv.style.marginBottom = "1em";
