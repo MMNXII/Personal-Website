@@ -51,7 +51,7 @@ var graphicDesContent = document.getElementById("graphic-des-content");
             graphicDesHead.style.fontSize = "1.8rem";
             graphicDesHead.style.color = "orange";
             graphicDesHead.style.marginBottom = "0em";
-            graphicDesDiv.style.height = "65em";
+            graphicDesDiv.style.height = "68em";
             graphicDesDiv.style.transitionProperty = "height";
             graphicDesDiv.style.transitionDuration = ".25s";
             graphicDesDiv.style.marginBottom = "1em";
@@ -158,3 +158,5 @@ var resumeContent = document.getElementById("resume-content");
 
                     images[willmoreIndex-1].style.display = "block";
             }
+
+
