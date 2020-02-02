@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* border: 1px solid yellow; */
+  border: 1px solid yellow;
 }
 body {
   background-image: linear-gradient(41deg, rgba(107, 107, 107, 0.04) 0%, rgba(107, 107, 107, 0.04) 8%,rgba(31, 31, 31, 0.04) 8%, rgba(31, 31, 31, 0.04) 100%),linear-gradient(9deg, rgba(228, 228, 228, 0.04) 0%, rgba(228, 228, 228, 0.04) 62%,rgba(54, 54, 54, 0.04) 62%, rgba(54, 54, 54, 0.04) 100%),linear-gradient(124deg, rgba(18, 18, 18, 0.04) 0%, rgba(18, 18, 18, 0.04) 37%,rgba(233, 233, 233, 0.04) 37%, rgba(233, 233, 233, 0.04) 100%),linear-gradient(253deg, rgba(201, 201, 201, 0.04) 0%, rgba(201, 201, 201, 0.04) 55%,rgba(47, 47, 47, 0.04) 55%, rgba(47, 47, 47, 0.04) 100%),linear-gradient(270deg, rgba(172, 172, 172, 0.04) 0%, rgba(172, 172, 172, 0.04) 33%,rgba(26, 26, 26, 0.04) 33%, rgba(26, 26, 26, 0.04) 100%),linear-gradient(64deg, rgba(11, 11, 11, 0.04) 0%, rgba(11, 11, 11, 0.04) 38%,rgba(87, 87, 87, 0.04) 38%, rgba(87, 87, 87, 0.04) 100%),linear-gradient(347deg, rgba(199, 199, 199, 0.04) 0%, rgba(199, 199, 199, 0.04) 69%,rgba(4, 4, 4, 0.04) 69%, rgba(4, 4, 4, 0.04) 100%),linear-gradient(313deg, rgba(36, 36, 36, 0.04) 0%, rgba(36, 36, 36, 0.04) 20%,rgba(91, 91, 91, 0.04) 20%, rgba(91, 91, 91, 0.04) 100%),linear-gradient(90deg, rgb(10, 17, 72),rgb(35, 148, 228));
@@ -182,6 +182,12 @@ body {
     height: 11em;
   }
 }
+
+#willmore-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 #willmore-image1, #willmore-image2 {
   margin-top:.5em;
   width: auto;
@@ -194,7 +200,7 @@ body {
 }
 #willmore-image3 {
   margin-top: 3em;
-  width: 80%;
+  width: 21em;
   height: auto;
 }
 #aoe-image {
@@ -207,7 +213,7 @@ body {
     height: 19em;
   }
 }
-#prev-image-report, #next-image-report, #prev-image-willmore, #next-image-willmore {
+#prev-image-report, #next-image-report {
   cursor: pointer;
   display: block;
   position: absolute;
@@ -217,13 +223,10 @@ body {
 #prev-image-report, #next-image-report {
   margin-top: -10em;
 }
-#prev-image-willmore, #next-image-willmore {
-  margin-top: -12em;
-}
-#prev-image-report, #prev-image-willmore {
+#prev-image-report {
   left: 3%;
 }
-#next-image-report, #next-image-willmore {
+#next-image-report {
   right: 3%;
 }
 @media only screen and (min-width: 500px) and (max-width: 649px) {
@@ -232,12 +235,6 @@ body {
   }
   #next-image-report {
     right: 12%;
-  }
-  #prev-image-willmore {
-    left: 15%;
-  }
-  #next-image-willmore {
-    right: 15%;
   }
 }
 @media only screen and (min-width: 650px) and (max-width: 849px) {
@@ -249,14 +246,6 @@ body {
     margin-top: -12em;
     right: 8%
   }
-  #prev-image-willmore {
-    margin-top: -14em;
-    left: 17%;
-  }
-  #next-image-willmore {
-    margin-top: -14em;
-    right: 17%;
-  }
 }
 @media only screen and (min-width: 850px) {
   #prev-image-report {
@@ -266,14 +255,6 @@ body {
   #next-image-report {
     margin-top: -12em;
     right: 18%
-  }
-  #prev-image-willmore {
-    margin-top: -14em;
-    left: 27%;
-  }
-  #next-image-willmore {
-    margin-top: -14em;
-    right: 27%;
   }
 }
 
@@ -286,41 +267,10 @@ body {
     margin-top: -12em;
     right: 27%
   }
-  #prev-image-willmore {
-    margin-top: -14em;
-    left: 35%;
-  }
-  #next-image-willmore {
-    margin-top: -14em;
-    right: 35%;
-  }
 }
 
-/* @media only screen and (min-width: 660px) and (max-width: 770px) {
-  #prev-image-report, #prev-image-willmore {
-    left: 20%;
-  }
-  #next-image-report, #next-image-willmore {
-    right: 20%;
-  }
-}
-@media only screen and (min-width: 771px) and (max-width: 1000px) {
-  #prev-image-report, #prev-image-willmore {
-    left: 25%;
-  }
-  #next-image-report, #next-image-willmore {
-    right: 25%;
-  }
-}
-@media only screen and (min-width: 1001px) {
-  #prev-image-report, #prev-image-willmore {
-    left: 30%;
-  }
-  #next-image-report, #next-image-willmore {
-    right: 30%;
-  }
-} */
-#prev-image-report:hover, #next-image-report:hover, #prev-image-willmore:hover, #next-image-willmore:hover {
+
+#prev-image-report:hover, #next-image-report:hover {
   color: rgb(255, 136, 0);
 }
 

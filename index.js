@@ -136,27 +136,4 @@ var resumeContent = document.getElementById("resume-content");
                     images[reportIndex-1].style.display = "block";
             }
 
-    let b;
-    let willmoreIndex = 1;
-    willmoreShowSlides(willmoreIndex);
-
-        function willmoreSlides(n) {
-            willmoreShowSlides(willmoreIndex += n);
-        }
-
-            function willmoreShowSlides(n) {
-                let images = document.getElementsByClassName("willmore-image-container");
-                    if (n > images.length) {
-                        willmoreIndex = 1;
-
-                    } if (n < 1) {
-                        willmoreIndex = images.length;
-
-                    } for (b = 0; b < images.length; b++) {
-                        images[b].style.display = "none";
-                    }
-
-                    images[willmoreIndex-1].style.display = "block";
-            }
-
 
