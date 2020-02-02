@@ -48,7 +48,9 @@ body {
 #profile {
   width: 22%;
   min-width: 135px;
+  min-height: 149px;
   max-width: 300px;
+  max-height: 330px;
   border-radius: 50%;
 }
 
