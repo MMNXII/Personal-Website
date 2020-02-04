@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* border: 1px solid green; */
+  /* border: 1px solid yellow; */
 }
 body {
   background-image: linear-gradient(41deg, rgba(107, 107, 107, 0.04) 0%, rgba(107, 107, 107, 0.04) 8%,rgba(31, 31, 31, 0.04) 8%, rgba(31, 31, 31, 0.04) 100%),linear-gradient(9deg, rgba(228, 228, 228, 0.04) 0%, rgba(228, 228, 228, 0.04) 62%,rgba(54, 54, 54, 0.04) 62%, rgba(54, 54, 54, 0.04) 100%),linear-gradient(124deg, rgba(18, 18, 18, 0.04) 0%, rgba(18, 18, 18, 0.04) 37%,rgba(233, 233, 233, 0.04) 37%, rgba(233, 233, 233, 0.04) 100%),linear-gradient(253deg, rgba(201, 201, 201, 0.04) 0%, rgba(201, 201, 201, 0.04) 55%,rgba(47, 47, 47, 0.04) 55%, rgba(47, 47, 47, 0.04) 100%),linear-gradient(270deg, rgba(172, 172, 172, 0.04) 0%, rgba(172, 172, 172, 0.04) 33%,rgba(26, 26, 26, 0.04) 33%, rgba(26, 26, 26, 0.04) 100%),linear-gradient(64deg, rgba(11, 11, 11, 0.04) 0%, rgba(11, 11, 11, 0.04) 38%,rgba(87, 87, 87, 0.04) 38%, rgba(87, 87, 87, 0.04) 100%),linear-gradient(347deg, rgba(199, 199, 199, 0.04) 0%, rgba(199, 199, 199, 0.04) 69%,rgba(4, 4, 4, 0.04) 69%, rgba(4, 4, 4, 0.04) 100%),linear-gradient(313deg, rgba(36, 36, 36, 0.04) 0%, rgba(36, 36, 36, 0.04) 20%,rgba(91, 91, 91, 0.04) 20%, rgba(91, 91, 91, 0.04) 100%),linear-gradient(90deg, rgb(10, 17, 72),rgb(35, 148, 228));
@@ -206,6 +206,9 @@ body {
 
 
 /* graphic design */
+#graphic-des-section {
+  overflow: scroll;
+}
 .report-images {
   margin-top: 1.2em;
   width: auto;
@@ -233,9 +236,13 @@ body {
   }
 } */
 #willmore-image3 {
-  margin-top: 3em;
+  margin-top: .5em;
   width: 21em;
   height: auto;
+}
+.sub-captions > a {
+  text-decoration: none;
+  color: rgb(255, 136, 0);
 }
 #aoe-image {
   width: auto;
@@ -324,13 +331,13 @@ body {
 
 
 
+
 #resume-content {
   text-align: left;
   padding-right: 1rem;
 }
-
 #traits {
-  margin-bottom: 6em;
+  margin-bottom: 3em;
 }
 
 #summary > h2 {
@@ -341,18 +348,25 @@ body {
   padding-left: .8em;
   text-align: left;
 }
-
-
+@media only screen and (min-width: 840px) {
+  #summary > h2, #prof-exp > h2, #education > h2, #technical > h2, #traits > h2 {
+    font-size: 1.8em;
+  }
+}
 #summary > p {
   width: 100%;
   margin-left: 0;
   padding-left: 1em;
   text-align: left;
 }
-
 @media only screen and (min-width: 780px) {
   #summary > p {
     width: 780px;
+  }
+}
+@media only screen and (min-width: 840px) {
+  #summary > p, li {
+    font-size: 1.4em;
   }
 }
 
@@ -363,6 +377,11 @@ body {
   margin-left: 1em;
   margin-bottom: .5em;
   text-align: left;
+}
+@media only screen and (min-width: 840px) {
+  #prof-exp > h3, #education > h3 {
+    font-size: 1.5em;
+  }
 }
 
 
