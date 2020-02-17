@@ -160,6 +160,7 @@ body {
 }
 .captions {
   color: rgb(255, 255, 255);
+  margin-top: .2em;
   font-size: 1.4em;
   text-align: center;
   font-family: 'Oleo Script', cursive;
@@ -211,7 +212,7 @@ body {
     width: auto;
   }
 }
-#rps-image:hover, #italy-image:hover, #etchasketch-image:hover, .report-images:hover, .willmore-images:hover, #aoe-image:hover {
+#rps-image:hover, #italy-image:hover, #etchasketch-image:hover {
   border: 1px solid rgb(255, 136, 0);
 }
 
@@ -232,7 +233,6 @@ body {
     height: 11em;
   }
 }
-
 #willmore-container {
   display: flex;
   flex-wrap: wrap;
@@ -241,7 +241,7 @@ body {
 #willmore-image1, #willmore-image2 {
   margin-top:.5em;
   width: auto;
-  height: 10em;
+  height: 15em;
 }
 @media only screen and (min-width: 650px) {
   #willmore-image1, #willmore-image2 {
@@ -269,7 +269,17 @@ body {
 @media only screen and (min-width: 650px) {
   #aoe-image {
     width: auto;
-    height: 19em;
+    height: 22em;
+  }
+}
+#personal-bcard1, #personal-bcard2 {
+  width: 22em;
+  height: auto;
+}
+@media only screen and (min-width: 650px) {
+  #personal-bcard1, #personal-bcard2{
+    width: auto;
+    height: 15em;
   }
 }
 #prev-image-report, #next-image-report {
@@ -328,6 +338,10 @@ body {
     right: 29%
   }
 }
+.report-images:hover, .willmore-images:hover, #aoe-image:hover, #personal-bcard1:hover, #personal-bcard2:hover {
+  border: 1px solid rgb(255, 136, 0);
+}
+
 
 
 /* resume */
