@@ -113,27 +113,4 @@ var resumeContent = document.getElementById("resume-content");
         }
     }
 
-    let a;
-    let reportIndex = 1;
-    showSlides(reportIndex);
-
-        function reportSlides(n) {
-            showSlides(reportIndex += n);
-        }
-
-            function showSlides(n) {
-                let images = document.getElementsByClassName("report-image-container");
-                    if (n > images.length) {
-                        reportIndex = 1;
-
-                    } if (n < 1) {
-                        reportIndex = images.length;
-
-                    } for (a = 0; a < images.length; a++) {
-                        images[a].style.display = "none";
-                    }
-
-                    images[reportIndex-1].style.display = "block";
-            }
-
 

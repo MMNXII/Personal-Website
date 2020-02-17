@@ -228,6 +228,9 @@ body {
   width: auto;
   height: 6.5em;
 }
+.report-images:hover {
+  border: 1px solid rgb(255, 136, 0);
+}
 @media only screen and (min-width: 650px) {
   .report-images {
     height: 11em;
@@ -262,6 +265,11 @@ body {
   text-decoration: none;
   color: rgb(255, 136, 0);
 }
+#aoe-bcard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 #aoe-image {
   width: auto;
   height: 15em;
@@ -280,62 +288,6 @@ body {
   #personal-bcard1, #personal-bcard2{
     width: auto;
     height: 15em;
-  }
-}
-#prev-image-report, #next-image-report {
-  cursor: pointer;
-  display: block;
-  position: absolute;
-  margin-top: -10em;
-  font-size: 1.5em;
-  transition: .6s linear;
-  color: rgb(255, 136, 0);
-}
-#prev-image-report:hover, #next-image-report:hover {
-  color: rgb(255, 183, 101);
-}
-#prev-image-report {
-  left: 3%;
-}
-#next-image-report {
-  right: 3%;
-}
-@media only screen and (min-width: 500px) and (max-width: 649px) {
-  #prev-image-report {
-    left: 12%;
-  }
-  #next-image-report {
-    right: 12%;
-  }
-}
-@media only screen and (min-width: 650px) and (max-width: 849px) {
-  #prev-image-report {
-    margin-top: -12em;
-    left: 8%
-  }
-  #next-image-report {
-    margin-top: -12em;
-    right: 8%
-  }
-}
-@media only screen and (min-width: 850px) {
-  #prev-image-report {
-    margin-top: -12em;
-    left: 18%
-  }
-  #next-image-report {
-    margin-top: -12em;
-    right: 18%
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #prev-image-report {
-    margin-top: -12em;
-    left: 29%
-  }
-  #next-image-report {
-    margin-top: -12em;
-    right: 29%
   }
 }
 .report-images:hover, .willmore-images:hover, #aoe-image:hover, #personal-bcard1:hover, #personal-bcard2:hover {
