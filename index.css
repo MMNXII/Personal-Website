@@ -303,6 +303,7 @@ body {
   width: 96%;
   color: rgb(255, 255, 255);
   font-size: 1.1em;
+  line-height: 1.4em;
   text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
 }
@@ -380,7 +381,6 @@ body {
 
   }
 }
-
 .icon {
   width: 2.2rem;
   height: 2.2rem;
@@ -393,7 +393,6 @@ body {
     width: 3.2rem;
     height: 3.2rem;
   }
-
 .icon:hover {
   opacity: 0.4;
 }
