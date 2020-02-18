@@ -322,7 +322,7 @@ body {
 }
 @media only screen and (min-width: 840px) {
   #summary > h2, #prof-exp > h2, #education > h2, #technical > h2, #traits > h2 {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
 }
 #summary > p {
@@ -338,7 +338,7 @@ body {
 }
 @media only screen and (min-width: 840px) {
   #summary > p, li {
-    font-size: 1.4em;
+    font-size: 1.1em;
   }
 }
 #prof-exp > h3, #education > h3 {
@@ -350,7 +350,7 @@ body {
 }
 @media only screen and (min-width: 840px) {
   #prof-exp > h3, #education > h3 {
-    font-size: 1.5em;
+    font-size: 1.1em;
   }
 }
 #prof-list, #edu-list, #tech-list {
