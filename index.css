@@ -6,8 +6,8 @@
 }
 body {
   background-image: linear-gradient(41deg, rgba(107, 107, 107, 0.04) 0%, rgba(107, 107, 107, 0.04) 8%,rgba(31, 31, 31, 0.04) 8%, rgba(31, 31, 31, 0.04) 100%),linear-gradient(9deg, rgba(228, 228, 228, 0.04) 0%, rgba(228, 228, 228, 0.04) 62%,rgba(54, 54, 54, 0.04) 62%, rgba(54, 54, 54, 0.04) 100%),linear-gradient(124deg, rgba(18, 18, 18, 0.04) 0%, rgba(18, 18, 18, 0.04) 37%,rgba(233, 233, 233, 0.04) 37%, rgba(233, 233, 233, 0.04) 100%),linear-gradient(253deg, rgba(201, 201, 201, 0.04) 0%, rgba(201, 201, 201, 0.04) 55%,rgba(47, 47, 47, 0.04) 55%, rgba(47, 47, 47, 0.04) 100%),linear-gradient(270deg, rgba(172, 172, 172, 0.04) 0%, rgba(172, 172, 172, 0.04) 33%,rgba(26, 26, 26, 0.04) 33%, rgba(26, 26, 26, 0.04) 100%),linear-gradient(64deg, rgba(11, 11, 11, 0.04) 0%, rgba(11, 11, 11, 0.04) 38%,rgba(87, 87, 87, 0.04) 38%, rgba(87, 87, 87, 0.04) 100%),linear-gradient(347deg, rgba(199, 199, 199, 0.04) 0%, rgba(199, 199, 199, 0.04) 69%,rgba(4, 4, 4, 0.04) 69%, rgba(4, 4, 4, 0.04) 100%),linear-gradient(313deg, rgba(36, 36, 36, 0.04) 0%, rgba(36, 36, 36, 0.04) 20%,rgba(91, 91, 91, 0.04) 20%, rgba(91, 91, 91, 0.04) 100%),linear-gradient(90deg, rgb(10, 17, 72),rgb(35, 148, 228));
-  background-repeat: no-repeat;
-  background-size: 100% 4000px;
+  /* background-repeat: no-repeat; */
+  background-size: 100% 2000px;
   margin-top: .49em;
 }
 #main-container {
@@ -62,7 +62,6 @@ body {
     margin-bottom: 1.5em;
   }
 }
-
 #profile {
   width: 22%;
   min-width: 135px;
@@ -138,25 +137,29 @@ body {
   width: 96%;
   margin-bottom: 1em;
 }
+a > img {
+  border: 1px solid rgba(255, 136, 0, 0);
+}
+a > img:hover {
+  border: 1px solid rgb(255, 136, 0);
+}
 .sub-headers {
   color: #ffffff;
   font-size: 1.5em;
   font-family: 'Oleo Script', cursive;
   background-color: rgb(33, 128, 168);
   transition-duration: .5s;
-  cursor: pointer;
-}
-.sub-headers:hover {
-  color: rgb(255, 136, 0);
-  font-size: 1.8rem;
-}
-#web-dev-header, #graphic-des-header, #resume-header {
-  margin-bottom: 1em;
+  margin-top:2em;
+  margin-bottom: .5em;
   border-radius: 14em;
 }
 #web-dev-section, #graphic-des-section, #resume-section {
   background-color: rgba(33, 128, 168, 0.315);
   border-radius: 1em;
+}
+#web-dev-content, #graphic-des-content {
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 .captions {
   color: rgb(255, 255, 255);
@@ -192,17 +195,14 @@ body {
   }
 }
 #rps-image {
-  margin-top: 1.1em;
   width: 20em;
   height: 15em;
 }
 #italy-image {
-  margin-top: 1.1em;
   width: 20em;
   height: 12em;
 }
 #etchasketch-image {
-  margin-top: 1.1em;
   width: 20em;
   height: 14em;
 }
@@ -212,9 +212,7 @@ body {
     width: auto;
   }
 }
-#rps-image:hover, #italy-image:hover, #etchasketch-image:hover {
-  border: 1px solid rgb(255, 136, 0);
-}
+
 
 
 
@@ -224,12 +222,8 @@ body {
   overflow: scroll;
 }
 .report-images {
-  margin-top: 1.2em;
   width: auto;
   height: 6.5em;
-}
-.report-images:hover {
-  border: 1px solid rgb(255, 136, 0);
 }
 @media only screen and (min-width: 650px) {
   .report-images {
@@ -290,9 +284,6 @@ body {
     height: 15em;
   }
 }
-.report-images:hover, .willmore-images:hover, #aoe-image:hover, #personal-bcard1:hover, #personal-bcard2:hover {
-  border: 1px solid rgb(255, 136, 0);
-}
 
 
 
@@ -309,7 +300,8 @@ body {
 }
 #resume-content {
   text-align: left;
-  padding-right: 1rem;
+  padding-right: 1em;
+  padding-bottom: 1em;
 }
 #traits {
   margin-bottom: 3em;
@@ -364,6 +356,7 @@ body {
 /* footer */
 #icon-container {
   position: fixed;
+  display: inline-block;
   bottom: 0;
   background-color: rgb(24, 100, 155);
   width:100%;
@@ -387,32 +380,18 @@ body {
   margin: .2em;
   justify-content: space-between;
   transition-duration: .5s;
+  border: none;
 }
 @media only screen and (min-width: 1100px) {
   .icon {
     width: 3.2rem;
     height: 3.2rem;
   }
+}
 .icon:hover {
   opacity: 0.4;
+  border: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
