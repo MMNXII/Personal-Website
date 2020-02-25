@@ -177,8 +177,7 @@ a > img:hover {
 }
 
 #web-dev-content, #graphic-des-content {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding: 2em;
 }
 
 .captions {
@@ -283,7 +282,7 @@ a > img:hover {
 }
 /* Resume */
 #resume-content {
-  padding: 1em;
+  padding: em;
 }
 
 #resume-content h2 {
