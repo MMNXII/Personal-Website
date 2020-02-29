@@ -165,11 +165,11 @@ body {
 }
 
 a > img {
-  border: 1px solid rgba(255, 136, 0, 0);
+  border: 3px solid rgba(255, 136, 0, 0);
 }
 
 a > img:hover {
-  border: 1px solid #ff8800;
+  border: 3px solid #ff8800;
 }
 
 .sub-headers {
@@ -253,10 +253,6 @@ a > img:hover {
   text-decoration: none;
   color: #ff8800;
 }
-.sub-captions > a:hover {
-  text-decoration: none;
-  color: #ffc37e;
-}
 
 #aoe-bcard-container {
   justify-content: space-evenly;
@@ -286,12 +282,7 @@ a > img:hover {
 }
 /* Resume */
 #resume-content {
-  padding: 1em;
-}
-@media only screen and (min-width: 700px) {
-  #resume-content {
-    padding: 2em;
-  }
+  padding: 2em;
 }
 
 #resume-content h2 {

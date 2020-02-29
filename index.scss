@@ -168,10 +168,10 @@ body {
     margin-bottom: 1em;
 }
 a > img {
-    border: 1px solid rgba(255, 136, 0, 0);
+    border: 3px solid rgba(255, 136, 0, 0);
 }
 a > img:hover {
-    border: 1px solid rgb(255, 136, 0);
+    border: 3px solid rgb(255, 136, 0);
 }
 .sub-headers {
     @extend %script-text;
@@ -201,6 +201,8 @@ a > img:hover {
         width: 450px;
     }
 }
+
+
 
 
 
