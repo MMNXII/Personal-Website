@@ -274,6 +274,9 @@ a > img:hover {
     text-decoration: none;
     color: rgb(255, 136, 0);
 }
+.sub-captions > a:hover {
+    color: rgb(255, 177, 88);
+}
 #aoe-bcard-container {
     @extend %flex-and-wrap;
     justify-content: space-evenly;

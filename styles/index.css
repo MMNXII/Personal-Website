@@ -254,6 +254,10 @@ a > img:hover {
   color: #ff8800;
 }
 
+.sub-captions > a:hover {
+  color: #ffb158;
+}
+
 #aoe-bcard-container {
   justify-content: space-evenly;
 }
