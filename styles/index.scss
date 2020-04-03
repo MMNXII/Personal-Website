@@ -330,7 +330,7 @@ a > img:hover {
         margin-left: 1.5em;
     }
 #tech-list {
-    .tech-indent {
+    .list-indent {
         margin-left: 3em;
     }
     .tech-head {
@@ -338,10 +338,23 @@ a > img:hover {
     }
 }
 
-#prof-exp > h3, #education > h3 {
+#prof-exp > h3, #education > h3, table {
     @extend %standard-text;
     text-align: left;
     font-size: 1.2em;
+}
+#client-list {
+    margin-top: .6em;
+    display: inline-block;
+}
+#client-list-right {
+    display: inline-block;
+}
+@media only screen and (max-width: 605px) {
+    #client-list,
+    #client-list-right {
+        display: block;
+    }
 }
 
 

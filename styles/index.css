@@ -10,7 +10,7 @@
   color: #ffffff;
 }
 
-#prof-exp > h3, #education > h3, #resume-content p,
+#prof-exp > h3, #education > h3, table, #resume-content p,
 #resume-content li, .sub-captions, #intro-container {
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
@@ -308,18 +308,33 @@ a > img:hover {
   margin-left: 1.5em;
 }
 
-#tech-list .tech-indent {
+#tech-list .list-indent {
   margin-left: 3em;
 }
 #tech-list .tech-head {
   font-size: 1.3em;
 }
 
-#prof-exp > h3, #education > h3 {
+#prof-exp > h3, #education > h3, table {
   text-align: left;
   font-size: 1.2em;
 }
 
+#client-list {
+  margin-top: 0.6em;
+  display: inline-block;
+}
+
+#client-list-right {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 605px) {
+  #client-list,
+#client-list-right {
+    display: block;
+  }
+}
 /* footer */
 #icon-container {
   position: fixed;
