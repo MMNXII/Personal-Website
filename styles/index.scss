@@ -6,12 +6,12 @@
 %script-text {
     font-family: 'Oleo Script', cursive;
     text-align: center;
-    color: #ffffff;
+    color: #ffc3a7;
 }
 %standard-text {
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
-    color: #dfdfdf;
+    color: #cecece;
 }
 %sub-headers {
     font-size: 2em;
@@ -39,7 +39,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    // border: 1px solid yellow;
+    // border: .5px solid yellow;
 }
 body {
     background-color: #000122;
@@ -176,7 +176,7 @@ a > img:hover {
 .sub-headers {
     @extend %script-text;
     @extend %sub-headers;
-    color: rgb(255, 136, 0)
+    color: rgb(255, 115, 0)
 }
 .work-section {
     @extend %work-sections;
@@ -186,15 +186,20 @@ a > img:hover {
 }
 .captions {
     @extend %script-text;
-    font-size: 1.4em;
+    font-size: 1.6em;
     margin-top: .2em;
 }
 .sub-captions {
     @extend %standard-text;
     width: 268px;
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin: 0 auto;
+}
+.code-captions {
+    font-size: 1em;
+    margin-top: .8em;
     margin-bottom: 2em;
+    color: #8e87af;
 }
 @media only screen and (min-width: 700px) {
     .sub-captions {
