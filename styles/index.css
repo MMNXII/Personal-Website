@@ -7,14 +7,14 @@
 .captions, .sub-headers, #header {
   font-family: "Oleo Script", cursive;
   text-align: center;
-  color: #ffffff;
+  color: #ffc3a7;
 }
 
 #prof-exp > h3, #education > h3, table, #resume-content p,
 #resume-content li, .sub-captions, #intro-container {
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
-  color: #dfdfdf;
+  color: #cecece;
 }
 
 .sub-headers {
@@ -173,7 +173,7 @@ a > img:hover {
 }
 
 .sub-headers {
-  color: #ff8800;
+  color: #ff7300;
 }
 
 #web-dev-content, #graphic-des-content {
@@ -181,15 +181,21 @@ a > img:hover {
 }
 
 .captions {
-  font-size: 1.4em;
+  font-size: 1.6em;
   margin-top: 0.2em;
 }
 
 .sub-captions {
   width: 268px;
-  font-size: 1.2em;
+  font-size: 1.3em;
   margin: 0 auto;
+}
+
+.code-captions {
+  font-size: 1em;
+  margin-top: 0.8em;
   margin-bottom: 2em;
+  color: #8e87af;
 }
 
 @media only screen and (min-width: 700px) {
