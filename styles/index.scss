@@ -335,15 +335,6 @@ a > img:hover {
         margin-top: .3em;
         margin-left: 1.5em;
     }
-#tech-list {
-    .list-indent {
-        margin-left: 3em;
-    }
-    .tech-head {
-        font-size: 1.3em;
-    }
-}
-
 #prof-exp > h3, #education > h3, table {
     @extend %standard-text;
     text-align: left;
