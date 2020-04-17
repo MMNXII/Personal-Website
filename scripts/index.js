@@ -10,3 +10,19 @@
     direction: 'normal',
   });
 })();
+
+const canvas = document.getElementById('#canvas-div');
+
+var granimInstance = new Granim({
+  element: '#canvas-background',
+  direction: 'diagonal',
+  isPausedWhenNotInView: true,
+  states: {
+    'default-state': {
+      gradients: [
+        ['#001433', '#263a57'],
+        ['#1b2029', '#001433'],
+      ],
+    },
+  },
+});
