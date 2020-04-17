@@ -10,7 +10,9 @@
   color: #508caf;
 }
 
-#prof-exp > h3, #education > h3, table, #resume-content p,
+#prof-exp > h3,
+#education > h3,
+table, #resume-content p,
 #resume-content li, .sub-captions, #intro-container {
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
@@ -43,15 +45,24 @@
 }
 
 body {
-  background-color: #181818;
+  background-color: #0000;
   background-size: 100%;
-  margin-top: 0.49em;
 }
 
 #main-container {
   justify-content: space-around;
   width: 96%;
   margin: 0 auto;
+}
+
+#canvas-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 /* Header Text */
@@ -176,7 +187,8 @@ a > img:hover {
   color: #508caf;
 }
 
-#web-dev-content, #graphic-des-content {
+#web-dev-content,
+#graphic-des-content {
   padding: 2em;
 }
 
@@ -195,7 +207,7 @@ a > img:hover {
   font-size: 1em;
   margin-top: 0.8em;
   margin-bottom: 2em;
-  color: #3c6681;
+  color: #5088aa;
 }
 
 @media only screen and (min-width: 700px) {
@@ -213,7 +225,9 @@ a > img:hover {
   }
 }
 @media only screen and (min-width: 1000px) {
-  #rps-image, #italy-image, #etchasketch-image {
+  #rps-image,
+#italy-image,
+#etchasketch-image {
     height: 240px;
     width: auto;
   }
@@ -233,14 +247,16 @@ a > img:hover {
   justify-content: space-evenly;
 }
 
-#willmore-image1, #willmore-image2 {
+#willmore-image1,
+#willmore-image2 {
   margin-top: 0.5em;
   width: auto;
   height: 15em;
 }
 
 @media only screen and (min-width: 650px) {
-  #willmore-image1, #willmore-image2 {
+  #willmore-image1,
+#willmore-image2 {
     height: 19.5em;
   }
 }
@@ -279,13 +295,15 @@ a > img:hover {
     height: 22em;
   }
 }
-#personal-bcard1, #personal-bcard2 {
+#personal-bcard1,
+#personal-bcard2 {
   width: 22em;
   height: auto;
 }
 
 @media only screen and (min-width: 650px) {
-  #personal-bcard1, #personal-bcard2 {
+  #personal-bcard1,
+#personal-bcard2 {
     width: auto;
     height: 15em;
   }
@@ -314,7 +332,9 @@ a > img:hover {
   margin-left: 1.5em;
 }
 
-#prof-exp > h3, #education > h3, table {
+#prof-exp > h3,
+#education > h3,
+table {
   text-align: left;
   font-size: 1.2em;
 }
@@ -342,6 +362,7 @@ a > img:hover {
   background-color: #20212c;
   width: 100%;
   text-align: center;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 1100px) {
