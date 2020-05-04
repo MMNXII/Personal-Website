@@ -235,12 +235,13 @@ a > img:hover {
 /* Graphic Design */
 .report-images {
   width: auto;
-  height: 6.5em;
+  height: 8.5em;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 650px) {
   .report-images {
-    height: 11em;
+    height: 13em;
   }
 }
 #willmore-container {

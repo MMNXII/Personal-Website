@@ -1,5 +1,5 @@
 (introAnime = () => {
-  var animation = anime({
+  const animation = anime({
     targets:
       '#header, #profile, #intro-container, #work-container, #icon-container',
     duration: 500,
@@ -11,19 +11,54 @@
   });
 })();
 
-const canvas = document.getElementById('#canvas-div');
+(background = () => {
+  const canvasEl = document.getElementById('#canvas-div');
 
-var granimInstance = new Granim({
-  element: '#canvas-background',
-  direction: 'diagonal',
-  isPausedWhenNotInView: true,
-  states: {
-    'default-state': {
-      gradients: [
-        ['#000c29', '#001329'],
-        ['#001d29', '#002829'],
-        ['#002829', '#0f0026'],
-      ],
+  const granimInstance = new Granim({
+    element: '#canvas-background',
+    direction: 'diagonal',
+    isPausedWhenNotInView: true,
+    states: {
+      'default-state': {
+        gradients: [
+          ['#000c29', '#001329'],
+          ['#001d29', '#002829'],
+          ['#002829', '#0f0026'],
+        ],
+      },
     },
-  },
-});
+  });
+})();
+
+(slideshows = () => {
+  const initiateDivs = (e) => {
+    e.target.classList.contains('back-btn')
+      ? showImages((slideIndex += -1))
+      : showImages((slideIndex += +1));
+  };
+
+  const showImages = (n) => {
+    const images = document.getElementsByClassName('report-images');
+    const imagesArray = Array.from(images);
+    n > images.length ? (slideIndex = 1) : null;
+    n < 1 ? (slideIndex = images.length) : null;
+
+    imagesArray.forEach((img) => {
+      img.style.display = 'none';
+    });
+
+    imagesArray[slideIndex - 1].style.display = 'block';
+  };
+
+  const btn = document
+    .getElementById('report-container')
+    .getElementsByClassName('image-button');
+  const btnArray = Array.from(btn);
+
+  btnArray.forEach((arr) => {
+    arr.addEventListener('click', initiateDivs);
+  });
+
+  let slideIndex = 1;
+  showImages(slideIndex);
+})();
