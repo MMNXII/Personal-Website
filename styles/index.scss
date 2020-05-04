@@ -208,7 +208,7 @@ a > img:hover {
   height: 2em;
   color: rgb(80, 140, 175);
   background-color: #313344da;
-  margin: 0.5em;
+  margin: 0 auto;
 }
 
 /* Web Development */
@@ -242,7 +242,12 @@ a > img:hover {
 }
 
 /* Graphic Design */
+#report-container > a {
+  display: contents;
+}
+
 .report-images {
+  display: inline-block;
   width: auto;
   height: 7em;
   margin: 0 auto;
