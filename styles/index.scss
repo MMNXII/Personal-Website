@@ -203,6 +203,13 @@ a > img:hover {
     width: 450px;
   }
 }
+.image-button {
+  width: 2em;
+  height: 2em;
+  color: rgb(80, 140, 175);
+  background-color: #313344da;
+  margin: 0.5em;
+}
 
 /* Web Development */
 @media only screen and (min-width: 1000px) {
