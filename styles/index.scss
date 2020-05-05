@@ -203,7 +203,8 @@ a > img:hover {
     width: 450px;
   }
 }
-.image-button {
+.report-image-button,
+.willmore-image-button {
   width: 2em;
   height: 2em;
   color: rgb(80, 140, 175);
@@ -242,7 +243,8 @@ a > img:hover {
 }
 
 /* Graphic Design */
-#report-container > a {
+#report-container > a,
+#willmore-container > a {
   display: contents;
 }
 
@@ -262,9 +264,10 @@ a > img:hover {
     height: 16em;
   }
 }
-#willmore-container {
-  @extend %flex-and-wrap;
-  justify-content: space-evenly;
+
+.willmore-images {
+  display: block;
+  margin: 0 auto;
 }
 #willmore-image1,
 #willmore-image2 {
@@ -279,7 +282,8 @@ a > img:hover {
   }
 }
 #willmore-image3 {
-  margin-top: 0.5em;
+  margin-top: 5.5em;
+  margin-bottom: 7.45em;
   width: 21em;
   height: auto;
 }
