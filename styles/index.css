@@ -1,5 +1,5 @@
 /*SASS Classes*/
-#aoe-bcard-container, #willmore-container, #main-container {
+#aoe-bcard-container, #main-container {
   display: flex;
   flex-wrap: wrap;
 }
@@ -215,7 +215,8 @@ a > img:hover {
     width: 450px;
   }
 }
-.image-button {
+.report-image-button,
+.willmore-image-button {
   width: 2em;
   height: 2em;
   color: #508caf;
@@ -262,10 +263,6 @@ a > img:hover {
     height: 16em;
   }
 }
-#willmore-container {
-  justify-content: space-evenly;
-}
-
 #willmore-image1,
 #willmore-image2 {
   margin-top: 0.5em;
