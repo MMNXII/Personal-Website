@@ -30,35 +30,86 @@
   });
 })();
 
-(slideshows = () => {
-  const initiateDivs = (e) => {
-    e.target.classList.contains('back-btn')
-      ? showImages((slideIndex += -1))
-      : showImages((slideIndex += +1));
-  };
+// (slideshows = () => {
+//   const initiateDivs = (e) => {
+//     e.target.classList.contains('back-btn')
+//       ? showImages((slideIndex += -1))
+//       : showImages((slideIndex += +1));
+//   };
 
-  const showImages = (n) => {
-    const images = document.getElementsByClassName('report-images');
-    const imagesArray = Array.from(images);
-    n > images.length ? (slideIndex = 1) : null;
-    n < 1 ? (slideIndex = images.length) : null;
+// const showImages = (n) => {
+//   const images = document.getElementsByClassName('report-images');
+//   const imagesArray = Array.from(images);
+//   n > images.length ? (slideIndex = 1) : null;
+//   n < 1 ? (slideIndex = images.length) : null;
 
-    imagesArray.forEach((img) => {
-      img.style.display = 'none';
-    });
+//   imagesArray.forEach((img) => {
+//     img.style.display = 'none';
+//   });
 
-    imagesArray[slideIndex - 1].style.display = 'block';
-  };
+//   imagesArray[slideIndex - 1].style.display = 'block';
+// };
 
-  const btn = document
-    .getElementById('report-container')
-    .getElementsByClassName('image-button');
+//   const btn = document
+//     .getElementById('report-container')
+//     .getElementsByClassName('image-button');
+//   const btnArray = Array.from(btn);
+
+//   btnArray.forEach((arr) => {
+//     arr.addEventListener('click', initiateDivs);
+//   });
+
+// let slideIndex = 1;
+// showImages(slideIndex);
+// })();
+
+const getBtns = (id) => {
+  const btn = document.getElementById(id).getElementsByTagName('button');
   const btnArray = Array.from(btn);
 
   btnArray.forEach((arr) => {
-    arr.addEventListener('click', initiateDivs);
+    arr.addEventListener(
+      'click',
+      (initiateDivs = (e) => {
+        e.target.parentNode.id == 'report-container' &&
+        e.target.classList.contains('back-btn')
+          ? showImages((slideIndex += -1), 'report-images')
+          : null;
+
+        e.target.parentNode.id == 'report-container' &&
+        e.target.classList.contains('forward-btn')
+          ? showImages((slideIndex += +1), 'report-images')
+          : null;
+
+        e.target.parentNode.id == 'willmore-container' &&
+        e.target.classList.contains('back-btn')
+          ? showImages((slideIndex += -1), 'willmore-images')
+          : null;
+
+        e.target.parentNode.id == 'willmore-container' &&
+        e.target.classList.contains('forward-btn')
+          ? showImages((slideIndex += +1), 'willmore-images')
+          : null;
+      })
+    );
+  });
+};
+
+const showImages = (n, className) => {
+  const images = document.getElementsByClassName(className);
+  const imagesArray = Array.from(images);
+  n > images.length ? (slideIndex = 1) : null;
+  n < 1 ? (slideIndex = images.length) : null;
+
+  imagesArray.forEach((img) => {
+    img.style.display = 'none';
   });
 
-  let slideIndex = 1;
-  showImages(slideIndex);
-})();
+  imagesArray[slideIndex - 1].style.display = 'block';
+};
+
+getBtns('report-container');
+getBtns('willmore-container');
+
+showImages((slideIndex = 1), 'report-images');
+showImages((slideIndex = 1), 'willmore-images');

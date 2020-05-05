@@ -242,7 +242,8 @@ a > img:hover {
   }
 }
 /* Graphic Design */
-#report-container > a {
+#report-container > a,
+#willmore-container > a {
   display: contents;
 }
 
@@ -263,6 +264,11 @@ a > img:hover {
     height: 16em;
   }
 }
+.willmore-images {
+  display: block;
+  margin: 0 auto;
+}
+
 #willmore-image1,
 #willmore-image2 {
   margin-top: 0.5em;
