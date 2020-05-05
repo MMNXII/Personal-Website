@@ -224,6 +224,13 @@ a > img:hover {
   margin: 0.5em;
 }
 
+.report-image-button:hover,
+.willmore-image-button:hover {
+  opacity: 0.5;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+}
+
 /* Web Development */
 @media only screen and (min-width: 1000px) {
   #web-dev-content {
