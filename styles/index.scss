@@ -275,29 +275,13 @@ a > img:hover {
 .willmore-images {
   display: block;
   margin: 0 auto;
-}
-#willmore-image1,
-#willmore-image2 {
   margin-top: 0.5em;
   width: auto;
   height: 15em;
 }
 @media only screen and (min-width: 650px) {
-  #willmore-image1,
-  #willmore-image2 {
+  .willmore-images {
     height: 19.5em;
-  }
-}
-#willmore-image3 {
-  margin-top: 5.5em;
-  margin-bottom: 8.4em;
-  width: 21em;
-  height: auto;
-}
-@media only screen and (max-width: 700px) {
-  #willmore-image3 {
-    margin-top: 5.5em;
-    margin-bottom: 4em;
   }
 }
 .sub-captions > a {
