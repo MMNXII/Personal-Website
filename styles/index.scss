@@ -167,7 +167,9 @@ a > img {
   border: 3px solid rgba(255, 136, 0, 0);
 }
 a > img:hover {
-  border: 3px solid rgb(54, 94, 117);
+  opacity: 0.8;
+  transition-property: opacity;
+  transition-duration: 0.3s;
 }
 .sub-headers {
   @extend %script-text;
@@ -214,6 +216,7 @@ a > img:hover {
 
 .report-image-button:hover,
 .willmore-image-button:hover {
+  cursor: pointer;
   opacity: 0.5;
   transition-property: opacity;
   transition-duration: 0.3s;
@@ -250,6 +253,12 @@ a > img:hover {
 }
 
 /* Graphic Design */
+
+#graphic-des-content {
+  @extend %flex-and-wrap;
+  justify-content: center;
+}
+
 #report-container > a,
 #willmore-container > a {
   display: contents;
@@ -293,7 +302,7 @@ a > img:hover {
 }
 #aoe-bcard-container {
   @extend %flex-and-wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 #aoe-image {
   width: auto;
