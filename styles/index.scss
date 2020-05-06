@@ -16,7 +16,13 @@
 %sub-headers {
   font-size: 2em;
   border-radius: 14em;
-  background-color: #313344da;
+  background: rgb(231, 0, 145);
+  background: linear-gradient(
+    90deg,
+    rgba(231, 0, 145, 0) 0%,
+    rgba(49, 51, 68, 1) 53%,
+    rgba(255, 0, 0, 0) 100%
+  );
   transition-duration: 0.5s;
   margin-top: 2em;
   margin-bottom: 0.2em;
@@ -167,7 +173,7 @@ a > img {
   border: 3px solid rgba(255, 136, 0, 0);
 }
 a > img:hover {
-  opacity: 0.8;
+  opacity: 0.6;
   transition-property: opacity;
   transition-duration: 0.3s;
 }
@@ -373,7 +379,7 @@ table {
   position: fixed;
   display: inline-block;
   bottom: 0;
-  background-color: #20212c;
+  background-color: #313344;
   width: 100%;
   text-align: center;
   z-index: 1;
