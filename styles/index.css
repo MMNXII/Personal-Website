@@ -109,9 +109,9 @@ body {
   }
 }
 #profile {
-  width: 22%;
-  min-width: 135px;
-  max-width: 300px;
+  width: 18%;
+  min-width: 125px;
+  max-width: 290px;
   height: auto;
   border-radius: 50%;
 }
