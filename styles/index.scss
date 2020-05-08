@@ -421,7 +421,8 @@ table {
   text-decoration: none;
 }
 
-#report-markers-container {
+#report-markers-container,
+#willmore-markers-container {
   position: absolute;
   display: inline-block;
   color: white;
@@ -429,8 +430,12 @@ table {
   margin-top: 0.5em;
   margin-left: 3em;
 }
+#willmore-markers-container {
+  margin-left: 1.5em;
+}
 
-.report-markers {
+.report-markers,
+.willmore-markers {
   margin: 0.2em;
   display: inline-block;
   width: 0.8em;
@@ -438,6 +443,7 @@ table {
   background-color: rgba(255, 255, 255, 0.267);
   border-radius: 50%;
 }
-#report-marker-1 {
+#report-marker-1,
+#willmore-marker-1 {
   background-color: rgba(255, 255, 255, 0.801);
 }
