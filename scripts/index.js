@@ -85,7 +85,7 @@ const showImages = (n, className, classMarkers) => {
 
   markersArray.forEach((marker) => {
     marker.style.backgroundColor = 'rgba(255, 255, 255, 0.267)';
-    marker.style.opacity = '.4';
+    marker.style.opacity = '.5';
   });
 
   imagesArray[slideIndex - 1].style.display = 'block';

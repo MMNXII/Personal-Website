@@ -334,8 +334,8 @@ a > img:hover {
 .willmore-markers {
   margin: 0.2em;
   display: inline-block;
-  width: 0.8em;
-  height: 0.8em;
+  width: 0.7em;
+  height: 0.7em;
   background-color: rgba(255, 255, 255, 0.267);
   border-radius: 50%;
 }
