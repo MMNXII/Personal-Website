@@ -39,31 +39,43 @@ const getBtns = (id) => {
       (initiateDivs = (e) => {
         e.target.parentNode.id == 'report-container' &&
         e.target.classList.contains('back-btn')
-          ? showImages((slideIndex += -1), 'report-images')
+          ? showImages((slideIndex += -1), 'report-images', 'report-markers')
           : null;
 
         e.target.parentNode.id == 'report-container' &&
         e.target.classList.contains('forward-btn')
-          ? showImages((slideIndex += +1), 'report-images')
+          ? showImages((slideIndex += +1), 'report-images', 'report-markers')
           : null;
 
         e.target.parentNode.id == 'willmore-container' &&
         e.target.classList.contains('back-btn')
-          ? showImages((slideIndex += -1), 'willmore-images')
+          ? showImages(
+              (slideIndex += -1),
+              'willmore-images',
+              'willmore-markers'
+            )
           : null;
 
         e.target.parentNode.id == 'willmore-container' &&
         e.target.classList.contains('forward-btn')
-          ? showImages((slideIndex += +1), 'willmore-images')
+          ? showImages(
+              (slideIndex += +1),
+              'willmore-images',
+              'willmore-markers'
+            )
           : null;
       })
     );
   });
 };
 
-const showImages = (n, className) => {
+const showImages = (n, className, classMarkers) => {
   const images = document.getElementsByClassName(className);
   const imagesArray = Array.from(images);
+
+  const markers = document.getElementsByClassName(classMarkers);
+  const markersArray = Array.from(markers);
+
   n > images.length ? (slideIndex = 1) : null;
   n < 1 ? (slideIndex = images.length) : null;
 
@@ -71,11 +83,17 @@ const showImages = (n, className) => {
     img.style.display = 'none';
   });
 
+  markersArray.forEach((marker) => {
+    marker.style.backgroundColor = 'rgba(255, 255, 255, 0.267)';
+  });
+
   imagesArray[slideIndex - 1].style.display = 'block';
+  markersArray[slideIndex - 1].style.backgroundColor =
+    'rgba(255, 255, 255, 0.801)';
 };
 
 getBtns('report-container');
 getBtns('willmore-container');
 
-showImages((slideIndex = 1), 'report-images');
-showImages((slideIndex = 1), 'willmore-images');
+showImages((slideIndex = 1), 'report-images', 'report-markers');
+showImages((slideIndex = 1), 'willmore-images', 'willmore-markers');
