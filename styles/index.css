@@ -426,17 +426,16 @@ table {
   text-decoration: none;
 }
 
-#slide-show-markers-container {
+#report-markers-container {
   position: absolute;
   display: inline-block;
   color: white;
-  border: 1px solid yellow;
   text-align: right;
   margin-top: 0.5em;
   margin-left: 3em;
 }
 
-.markers {
+.report-markers {
   margin: 0.2em;
   display: inline-block;
   width: 0.8em;
@@ -445,7 +444,7 @@ table {
   border-radius: 50%;
 }
 
-#marker-1 {
+#report-marker-1 {
   background-color: rgba(255, 255, 255, 0.801);
 }
 

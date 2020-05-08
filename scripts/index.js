@@ -65,6 +65,10 @@ const showImages = (n, className) => {
   const images = document.getElementsByClassName(className);
   const imagesArray = Array.from(images);
 
+  const markers = document.getElementsByClassName('report-markers');
+  const markersArray = Array.from(markers);
+  console.log(markersArray);
+
   n > images.length ? (slideIndex = 1) : null;
   n < 1 ? (slideIndex = images.length) : null;
 
