@@ -64,6 +64,7 @@ const getBtns = (id) => {
 const showImages = (n, className) => {
   const images = document.getElementsByClassName(className);
   const imagesArray = Array.from(images);
+
   n > images.length ? (slideIndex = 1) : null;
   n < 1 ? (slideIndex = images.length) : null;
 
