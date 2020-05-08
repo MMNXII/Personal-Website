@@ -85,11 +85,15 @@ const showImages = (n, className, classMarkers) => {
 
   markersArray.forEach((marker) => {
     marker.style.backgroundColor = 'rgba(255, 255, 255, 0.267)';
+    marker.style.opacity = '.4';
   });
 
   imagesArray[slideIndex - 1].style.display = 'block';
   markersArray[slideIndex - 1].style.backgroundColor =
     'rgba(255, 255, 255, 0.801)';
+  markersArray[slideIndex - 1].style.opacity = '1';
+  markersArray[slideIndex - 1].style.transitionProperty = 'opacity';
+  markersArray[slideIndex - 1].style.transitionDuration = '.5s';
 };
 
 getBtns('report-container');

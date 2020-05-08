@@ -218,23 +218,6 @@ a > img:hover {
     width: 450px;
   }
 }
-.report-image-button,
-.willmore-image-button {
-  width: 2em;
-  height: 2em;
-  color: #508caf;
-  background-color: #313344da;
-  margin: 0.5em;
-}
-
-.report-image-button:hover,
-.willmore-image-button:hover {
-  cursor: pointer;
-  opacity: 0.5;
-  transition-property: opacity;
-  transition-duration: 0.3s;
-}
-
 /* Web Development */
 @media only screen and (min-width: 1000px) {
   #web-dev-content {
@@ -299,6 +282,67 @@ a > img:hover {
 
 .sub-captions > a:hover {
   color: #508caf;
+}
+
+.report-image-button,
+.willmore-image-button {
+  width: 2em;
+  height: 2em;
+  color: #508caf;
+  background-color: #313344da;
+  margin: 0.5em;
+}
+
+.report-image-button:hover,
+.willmore-image-button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+}
+
+#report-markers-container,
+#willmore-markers-container {
+  position: absolute;
+  display: inline-block;
+  color: white;
+  text-align: right;
+  margin-top: 0.5em;
+  margin-left: 3em;
+}
+
+#willmore-markers-container {
+  margin-left: 1.5em;
+}
+
+@media only screen and (min-width: 650px) {
+  #report-markers-container {
+    margin-left: 8em;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #report-markers-container {
+    margin-left: 16em;
+  }
+}
+@media only screen and (min-width: 650px) {
+  #willmore-markers-container {
+    margin-left: 3em;
+  }
+}
+.report-markers,
+.willmore-markers {
+  margin: 0.2em;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  background-color: rgba(255, 255, 255, 0.267);
+  border-radius: 50%;
+}
+
+#report-marker-1,
+#willmore-marker-1 {
+  background-color: rgba(255, 255, 255, 0.801);
 }
 
 #aoe-bcard-container {
@@ -424,50 +468,6 @@ table {
 
 #icon-container > a {
   text-decoration: none;
-}
-
-#report-markers-container,
-#willmore-markers-container {
-  position: absolute;
-  display: inline-block;
-  color: white;
-  text-align: right;
-  margin-top: 0.5em;
-  margin-left: 3em;
-}
-
-#willmore-markers-container {
-  margin-left: 1.5em;
-}
-
-@media only screen and (min-width: 650px) {
-  #report-markers-container {
-    margin-left: 8em;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  #report-markers-container {
-    margin-left: 16em;
-  }
-}
-@media only screen and (min-width: 650px) {
-  #willmore-markers-container {
-    margin-left: 3em;
-  }
-}
-.report-markers,
-.willmore-markers {
-  margin: 0.2em;
-  display: inline-block;
-  width: 0.8em;
-  height: 0.8em;
-  background-color: rgba(255, 255, 255, 0.267);
-  border-radius: 50%;
-}
-
-#report-marker-1,
-#willmore-marker-1 {
-  background-color: rgba(255, 255, 255, 0.801);
 }
 
 /*# sourceMappingURL=index.css.map */
