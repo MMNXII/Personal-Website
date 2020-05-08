@@ -440,6 +440,21 @@ table {
   margin-left: 1.5em;
 }
 
+@media only screen and (min-width: 650px) {
+  #report-markers-container {
+    margin-left: 8em;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #report-markers-container {
+    margin-left: 16em;
+  }
+}
+@media only screen and (min-width: 650px) {
+  #willmore-markers-container {
+    margin-left: 3em;
+  }
+}
 .report-markers,
 .willmore-markers {
   margin: 0.2em;
