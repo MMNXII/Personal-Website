@@ -76,7 +76,13 @@ const showImages = (n, className) => {
     img.style.display = 'none';
   });
 
+  markersArray.forEach((marker) => {
+    marker.style.backgroundColor = 'rgba(255, 255, 255, 0.267)';
+  });
+
   imagesArray[slideIndex - 1].style.display = 'block';
+  markersArray[slideIndex - 1].style.backgroundColor =
+    'rgba(255, 255, 255, 0.801)';
 };
 
 getBtns('report-container');
