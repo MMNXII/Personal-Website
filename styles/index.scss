@@ -218,21 +218,33 @@ a > img:hover {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 }
-#rps-image {
-  @extend %web-dev-img-height-width;
+
+@media only screen and (max-width: 1000px) {
+  #rps,
+  #italy,
+  #etch,
+  #rpg {
+    width: 100%;
+  }
 }
-#rpg-image {
-  @extend %web-dev-img-height-width;
+@media only screen and (min-width: 1000px) {
+  #rps,
+  #italy,
+  #etch,
+  #rpg {
+    width: 50%;
+  }
 }
-#italy-image {
-  @extend %web-dev-img-height-width;
-}
+#rps-image,
+#rpg-image,
+#italy-image,
 #etchasketch-image {
   @extend %web-dev-img-height-width;
 }
+
 @media only screen and (min-width: 1000px) {
   #rps-image,
   #italy-image,
@@ -242,12 +254,44 @@ a > img:hover {
   }
 }
 
+#rps-image,
+#italy-image,
+#etchasketch-image,
+#rpg-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.project-buttons {
+  font-size: 0.85em;
+  text-align: center;
+  padding: 0.3em;
+  margin: 0.5em;
+  display: inline-block;
+  color: rgb(112, 203, 255);
+  background-color: #313344da;
+  border-radius: 10%;
+  opacity: 0.8;
+  border: 1px solid rgb(112, 203, 255);
+}
+.project-buttons:hover {
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: 0.3s;
+  color: rgb(255, 136, 0);
+}
+
 /* Graphic Design */
 #graphic-des-content {
   @extend %flex-and-wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
+@media only screen and (min-width: 1000px) {
+  #aoe-bcard-container {
+    width: 100%;
+  }
+}
 #report-container > a,
 #willmore-container > a {
   display: contents;
@@ -295,14 +339,17 @@ a > img:hover {
   color: rgb(80, 140, 175);
   background-color: #313344da;
   margin: 0.5em;
+  border-radius: 50%;
+  opacity: 0.8;
+  border: 1px solid rgb(112, 203, 255);
 }
 
 .report-image-button:hover,
 .willmore-image-button:hover {
   cursor: pointer;
-  opacity: 0.5;
-  transition-property: opacity;
+  transition-property: color;
   transition-duration: 0.3s;
+  color: rgb(255, 136, 0);
 }
 #report-markers-container,
 #willmore-markers-container {
@@ -346,7 +393,7 @@ a > img:hover {
 }
 #aoe-bcard-container {
   @extend %flex-and-wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 #aoe-image {
   width: auto;
@@ -375,9 +422,16 @@ a > img:hover {
 #resume-content {
   padding: 2em;
 }
+@media only screen and (min-width: 1060px) {
+  #resume-content {
+    width: 1060px;
+  }
+}
+
 #resume-content h2 {
   text-align: left;
 }
+
 #resume-content div {
   margin-bottom: 1.5em;
 }
