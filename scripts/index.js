@@ -101,3 +101,15 @@ getBtns('willmore-container');
 
 showImages((slideIndex = 1), 'report-images', 'report-markers');
 showImages((slideIndex = 1), 'willmore-images', 'willmore-markers');
+
+const doc = document.createElement('img');
+doc.id = 'test';
+doc.src = '/home/mmnxii/Desktop/slice1.svg';
+doc.style.position = 'absolute';
+doc.style.top = '0';
+doc.style.right = '0';
+doc.style.left = '0';
+doc.style.opacity = '1';
+doc.style.margin = '0 auto';
+
+document.body.appendChild(doc);
