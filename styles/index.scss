@@ -512,20 +512,3 @@ table {
 #icon-container > a {
   text-decoration: none;
 }
-
-@keyframes rot {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-#test {
-  animation-name: rot;
-  animation-duration: 30s;
-  animation-iteration-count: infinite;
-  animation-direction: linear;
-  animation-timing-function: normal;
-}
