@@ -33,7 +33,10 @@ table, #resume-content p,
   border-radius: 1em;
 }
 
-#etchasketch-image, #italy-image, #rpg-image, #rps-image {
+#rps-image,
+#rpg-image,
+#italy-image,
+#etchasketch-image {
   width: 20em;
   height: auto;
 }
@@ -224,7 +227,23 @@ a > img:hover {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #rps,
+#italy,
+#etch,
+#rpg {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #rps,
+#italy,
+#etch,
+#rpg {
+    width: 50%;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -235,11 +254,44 @@ a > img:hover {
     width: auto;
   }
 }
-/* Graphic Design */
-#graphic-des-content {
-  justify-content: center;
+#rps-image,
+#italy-image,
+#etchasketch-image,
+#rpg-image {
+  display: block;
+  margin: 0 auto;
 }
 
+.project-buttons {
+  font-size: 0.85em;
+  text-align: center;
+  padding: 0.3em;
+  margin: 0.5em;
+  display: inline-block;
+  color: #70cbff;
+  background-color: #313344da;
+  border-radius: 10%;
+  opacity: 0.8;
+  border: 1px solid #70cbff;
+}
+
+.project-buttons:hover {
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: 0.3s;
+  color: #ff8800;
+}
+
+/* Graphic Design */
+#graphic-des-content {
+  justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 1000px) {
+  #aoe-bcard-container {
+    width: 100%;
+  }
+}
 #report-container > a,
 #willmore-container > a {
   display: contents;
@@ -291,14 +343,17 @@ a > img:hover {
   color: #508caf;
   background-color: #313344da;
   margin: 0.5em;
+  border-radius: 50%;
+  opacity: 0.8;
+  border: 1px solid #70cbff;
 }
 
 .report-image-button:hover,
 .willmore-image-button:hover {
   cursor: pointer;
-  opacity: 0.5;
-  transition-property: opacity;
+  transition-property: color;
   transition-duration: 0.3s;
+  color: #ff8800;
 }
 
 #report-markers-container,
@@ -346,7 +401,7 @@ a > img:hover {
 }
 
 #aoe-bcard-container {
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 #aoe-image {
@@ -378,6 +433,11 @@ a > img:hover {
   padding: 2em;
 }
 
+@media only screen and (min-width: 1060px) {
+  #resume-content {
+    width: 1060px;
+  }
+}
 #resume-content h2 {
   text-align: left;
 }
