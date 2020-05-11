@@ -104,7 +104,7 @@ showImages((slideIndex = 1), 'willmore-images', 'willmore-markers');
 
 const doc = document.createElement('img');
 doc.id = 'test';
-doc.src = '/home/mmnxii/code-projects/personal-website/images/slice1.svg';
+doc.src = './images/slice1.svg';
 doc.style.position = 'absolute';
 doc.style.top = '0';
 doc.style.right = '0';
