@@ -45,11 +45,14 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: #0e1524;
+}
 
 #main-container {
   @extend %flex-and-wrap;
   justify-content: space-around;
-  width: 96%;
+  width: 98%;
   margin: 0 auto;
 }
 #canvas-background {
@@ -66,13 +69,11 @@
 #logo-container {
   position: relative;
   width: 20%;
-  margin: auto auto 4em auto;
-}
-@media only screen and (min-width: 1100px) {
-  #logo-container {
-    justify-content: center;
-    margin-bottom: 1.5em;
-  }
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 200px;
+  max-height: 200px;
+  margin: 0.5em auto 1.5em auto;
 }
 
 @keyframes spin {
@@ -103,34 +104,84 @@
   height: 60%;
 }
 
-/* Intro Paragraph */
-#intro-container {
+/* Headers */
+#header-container {
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 2em;
+  margin-bottom: 5em;
 }
 .header {
+  text-align: center;
   font-family: header;
   letter-spacing: 0.1em;
-  line-height: 1.3em;
-  font-size: 2.5em;
+  line-height: 1em;
 }
 .name {
   color: #ae677d;
-  font-size: 4.5em;
+  font-size: 3.5em;
 }
 .web,
 .graphic {
   display: inline-block;
   color: #9890a6;
+  font-size: 1.3em;
 }
-
 .divide {
   display: inline-block;
-  color: #598489;
-  margin: auto 0.5em auto 0.5em;
+  color: #78b1b8;
+  margin: auto 0.3em auto 0.3em;
+  font-size: 1.3em;
 }
+@media only screen and (max-width: 360px) {
+  .name {
+    font-size: 2.5em;
+  }
+  .web,
+  .graphic,
+  .divide {
+    font-size: 1em;
+  }
+}
+
+/* Introdution */
+#intro-container {
+  width: 100%;
+  margin: auto auto 5em auto;
+  text-align: center;
+}
+.hello,
+.comma,
+.welcome,
+.intro-para {
+  color: #78b1b8;
+  font-size: 2em;
+}
+.intro-para {
+  line-height: 1.2em;
+  text-align: left;
+  margin: 1em auto auto auto;
+  width: 80%;
+  min-width: 395px;
+  max-width: 750px;
+}
+
+@media only screen and (max-width: 600px) {
+  .hello,
+  .comma,
+  .welcome,
+  .intro-para {
+    font-size: 1.5em;
+  }
+}
+// @media only screen and (min-width: 360px) and (max-width: 500px) {
+//   .hello,
+//   .comma,
+//   .welcome,
+//   .intro-para {
+//     font-size: 2em;
+//   }
+// }
 
 /* Work Sections General */
 #work-container {
