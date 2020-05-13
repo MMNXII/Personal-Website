@@ -18,30 +18,36 @@
       href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
       rel="stylesheet"
     />
+
     <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
     <title>Matthew Neal</title>
   </head>
   <body>
-    <canvas id="canvas-background"></canvas>
     <div id="main-container">
-      <div id="header-container">
-        <h1 id="header">Matthew Neal</h1>
+      <div id="logo-container">
+        <img id="logo-bg" alt="logo-bg" src="./images/logo/M-bg.svg" />
+        <img id="logo" alt="logo" src="./images/logo/M.svg" />
       </div>
-      <div id="profile-container">
-        <img id="profile" alt="profile picture" src="images/profile.jpg" />
+
+      <div id="header-container">
+        <h1 class="header name">Matthew Neal</h1>
+        <h1 class="header web">Web Developer</h1>
+        <h1 class="header divide">/</h1>
+        <h1 class="header graphic">Graphic Designer</h1>
       </div>
 
       <div id="intro-container">
         <p>
-          Hello, and welcome to my online hub. Here you will find various
-          projects showcased through a platform that I designed and built from
-          the ground up. I use this as my medium to the world wide web and a
-          foundation for my professional profile as a web developer and graphic
-          designer.
+          <span class="header hello">Hello</span
+          ><span class="header comma">,</span
+          ><span class="header welcome"> and welcome</span>
         </p>
-        <br />
-        <p>
-          Please view my work below
+        <p class="header intro-para">
+          Based in Las Vegas, NV, I am always interested in tackling a project
+          whether it is development, design, or better yet...both! I received my
+          B.A. in Graphic Design in 2011 and have been self-teaching web
+          development since September 2019 studying front end fundamentals and
+          everything that goes along with it. Thanks for visiting :)
         </p>
       </div>
 
@@ -443,7 +449,6 @@
       </div>
     </div>
 
-    <script src="scripts/granim.min.js"></script>
     <script src="scripts/anime.min.js"></script>
     <script src="scripts/index.js"></script>
   </body>

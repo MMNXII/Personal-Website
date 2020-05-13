@@ -1,10 +1,14 @@
 /*SASS Classes*/
+@font-face {
+  font-family: header;
+  src: url(../fonts/simple.ttf);
+}
 #aoe-bcard-container, #graphic-des-content, #main-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.captions, .sub-headers, #header {
+.captions, .sub-headers {
   font-family: "Righteous", cursive;
   text-align: center;
   color: #508caf;
@@ -13,7 +17,7 @@
 #prof-exp > h3,
 #education > h3,
 table, #resume-content p,
-#resume-content li, .sub-captions, #intro-container {
+#resume-content li, .sub-captions {
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
   color: #cecece;
@@ -49,13 +53,12 @@ table, #resume-content p,
 }
 
 body {
-  background-color: #0000;
-  background-size: 100%;
+  background-color: #0e1524;
 }
 
 #main-container {
   justify-content: space-around;
-  width: 96%;
+  width: 98%;
   margin: 0 auto;
 }
 
@@ -69,106 +72,120 @@ body {
   left: 0;
 }
 
-/* Header Text */
+/* Logo */
+#logo-container {
+  position: relative;
+  width: 20%;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 200px;
+  max-height: 200px;
+  margin: 0.5em auto 1.5em auto;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#logo-bg {
+  animation-name: spin;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  width: 100%;
+  height: 100%;
+}
+
+#logo {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  height: 60%;
+}
+
+/* Headers */
 #header-container {
   width: 100%;
-  margin-bottom: 1.1em;
-}
-
-#header {
-  letter-spacing: 0.02em;
-  color: #508caf;
-  width: 100%;
-  font-size: 3em;
-}
-
-@media only screen and (min-width: 600px) {
-  #header {
-    font-size: 4em;
-  }
-}
-@media only screen and (min-width: 1100px) {
-  #header {
-    text-align: left;
-    font-size: 5em;
-    width: 95%;
-    margin: 0 auto;
-  }
-}
-/* Profile Picture */
-#profile-container {
-  display: block;
   text-align: center;
-  width: 100%;
-  margin-bottom: 1.1em;
-}
-
-@media only screen and (min-width: 1100px) {
-  #profile-container {
-    justify-content: center;
-    width: 25%;
-    margin-left: 4.6%;
-    margin-bottom: 1.5em;
-  }
-}
-#profile {
-  width: 18%;
-  min-width: 125px;
-  max-width: 290px;
-  height: auto;
-  border-radius: 50%;
-}
-
-@media only screen and (min-width: 1100px) {
-  #profile {
-    width: 100%;
-    min-width: 135px;
-    max-width: 300px;
-    height: auto;
-    border-radius: 50%;
-  }
-}
-/* Intro Paragraph */
-#intro-container {
-  width: 98%;
   margin: 0 auto;
-  margin-bottom: 2em;
+  margin-bottom: 5em;
 }
 
-#intro-container > p {
-  font-size: 1.2em;
-  line-height: 1.3em;
+.header {
+  text-align: center;
+  font-family: header;
+  letter-spacing: 0.1em;
+  line-height: 1em;
 }
 
-@media only screen and (min-width: 360px) and (max-width: 599px) {
-  #intro-container {
-    width: 440px;
+.name {
+  color: #ae677d;
+  font-size: 3.5em;
+}
+
+.web,
+.graphic {
+  display: inline-block;
+  color: #9890a6;
+  font-size: 1.3em;
+}
+
+.divide {
+  display: inline-block;
+  color: #78b1b8;
+  margin: auto 0.3em auto 0.3em;
+  font-size: 1.3em;
+}
+
+@media only screen and (max-width: 360px) {
+  .name {
+    font-size: 2.5em;
+  }
+
+  .web,
+.graphic,
+.divide {
+    font-size: 1em;
   }
 }
-@media only screen and (min-width: 600px) {
-  #intro-container {
-    width: 600px;
-  }
+/* Introdution */
+#intro-container {
+  width: 100%;
+  margin: auto auto 5em auto;
+  text-align: center;
 }
-@media only screen and (min-width: 840px) {
-  #intro-container {
-    margin-top: 1em;
-    width: 770px;
-  }
+
+.hello,
+.comma,
+.welcome,
+.intro-para {
+  color: #78b1b8;
+  font-size: 2em;
 }
-@media only screen and (min-width: 1105px) {
-  #intro-container {
-    margin-top: 3em;
-  }
+
+.intro-para {
+  line-height: 1.2em;
+  text-align: left;
+  margin: 1em auto auto auto;
+  width: 80%;
+  min-width: 395px;
+  max-width: 750px;
 }
-@media only screen and (min-width: 600px) {
-  #intro-container > p {
-    font-size: 1.4em;
-  }
-}
-@media only screen and (min-width: 1105px) {
-  #intro-container > p {
-    font-size: 1.8em;
+
+@media only screen and (max-width: 600px) {
+  .hello,
+.comma,
+.welcome,
+.intro-para {
+    font-size: 1.5em;
   }
 }
 /* Work Sections General */

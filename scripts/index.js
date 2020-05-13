@@ -1,31 +1,55 @@
 (introAnime = () => {
-  const animation = anime({
-    targets:
-      '#header, #profile, #intro-container, #work-container, #icon-container',
-    duration: 500,
-    delay: anime.stagger(300, { start: 300, from: 'first' }),
-    easing: 'easeInOutSine',
+  const logo = anime({
+    targets: '#logo-container',
+    duration: 2500,
+    delay: 300,
+    translateY: ['-20rem', 0],
+    direction: 'normal',
+    easing: 'spring(1, 80, 10, 0)',
+  });
+  const name = anime({
+    targets: '.name',
+    delay: 600,
+    duration: 1500,
+    translateY: ['-2rem', 0],
     opacity: [0, 1],
-    translateY: ['-1rem', 0],
+    direction: 'normal',
+    easing: 'spring(1, 80, 10, 0)',
+  });
+  const titles = anime({
+    targets: '.web, .divide, .graphic',
+    delay: 700,
+    duration: 1500,
+    translateY: ['-2rem', 0],
+    opacity: [0, 1],
+    direction: 'normal',
+    easing: 'spring(1, 80, 10, 0)',
+  });
+  const introHeader = anime({
+    targets: '#intro-container',
+    delay: 2500,
+    duration: 2500,
+    opacity: [0, 1],
+    direction: 'normal',
+    keyframes: [{ translateX: ['-2rem', '5rem'] }, { translateX: 0 }],
+    duration: 4000,
+    easing: 'easeOutElastic(1, .8)',
+  });
+  const introHeaderCommaWelcome = anime({
+    targets: '.comma, .welcome',
+    delay: 4500,
+    duration: 2000,
+    easing: 'easeInOutExpo',
+    opacity: [0, 1],
     direction: 'normal',
   });
-})();
-
-(background = () => {
-  const canvasEl = document.getElementById('#canvas-div');
-
-  const granimInstance = new Granim({
-    element: '#canvas-background',
-    direction: 'diagonal',
-    isPausedWhenNotInView: true,
-    states: {
-      'default-state': {
-        gradients: [
-          ['#0e1524', '#141a29'],
-          ['#0e1b24', '#111c24'],
-        ],
-      },
-    },
+  const intro = anime({
+    targets: '.intro-para',
+    delay: 5000,
+    duration: 2000,
+    easing: 'easeInOutExpo',
+    opacity: [0, 1],
+    direction: 'normal',
   });
 })();
 
