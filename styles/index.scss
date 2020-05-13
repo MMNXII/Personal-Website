@@ -1,4 +1,8 @@
 /*SASS Classes*/
+@font-face {
+  font-family: header;
+  src: url(../fonts/simple.ttf);
+}
 %flex-and-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -41,10 +45,7 @@
   margin: 0;
   padding: 0;
 }
-body {
-  background-color: #0000;
-  background-size: 100%;
-}
+
 #main-container {
   @extend %flex-and-wrap;
   justify-content: space-around;
@@ -61,105 +62,74 @@ body {
   left: 0;
 }
 
-/* Header Text */
-#header-container {
-  width: 100%;
-  margin-bottom: 1.1em;
-}
-#header {
-  @extend %script-text;
-  letter-spacing: 0.02em;
-  color: rgb(80, 140, 175);
-  width: 100%;
-  font-size: 3em;
-}
-@media only screen and (min-width: 600px) {
-  #header {
-    font-size: 4em;
-  }
+/* Logo */
+#logo-container {
+  position: relative;
+  width: 20%;
+  margin: auto auto 4em auto;
 }
 @media only screen and (min-width: 1100px) {
-  #header {
-    text-align: left;
-    font-size: 5em;
-    width: 95%;
-    margin: 0 auto;
-  }
-}
-
-/* Profile Picture */
-#profile-container {
-  display: block;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 1.1em;
-}
-@media only screen and (min-width: 1100px) {
-  #profile-container {
+  #logo-container {
     justify-content: center;
-    width: 25%;
-    margin-left: 4.6%;
     margin-bottom: 1.5em;
   }
 }
-#profile {
-  width: 18%;
-  min-width: 125px;
-  max-width: 290px;
-  height: auto;
-  border-radius: 50%;
-}
-@media only screen and (min-width: 1100px) {
-  #profile {
-    width: 100%;
-    min-width: 135px;
-    max-width: 300px;
-    height: auto;
-    border-radius: 50%;
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#logo-bg {
+  animation-name: spin;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  width: 100%;
+  height: 100%;
+}
+
+#logo {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  height: 60%;
 }
 
 /* Intro Paragraph */
 #intro-container {
-  @extend %standard-text;
-  width: 98%;
+  width: 100%;
+  text-align: center;
   margin: 0 auto;
   margin-bottom: 2em;
 }
-#intro-container > p {
-  font-size: 1.2em;
+.header {
+  font-family: header;
+  letter-spacing: 0.1em;
   line-height: 1.3em;
+  font-size: 2.5em;
 }
-@media only screen and (min-width: 360px) and (max-width: 599px) {
-  #intro-container {
-    width: 440px;
-  }
+.name {
+  color: #ae677d;
+  font-size: 4.5em;
 }
-@media only screen and (min-width: 600px) {
-  #intro-container {
-    width: 600px;
-  }
+.web,
+.graphic {
+  display: inline-block;
+  color: #9890a6;
 }
-@media only screen and (min-width: 840px) {
-  #intro-container {
-    margin-top: 1em;
-    width: 770px;
-  }
-}
-@media only screen and (min-width: 1105px) {
-  #intro-container {
-    margin-top: 3em;
-  }
-}
-@media only screen and (min-width: 600px) {
-  #intro-container > p {
-    font-size: 1.4em;
-  }
-}
-@media only screen and (min-width: 1105px) {
-  #intro-container > p {
-    font-size: 1.8em;
-  }
+
+.divide {
+  display: inline-block;
+  color: #598489;
+  margin: auto 0.5em auto 0.5em;
 }
 
 /* Work Sections General */

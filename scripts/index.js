@@ -1,7 +1,7 @@
 (introAnime = () => {
   const animation = anime({
     targets:
-      '#header, #profile, #intro-container, #work-container, #icon-container',
+      '#logo-container, #intro-container, #work-container, #icon-container',
     duration: 500,
     delay: anime.stagger(300, { start: 300, from: 'first' }),
     easing: 'easeInOutSine',
