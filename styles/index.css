@@ -72,7 +72,7 @@ body {
   width: 100%;
 }
 
-@media only screen and (max-width: 1040px) {
+@media only screen and (max-width: 1200px) {
   #banner {
     display: none;
   }
@@ -226,7 +226,6 @@ body {
 /***************** Page Links ******************/
 #page-links-container {
   position: absolute;
-  display: inline;
   margin: 1.3em auto auto auto;
   top: 0;
   right: 0;
@@ -236,21 +235,47 @@ body {
   list-style-type: none;
 }
 
-#divide-link1,
-#divide-link2 {
+#divide1,
+#divide2 {
   color: #78b1b8;
 }
 
 .page-links {
-  color: #9890a6;
   display: inline-block;
   font-size: 1.3em;
   margin: auto 0.7em auto auto;
 }
 
-@media only screen and (min-width: 1040px) and (max-width: 1339px) {
+@media only screen and (max-width: 750px) {
+  .page-links {
+    display: block;
+    text-align: right;
+  }
+}
+.page-anchors {
+  color: #9890a6;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1200px) {
   .page-links {
     font-size: 1.5em;
+  }
+
+  .page-anchors {
+    color: #9890a6;
+  }
+
+  #page-links-container {
+    margin: 1em auto auto auto;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1339px) {
+  .page-links {
+    font-size: 1.5em;
+  }
+
+  .page-anchors {
     color: #202435;
   }
 
@@ -261,6 +286,9 @@ body {
 @media only screen and (min-width: 1340px) {
   .page-links {
     font-size: 1.7em;
+  }
+
+  .page-anchors {
     color: #202435;
   }
 }
