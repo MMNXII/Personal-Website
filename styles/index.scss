@@ -3,37 +3,41 @@
   font-family: header;
   src: url(../fonts/simple.ttf);
 }
+
 %flex-and-wrap {
   display: flex;
   flex-wrap: wrap;
 }
+
 %script-text {
   font-family: 'Righteous', cursive;
   text-align: center;
   color: rgb(80, 140, 175);
 }
+
 %standard-text {
   font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
   color: #cecece;
 }
+
 %sub-headers {
   font-size: 2em;
   border-radius: 14em;
   background: rgb(231, 0, 145);
-  background: linear-gradient(
-    90deg,
-    rgba(231, 0, 145, 0) 0%,
-    rgba(49, 51, 68, 1) 53%,
-    rgba(255, 0, 0, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(231, 0, 145, 0) 0%,
+      rgba(49, 51, 68, 1) 53%,
+      rgba(255, 0, 0, 0) 100%);
   transition-duration: 0.5s;
   margin-top: 2em;
   margin-bottom: 0.2em;
 }
+
 %work-sections {
   border-radius: 1em;
 }
+
 %web-dev-img-height-width {
   width: 20em;
   height: auto;
@@ -44,46 +48,46 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: .2px solid yellow;
 }
+
 body {
   background-color: #0e1524;
 }
 
 #main-container {
   @extend %flex-and-wrap;
-  justify-content: space-around;
-  width: 98%;
-  margin: 0 auto;
-}
-#canvas-background {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  justify-content: center;
+  margin: auto;
 }
 
 /* Logo */
 #logo-container {
-  position: relative;
-  width: 20%;
+  width: fit-content;
   min-width: 100px;
   min-height: 100px;
-  max-width: 200px;
-  max-height: 200px;
-  margin: 0.5em auto 1.5em auto;
+  max-width: 100px;
+  max-height: 100px;
+  margin: .7em auto 1em auto;
+}
+
+@media only screen and (min-width: 700px) {
+  #logo-container {
+    display: inline-block;
+    margin: .7em;
+  }
 }
 
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 #logo-bg {
   animation-name: spin;
   animation-duration: 40s;
@@ -106,37 +110,51 @@ body {
 
 /* Headers */
 #header-container {
-  width: 100%;
+  width: fit-content;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 5em;
 }
+
+@media only screen and (min-width: 700px) {
+  #header-container {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -.8em;
+  }
+}
+
 .header {
   text-align: center;
   font-family: header;
   letter-spacing: 0.1em;
   line-height: 1em;
 }
+
 .name {
   color: #ae677d;
   font-size: 3.5em;
 }
+
 .web,
 .graphic {
   display: inline-block;
   color: #9890a6;
-  font-size: 1.2em;
+  font-size: 1.125em;
 }
+
 .divide {
   display: inline-block;
   color: #78b1b8;
-  margin: auto 0.3em auto 0.3em;
+  margin: auto 0.2em auto 0.2em;
   font-size: 1.2em;
 }
+
 @media only screen and (max-width: 360px) {
   .name {
     font-size: 2.5em;
   }
+
   .web,
   .graphic,
   .divide {
@@ -150,34 +168,37 @@ body {
   margin: auto auto 5em auto;
   text-align: center;
 }
+
 .hello,
-.comma,
-.welcome,
+.comma-welcome,
 .intro-para {
   color: #78b1b8;
-  font-size: 2em;
+  font-size: 1.8em;
 }
+
 .hello,
 .comma-welcome {
   display: inline;
 }
+
 .intro-para {
   line-height: 1.2em;
-  text-align: left;
+  text-align: center;
   margin: 1em auto auto auto;
-  width: 80%;
+  width: 85%;
   min-width: 300px;
   max-width: 750px;
 }
 
 @media only screen and (max-width: 600px) {
+
   .hello,
-  .comma,
-  .welcome,
+  .comma-welcome,
   .intro-para {
     font-size: 1.5em;
   }
 }
+
 // @media only screen and (min-width: 360px) and (max-width: 500px) {
 //   .hello,
 //   .comma,
@@ -194,43 +215,52 @@ body {
   width: 96%;
   margin-bottom: 1em;
 }
-a > img {
+
+a>img {
   border: 3px solid rgba(255, 136, 0, 0);
 }
-a > img:hover {
+
+a>img:hover {
   opacity: 0.6;
   transition-property: opacity;
   transition-duration: 0.3s;
 }
+
 .sub-headers {
   @extend %script-text;
   @extend %sub-headers;
   color: #636fa1;
 }
+
 .work-section {
   @extend %work-sections;
 }
+
 #web-dev-content,
 #graphic-des-content {
   padding: 2em;
 }
+
 .captions {
   @extend %script-text;
   font-size: 1.6em;
   margin-top: 0.2em;
 }
+
 .sub-captions {
   @extend %standard-text;
   width: 268px;
   font-size: 1.3em;
   margin: 0 auto;
 }
+
 .code-captions {
   font-size: 1em;
   margin-top: 0.8em;
   margin-bottom: 2em;
   color: rgb(80, 136, 170);
 }
+
 @media only screen and (min-width: 700px) {
   .sub-captions {
     width: 450px;
@@ -248,6 +278,7 @@ a > img:hover {
 }
 
 @media only screen and (max-width: 1000px) {
+
   #rps,
   #italy,
   #etch,
@@ -255,7 +286,9 @@ a > img:hover {
     width: 100%;
   }
 }
+
 @media only screen and (min-width: 1000px) {
+
   #rps,
   #italy,
   #etch,
@@ -263,6 +296,7 @@ a > img:hover {
     width: 50%;
   }
 }
+
 #rps-image,
 #rpg-image,
 #italy-image,
@@ -271,6 +305,7 @@ a > img:hover {
 }
 
 @media only screen and (min-width: 1000px) {
+
   #rps-image,
   #italy-image,
   #etchasketch-image {
@@ -299,6 +334,7 @@ a > img:hover {
   opacity: 0.8;
   border: 1px solid rgb(112, 203, 255);
 }
+
 .project-buttons:hover {
   cursor: pointer;
   transition-property: color;
@@ -317,21 +353,25 @@ a > img:hover {
     width: 100%;
   }
 }
-#report-container > a,
-#willmore-container > a {
+
+#report-container>a,
+#willmore-container>a {
   display: contents;
 }
+
 .report-images {
   display: inline-block;
   width: auto;
   height: 7em;
   margin: 0 auto;
 }
+
 @media only screen and (min-width: 650px) and (max-width: 999px) {
   .report-images {
     height: 11.5em;
   }
 }
+
 @media only screen and (min-width: 1000px) {
   .report-images {
     height: 16em;
@@ -345,18 +385,22 @@ a > img:hover {
   width: auto;
   height: 15em;
 }
+
 @media only screen and (min-width: 650px) {
   .willmore-images {
     height: 19.5em;
   }
 }
-.sub-captions > a {
+
+.sub-captions>a {
   text-decoration: none;
   color: rgb(98, 175, 219);
 }
-.sub-captions > a:hover {
+
+.sub-captions>a:hover {
   color: rgb(80, 140, 175);
 }
+
 .report-image-button,
 .willmore-image-button {
   width: 2em;
@@ -376,6 +420,7 @@ a > img:hover {
   transition-duration: 0.3s;
   color: rgb(255, 136, 0);
 }
+
 #report-markers-container,
 #willmore-markers-container {
   position: absolute;
@@ -385,24 +430,29 @@ a > img:hover {
   margin-top: 0.5em;
   margin-left: 3em;
 }
+
 #willmore-markers-container {
   margin-left: 1.5em;
 }
+
 @media only screen and (min-width: 650px) {
   #report-markers-container {
     margin-left: 8em;
   }
 }
+
 @media only screen and (min-width: 1000px) {
   #report-markers-container {
     margin-left: 16em;
   }
 }
+
 @media only screen and (min-width: 650px) {
   #willmore-markers-container {
     margin-left: 3em;
   }
 }
+
 .report-markers,
 .willmore-markers {
   margin: 0.2em;
@@ -412,30 +462,37 @@ a > img:hover {
   background-color: rgba(255, 255, 255, 0.267);
   border-radius: 50%;
 }
+
 #report-marker-1,
 #willmore-marker-1 {
   background-color: rgba(255, 255, 255, 0.801);
 }
+
 #aoe-bcard-container {
   @extend %flex-and-wrap;
   justify-content: space-evenly;
 }
+
 #aoe-image {
   width: auto;
   height: 15em;
 }
+
 @media only screen and (min-width: 650px) {
   #aoe-image {
     width: auto;
     height: 22em;
   }
 }
+
 #personal-bcard1,
 #personal-bcard2 {
   width: 22em;
   height: auto;
 }
+
 @media only screen and (min-width: 650px) {
+
   #personal-bcard1,
   #personal-bcard2 {
     width: auto;
@@ -447,6 +504,7 @@ a > img:hover {
 #resume-content {
   padding: 2em;
 }
+
 @media only screen and (min-width: 1060px) {
   #resume-content {
     width: 1060px;
@@ -460,31 +518,38 @@ a > img:hover {
 #resume-content div {
   margin-bottom: 1.5em;
 }
+
 #resume-content p,
 #resume-content li {
   @extend %standard-text;
   text-align: left;
   font-size: 1.2em;
 }
+
 #resume-content li {
   margin-top: 0.3em;
   margin-left: 1.5em;
 }
-#prof-exp > h3,
-#education > h3,
+
+#prof-exp>h3,
+#education>h3,
 table {
   @extend %standard-text;
   text-align: left;
   font-size: 1.2em;
 }
+
 #client-list {
   margin-top: 0.6em;
   display: inline-block;
 }
+
 #client-list-right {
   display: inline-block;
 }
+
 @media only screen and (max-width: 605px) {
+
   #client-list,
   #client-list-right {
     display: block;
@@ -501,17 +566,19 @@ table {
   text-align: center;
   z-index: 1;
 }
-@media only screen and (min-width: 1100px) {
+
+@media only screen and (min-width: 700px) {
   #icon-container {
     position: absolute;
-    top: 3%;
-    right: 3%;
-    width: 20%;
-    height: 15%;
+    top: 2em;
+    right: .7em;
+    width: fit-content;
+    height: fit-content;
     text-align: right;
     background-color: rgba(24, 100, 155, 0);
   }
 }
+
 .icon {
   width: 2.2rem;
   height: 2.2rem;
@@ -520,20 +587,24 @@ table {
   transition-duration: 0.5s;
   border: none;
 }
+
 @media only screen and (min-width: 1100px) {
   .icon {
     width: 3.2rem;
     height: 3.2rem;
   }
 }
+
 #resume {
   margin-top: 0;
   margin-left: -0.1rem;
 }
+
 .icon:hover {
   opacity: 0.4;
   border: none;
 }
-#icon-container > a {
+
+#icon-container>a {
   text-decoration: none;
 }
