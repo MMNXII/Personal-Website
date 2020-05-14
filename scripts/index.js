@@ -31,12 +31,12 @@
     duration: 2500,
     opacity: [0, 1],
     direction: 'normal',
-    keyframes: [{ translateX: ['-2rem', '5rem'] }, { translateX: 0 }],
+    translateX: ['-2em', 0],
     duration: 4000,
     easing: 'easeOutElastic(1, .8)',
   });
   const introHeaderCommaWelcome = anime({
-    targets: '.comma, .welcome',
+    targets: '.comma-welcome',
     delay: 4500,
     duration: 2000,
     easing: 'easeInOutExpo',

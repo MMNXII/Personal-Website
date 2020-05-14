@@ -125,13 +125,13 @@ body {
 .graphic {
   display: inline-block;
   color: #9890a6;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 .divide {
   display: inline-block;
   color: #78b1b8;
   margin: auto 0.3em auto 0.3em;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 @media only screen and (max-width: 360px) {
   .name {
@@ -156,6 +156,10 @@ body {
 .intro-para {
   color: #78b1b8;
   font-size: 2em;
+}
+.hello,
+.comma-welcome {
+  display: inline;
 }
 .intro-para {
   line-height: 1.2em;
