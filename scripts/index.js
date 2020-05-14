@@ -53,8 +53,7 @@
   });
   const icon = anime({
     targets: '.icon',
-    delay: anime.stagger(100, { start: 700 }),
-    duration: 1500,
+    delay: anime.stagger(50, { start: 700 }),
     translateY: ['-2rem', 0],
     opacity: [0, 1],
     direction: 'normal',
