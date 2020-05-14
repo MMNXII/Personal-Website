@@ -22,7 +22,9 @@
     <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
     <title>Matthew Neal</title>
   </head>
-  <body>
+  <body id="show">
+    <img id="banner" src="images/t.svg" />
+
     <div id="logo-container">
       <img id="logo-bg" alt="logo-bg" src="./images/logo/M-bg.svg" />
       <img id="logo" alt="logo" src="./images/logo/M.svg" />
@@ -31,11 +33,11 @@
     <div id="header-container">
       <h1 class="header name">Matthew Neal</h1>
       <h1 class="header web">Front End Developer</h1>
-      <h1 class="header divide">/</h1>
+      <h1 class="header divide">|</h1>
       <h1 class="header graphic">Graphic Designer</h1>
     </div>
 
-    <div id="icon-container">
+    <div id="social-media-icon-container">
       <a href="https://www.linkedin.com/in/matthewneal1202/" target="_blank">
         <img
           class="icon"
@@ -69,6 +71,25 @@
         />
       </a>
     </div>
+    <nav id="page-links-container">
+      <ul>
+        <li class="header page-links web-link">
+          <h5>Web Development</h5>
+        </li>
+        <li class="header page-links" id="divide-link1">
+          <h5>|</h5>
+        </li>
+        <li class="header page-links graphic-link">
+          <h5>Graphic Design</h5>
+        </li>
+        <li class="header page-links" id="divide-link2">
+          <h5>|</h5>
+        </li>
+        <li class="header page-links experience-link">
+          <h5>Experience</h5>
+        </li>
+      </ul>
+    </nav>
 
     <div id="main-container">
       <div id="intro-container">
@@ -83,7 +104,7 @@
         </p>
       </div>
 
-      <div id="work-container">
+      <div id="work-container" loading="lazy">
         <h3 class="sub-headers" id="web-dev-header">Web Development</h3>
         <div class="work-section" id="web-dev-section">
           <div id="web-dev-content">
@@ -327,7 +348,7 @@
         <div class="work-section" id="resume-section">
           <div id="resume-content">
             <div id="summary">
-              <h2 class="captions">Summary</h2>
+              <h5 class="captions">Summary</h5>
               <p>
                 Aspiring web developer with a background in graphic design and
                 skills in various web technologies. Exceptionally creative,
@@ -339,7 +360,7 @@
               </p>
             </div>
             <div id="technical">
-              <h2 class="captions">Technical Skills</h2>
+              <h5 class="captions">Technical Skills</h5>
               <ul id="tech-list">
                 <li class="tech-head">
                   <b>Languages:</b> HTML, CSS, SCSS / SASS, JavaScript
@@ -356,7 +377,7 @@
               </ul>
             </div>
             <div id="prof-exp">
-              <h2 class="captions">Professional Experience</h2>
+              <h5 class="captions">Professional Experience</h5>
               <h3 id="abc-header">
                 ABC Imaging of Washington, Las Vegas, NV<br />
                 Assistant Shop Manager<br />
@@ -391,7 +412,7 @@
               </ul>
             </div>
             <div id="education">
-              <h2 class="captions">Education</h2>
+              <h5 class="captions">Education</h5>
               <h3 id="csulb-header">
                 B.A. Graphic Design, California State University Long Beach
                 <br />

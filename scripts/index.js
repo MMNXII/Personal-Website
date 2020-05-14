@@ -1,4 +1,15 @@
+document.getElementById('show').style.display = 'block';
+
 (introAnime = () => {
+  const banner = anime({
+    targets: '#banner',
+    delay: 700,
+    duration: 1500,
+    translateY: ['-2rem', 0],
+    opacity: [0, 1],
+    direction: 'normal',
+    easing: 'spring(1, 80, 10, 0)',
+  });
   const logo = anime({
     targets: '#logo-container',
     duration: 2500,
@@ -20,6 +31,14 @@
     targets: '.web, .divide, .graphic',
     delay: 700,
     duration: 1500,
+    translateY: ['-2rem', 0],
+    opacity: [0, 1],
+    direction: 'normal',
+    easing: 'spring(1, 80, 10, 0)',
+  });
+  const icon = anime({
+    targets: '.icon',
+    delay: anime.stagger(50, { start: 700 }),
     translateY: ['-2rem', 0],
     opacity: [0, 1],
     direction: 'normal',
@@ -51,13 +70,21 @@
     opacity: [0, 1],
     direction: 'normal',
   });
-  const icon = anime({
-    targets: '.icon',
+  const pageLinks = anime({
+    targets: '.page-links',
     delay: anime.stagger(50, { start: 700 }),
     translateY: ['-2rem', 0],
     opacity: [0, 1],
     direction: 'normal',
     easing: 'spring(1, 80, 10, 0)',
+  });
+  const work = anime({
+    targets: '#work-container',
+    delay: 8000,
+    duration: 3000,
+    opacity: [0, 1],
+    easing: 'easeInOutExpo',
+    direction: 'normal',
   });
 })();
 

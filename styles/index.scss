@@ -1,4 +1,4 @@
-/*SASS Classes*/
+/***************** SASS Classes ******************/
 @font-face {
   font-family: header;
   src: url(../fonts/simple.ttf);
@@ -45,25 +45,38 @@
   height: auto;
 }
 
-/*General Page*/
+/***************** General ******************/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   // border: 0.2px solid yellow;
 }
-
-body {
+html {
   background-color: #0e1524;
 }
-
+body {
+  display: none;
+  background-color: #0e1524;
+}
 #main-container {
   @extend %flex-and-wrap;
   justify-content: center;
   margin: auto;
 }
 
-/* Logo */
+/***************** Top Banner ******************/
+#banner {
+  position: absolute;
+  width: 100%;
+}
+@media only screen and (max-width: 1040px) {
+  #banner {
+    display: none;
+  }
+}
+
+/***************** Logo ******************/
 #logo-container {
   width: fit-content;
   min-width: 100px;
@@ -72,14 +85,12 @@ body {
   max-height: 100px;
   margin: 0.7em auto 1em auto;
 }
-
 @media only screen and (min-width: 700px) {
   #logo-container {
     display: inline-block;
     margin: 0.7em;
   }
 }
-
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -89,7 +100,6 @@ body {
     transform: rotate(360deg);
   }
 }
-
 #logo-bg {
   animation-name: spin;
   animation-duration: 40s;
@@ -98,7 +108,6 @@ body {
   width: 100%;
   height: 100%;
 }
-
 #logo {
   position: absolute;
   margin: auto;
@@ -110,14 +119,13 @@ body {
   height: 60%;
 }
 
-/* Headers */
+/***************** Headers ******************/
 #header-container {
   width: fit-content;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 5em;
 }
-
 @media only screen and (min-width: 700px) {
   #header-container {
     display: inline-block;
@@ -126,38 +134,32 @@ body {
     vertical-align: top;
   }
 }
-
 .header {
   text-align: center;
   font-family: header;
   letter-spacing: 0.1em;
   line-height: 1.1em;
 }
-
 .name {
   color: #ae677d;
   font-size: 3em;
 }
-
 .web,
 .graphic {
   display: inline-block;
   color: #9890a6;
   font-size: 0.97em;
 }
-
 .divide {
   display: inline-block;
   color: #78b1b8;
   margin: auto 0.2em auto 0.2em;
   font-size: 0.9em;
 }
-
 @media only screen and (max-width: 360px) {
   .name {
     font-size: 2.5em;
   }
-
   .web,
   .graphic,
   .divide {
@@ -165,9 +167,100 @@ body {
   }
 }
 
-/* Introdution */
-#intro-container {
+/***************** Social Media Icons ******************/
+#social-media-icon-container {
+  position: fixed;
+  display: inline-block;
+  bottom: 0;
   width: 100%;
+  text-align: center;
+  background-color: #0e1524;
+  z-index: 1;
+}
+#social-media-icon-container > a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 700px) {
+  #social-media-icon-container {
+    position: relative;
+    display: block;
+    width: fit-content;
+    background-color: #0e152400;
+    margin-bottom: 5em;
+    margin-left: 9.2em;
+    margin-top: -1.6em;
+  }
+}
+
+.icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0.3em;
+  justify-content: space-between;
+  border: none;
+}
+
+@media only screen and (min-width: 700px) {
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+#resume {
+  margin-top: 0;
+  margin-left: -0.1rem;
+}
+
+.icon:hover {
+  filter: brightness(0.7);
+}
+
+/***************** Page Links ******************/
+
+#page-links-container {
+  position: absolute;
+  display: inline;
+  margin: 1.3em auto auto auto;
+  top: 0;
+  right: 0;
+}
+
+#page-links-container > ul {
+  list-style-type: none;
+}
+
+#divide-link1,
+#divide-link2 {
+  color: #78b1b8;
+}
+
+.page-links {
+  color: #9890a6;
+  display: inline-block;
+  font-size: 1.3em;
+  margin: auto 0.7em auto auto;
+}
+@media only screen and (min-width: 1040px) and (max-width: 1339px) {
+  .page-links {
+    font-size: 1.5em;
+    color: #202435;
+  }
+  #page-links-container {
+    margin: 1em auto auto auto;
+  }
+}
+@media only screen and (min-width: 1340px) {
+  .page-links {
+    font-size: 1.7em;
+    color: #202435;
+  }
+}
+
+/***************** Introduction ******************/
+#intro-container {
+  width: 99%;
   margin: auto auto 5em auto;
   text-align: center;
 }
@@ -201,20 +294,18 @@ body {
   }
 }
 
-/* Work Sections General */
+/***************** Work General ******************/
 #work-container {
   text-align: center;
   justify-content: center;
   width: 96%;
   margin-bottom: 1em;
 }
-
 #report-container > a > img,
 #willmore-container > a > img,
 #aoe-bcard-container > a > img {
   border: 3px solid rgba(255, 136, 0, 0);
 }
-
 #report-container > a > img:hover,
 #willmore-container > a > img:hover,
 #aoe-box > a > img:hover,
@@ -223,49 +314,42 @@ body {
   transition-property: opacity;
   transition-duration: 0.3s;
 }
-
 .sub-headers {
   @extend %script-text;
   @extend %sub-headers;
   color: #636fa1;
 }
-
 .work-section {
   @extend %work-sections;
 }
-
 #web-dev-content,
 #graphic-des-content {
   padding: 2em;
 }
-
 .captions {
   @extend %script-text;
   font-size: 1.6em;
   margin-top: 0.2em;
 }
-
 .sub-captions {
   @extend %standard-text;
   width: 268px;
   font-size: 1.3em;
   margin: 0 auto;
 }
-
 .code-captions {
   font-size: 1em;
   margin-top: 0.8em;
   margin-bottom: 2em;
   color: rgb(80, 136, 170);
 }
-
 @media only screen and (min-width: 700px) {
   .sub-captions {
     width: 450px;
   }
 }
 
-/* Web Development */
+/***************** Web Development ******************/
 @media only screen and (min-width: 1000px) {
   #web-dev-content {
     display: flex;
@@ -274,7 +358,6 @@ body {
     justify-content: center;
   }
 }
-
 @media only screen and (max-width: 1000px) {
   #rps,
   #italy,
@@ -283,7 +366,6 @@ body {
     width: 100%;
   }
 }
-
 @media only screen and (min-width: 1000px) {
   #rps,
   #italy,
@@ -292,14 +374,12 @@ body {
     width: 50%;
   }
 }
-
 #rps-image,
 #rpg-image,
 #italy-image,
 #etchasketch-image {
   @extend %web-dev-img-height-width;
 }
-
 @media only screen and (min-width: 1000px) {
   #rps-image,
   #italy-image,
@@ -308,7 +388,6 @@ body {
     width: auto;
   }
 }
-
 #rps-image,
 #italy-image,
 #etchasketch-image,
@@ -316,7 +395,6 @@ body {
   display: block;
   margin: 0 auto;
 }
-
 .project-buttons {
   font-size: 0.85em;
   text-align: center;
@@ -329,7 +407,6 @@ body {
   opacity: 0.8;
   border: 1px solid rgb(112, 203, 255);
 }
-
 .project-buttons:hover {
   cursor: pointer;
   transition-property: color;
@@ -337,7 +414,7 @@ body {
   color: rgb(255, 136, 0);
 }
 
-/* Graphic Design */
+/***************** Graphic Design ******************/
 #graphic-des-content {
   @extend %flex-and-wrap;
   justify-content: space-evenly;
@@ -348,31 +425,26 @@ body {
     width: 100%;
   }
 }
-
 #report-container > a,
 #willmore-container > a {
   display: contents;
 }
-
 .report-images {
   display: inline-block;
   width: auto;
   height: 7em;
   margin: 0 auto;
 }
-
 @media only screen and (min-width: 650px) and (max-width: 999px) {
   .report-images {
     height: 11.5em;
   }
 }
-
 @media only screen and (min-width: 1000px) {
   .report-images {
     height: 16em;
   }
 }
-
 .willmore-images {
   display: block;
   margin: 0 auto;
@@ -380,22 +452,18 @@ body {
   width: auto;
   height: 15em;
 }
-
 @media only screen and (min-width: 650px) {
   .willmore-images {
     height: 19.5em;
   }
 }
-
 .sub-captions > a {
   text-decoration: none;
   color: rgb(98, 175, 219);
 }
-
 .sub-captions > a:hover {
   color: rgb(80, 140, 175);
 }
-
 .report-image-button,
 .willmore-image-button {
   width: 2em;
@@ -407,7 +475,6 @@ body {
   opacity: 0.8;
   border: 1px solid rgb(112, 203, 255);
 }
-
 .report-image-button:hover,
 .willmore-image-button:hover {
   cursor: pointer;
@@ -415,7 +482,6 @@ body {
   transition-duration: 0.3s;
   color: rgb(255, 136, 0);
 }
-
 #report-markers-container,
 #willmore-markers-container {
   position: absolute;
@@ -425,29 +491,24 @@ body {
   margin-top: 0.5em;
   margin-left: 3em;
 }
-
 #willmore-markers-container {
   margin-left: 1.5em;
 }
-
 @media only screen and (min-width: 650px) {
   #report-markers-container {
     margin-left: 8em;
   }
 }
-
 @media only screen and (min-width: 1000px) {
   #report-markers-container {
     margin-left: 16em;
   }
 }
-
 @media only screen and (min-width: 650px) {
   #willmore-markers-container {
     margin-left: 3em;
   }
 }
-
 .report-markers,
 .willmore-markers {
   margin: 0.2em;
@@ -457,35 +518,29 @@ body {
   background-color: rgba(255, 255, 255, 0.267);
   border-radius: 50%;
 }
-
 #report-marker-1,
 #willmore-marker-1 {
   background-color: rgba(255, 255, 255, 0.801);
 }
-
 #aoe-bcard-container {
   @extend %flex-and-wrap;
   justify-content: space-evenly;
 }
-
 #aoe-image {
   width: auto;
   height: 15em;
 }
-
 @media only screen and (min-width: 650px) {
   #aoe-image {
     width: auto;
     height: 22em;
   }
 }
-
 #personal-bcard1,
 #personal-bcard2 {
   width: 22em;
   height: auto;
 }
-
 @media only screen and (min-width: 650px) {
   #personal-bcard1,
   #personal-bcard2 {
@@ -494,11 +549,10 @@ body {
   }
 }
 
-/* Resume */
+/***************** Resume ******************/
 #resume-content {
   padding: 2em;
 }
-
 @media only screen and (min-width: 1060px) {
   #resume-content {
     width: 1060px;
@@ -547,54 +601,4 @@ table {
   #client-list-right {
     display: block;
   }
-}
-
-/* footer */
-#icon-container {
-  position: fixed;
-  display: inline-block;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  background-color: #0e1524;
-  z-index: 1;
-}
-
-@media only screen and (min-width: 700px) {
-  #icon-container {
-    position: relative;
-    display: block;
-    width: fit-content;
-    background-color: #0e1524;
-    margin-bottom: 5em;
-    margin-left: 9.2em;
-    margin-top: -1.6em;
-  }
-}
-
-.icon {
-  width: 2.2rem;
-  height: 2.2rem;
-  margin: 0.3em;
-  justify-content: space-between;
-  transition-duration: 0.25s;
-  border: none;
-}
-
-@media only screen and (min-width: 700px) {
-  .icon {
-    width: 2rem;
-    height: 2rem;
-  }
-}
-
-#resume {
-  margin-top: 0;
-  margin-left: -0.1rem;
-}
-#icon-container > a {
-  text-decoration: none;
-}
-.icon:hover {
-  filter: brightness(0.7);
 }

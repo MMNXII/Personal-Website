@@ -1,4 +1,4 @@
-/*SASS Classes*/
+/***************** SASS Classes ******************/
 @font-face {
   font-family: header;
   src: url(../fonts/simple.ttf);
@@ -45,14 +45,19 @@ table, #resume-content p,
   height: auto;
 }
 
-/*General Page*/
+/***************** General ******************/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  background-color: #0e1524;
+}
+
 body {
+  display: none;
   background-color: #0e1524;
 }
 
@@ -61,7 +66,18 @@ body {
   margin: auto;
 }
 
-/* Logo */
+/***************** Top Banner ******************/
+#banner {
+  position: absolute;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1040px) {
+  #banner {
+    display: none;
+  }
+}
+/***************** Logo ******************/
 #logo-container {
   width: fit-content;
   min-width: 100px;
@@ -105,7 +121,7 @@ body {
   height: 60%;
 }
 
-/* Headers */
+/***************** Headers ******************/
 #header-container {
   width: fit-content;
   text-align: center;
@@ -158,9 +174,99 @@ body {
     font-size: 1em;
   }
 }
-/* Introdution */
-#intro-container {
+/***************** Social Media Icons ******************/
+#social-media-icon-container {
+  position: fixed;
+  display: inline-block;
+  bottom: 0;
   width: 100%;
+  text-align: center;
+  background-color: #0e1524;
+  z-index: 1;
+}
+
+#social-media-icon-container > a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 700px) {
+  #social-media-icon-container {
+    position: relative;
+    display: block;
+    width: fit-content;
+    background-color: #0e152400;
+    margin-bottom: 5em;
+    margin-left: 9.2em;
+    margin-top: -1.6em;
+  }
+}
+.icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0.3em;
+  justify-content: space-between;
+  border: none;
+}
+
+@media only screen and (min-width: 700px) {
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+#resume {
+  margin-top: 0;
+  margin-left: -0.1rem;
+}
+
+.icon:hover {
+  filter: brightness(0.7);
+}
+
+/***************** Page Links ******************/
+#page-links-container {
+  position: absolute;
+  display: inline;
+  margin: 1.3em auto auto auto;
+  top: 0;
+  right: 0;
+}
+
+#page-links-container > ul {
+  list-style-type: none;
+}
+
+#divide-link1,
+#divide-link2 {
+  color: #78b1b8;
+}
+
+.page-links {
+  color: #9890a6;
+  display: inline-block;
+  font-size: 1.3em;
+  margin: auto 0.7em auto auto;
+}
+
+@media only screen and (min-width: 1040px) and (max-width: 1339px) {
+  .page-links {
+    font-size: 1.5em;
+    color: #202435;
+  }
+
+  #page-links-container {
+    margin: 1em auto auto auto;
+  }
+}
+@media only screen and (min-width: 1340px) {
+  .page-links {
+    font-size: 1.7em;
+    color: #202435;
+  }
+}
+/***************** Introduction ******************/
+#intro-container {
+  width: 99%;
   margin: auto auto 5em auto;
   text-align: center;
 }
@@ -193,7 +299,7 @@ body {
     font-size: 1.5em;
   }
 }
-/* Work Sections General */
+/***************** Work General ******************/
 #work-container {
   text-align: center;
   justify-content: center;
@@ -248,7 +354,7 @@ body {
     width: 450px;
   }
 }
-/* Web Development */
+/***************** Web Development ******************/
 @media only screen and (min-width: 1000px) {
   #web-dev-content {
     display: flex;
@@ -309,7 +415,7 @@ body {
   color: #ff8800;
 }
 
-/* Graphic Design */
+/***************** Graphic Design ******************/
 #graphic-des-content {
   justify-content: space-evenly;
 }
@@ -455,7 +561,7 @@ body {
     height: 15em;
   }
 }
-/* Resume */
+/***************** Resume ******************/
 #resume-content {
   padding: 2em;
 }
@@ -505,55 +611,6 @@ table {
 #client-list-right {
     display: block;
   }
-}
-/* footer */
-#icon-container {
-  position: fixed;
-  display: inline-block;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  background-color: #0e1524;
-  z-index: 1;
-}
-
-@media only screen and (min-width: 700px) {
-  #icon-container {
-    position: relative;
-    display: block;
-    width: fit-content;
-    background-color: #0e1524;
-    margin-bottom: 5em;
-    margin-left: 9.2em;
-    margin-top: -1.6em;
-  }
-}
-.icon {
-  width: 2.2rem;
-  height: 2.2rem;
-  margin: 0.3em;
-  justify-content: space-between;
-  transition-duration: 0.25s;
-  border: none;
-}
-
-@media only screen and (min-width: 700px) {
-  .icon {
-    width: 2rem;
-    height: 2rem;
-  }
-}
-#resume {
-  margin-top: 0;
-  margin-left: -0.1rem;
-}
-
-#icon-container > a {
-  text-decoration: none;
-}
-
-.icon:hover {
-  filter: brightness(0.7);
 }
 
 /*# sourceMappingURL=index.css.map */
