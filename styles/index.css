@@ -116,15 +116,16 @@ body {
 @media only screen and (min-width: 700px) {
   #header-container {
     display: inline-block;
-    vertical-align: middle;
-    margin-top: -0.8em;
+    margin-top: 1.3em;
+    margin-bottom: 0;
+    vertical-align: top;
   }
 }
 .header {
   text-align: center;
   font-family: header;
   letter-spacing: 0.1em;
-  line-height: 1em;
+  line-height: 1.1em;
 }
 
 .name {
@@ -136,7 +137,7 @@ body {
 .graphic {
   display: inline-block;
   color: #9890a6;
-  font-size: 1em;
+  font-size: 0.97em;
 }
 
 .divide {
@@ -173,7 +174,7 @@ body {
 
 .hello,
 .comma-welcome {
-  display: inline;
+  display: inline-block;
 }
 
 .intro-para {
@@ -510,21 +511,20 @@ table {
   position: fixed;
   display: inline-block;
   bottom: 0;
-  background-color: #0e1524;
   width: 100%;
   text-align: center;
-  z-index: 1;
+  background-color: #0e1524;
 }
 
 @media only screen and (min-width: 700px) {
   #icon-container {
-    position: absolute;
-    top: 1.4em;
-    right: 0.7em;
+    position: relative;
+    display: block;
     width: fit-content;
-    height: fit-content;
-    text-align: right;
     background-color: #0e1524;
+    margin-bottom: 5em;
+    margin-left: 9.2em;
+    margin-top: -1.6em;
   }
 }
 .icon {
@@ -536,6 +536,12 @@ table {
   border: none;
 }
 
+@media only screen and (min-width: 700px) {
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
 #resume {
   margin-top: 0;
   margin-left: -0.1rem;
