@@ -37,7 +37,7 @@
   });
   const introHeaderCommaWelcome = anime({
     targets: '.comma-welcome',
-    delay: 4500,
+    delay: 3500,
     duration: 2000,
     easing: 'easeInOutExpo',
     opacity: [0, 1],
@@ -45,7 +45,7 @@
   });
   const intro = anime({
     targets: '.intro-para',
-    delay: 5000,
+    delay: 6000,
     duration: 2000,
     easing: 'easeInOutExpo',
     opacity: [0, 1],
