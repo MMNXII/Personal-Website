@@ -553,7 +553,8 @@ table {
   position: fixed;
   display: inline-block;
   bottom: 0;
-  background-color: #313344;
+  // background-color: #313344;
+  background-color: #0e1524;
   width: 100%;
   text-align: center;
   z-index: 1;
@@ -567,7 +568,7 @@ table {
     width: fit-content;
     height: fit-content;
     text-align: right;
-    background-color: rgba(24, 100, 155, 0);
+    background-color: #313344;
   }
 }
 
@@ -576,6 +577,7 @@ table {
   height: 2.2rem;
   margin: 0.3em;
   justify-content: space-between;
+  transition-duration: 0.25s;
   border: none;
 }
 
@@ -595,6 +597,6 @@ table {
   text-decoration: none;
 }
 .icon:hover {
-  opacity: 0.4;
-  border: none;
+  // filter: brightness(0.5);
+  filter: brightness(0.7);
 }
