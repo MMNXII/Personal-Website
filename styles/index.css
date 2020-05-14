@@ -257,6 +257,11 @@ body {
   text-decoration: none;
 }
 
+.page-anchors:hover {
+  transition-duration: 0.25s;
+  color: #ccc1e0;
+}
+
 @media only screen and (min-width: 950px) and (max-width: 1339px) {
   .page-links {
     font-size: 1.5em;
