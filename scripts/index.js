@@ -51,6 +51,15 @@
     opacity: [0, 1],
     direction: 'normal',
   });
+  const icon = anime({
+    targets: '.icon',
+    delay: anime.stagger(100, { start: 700 }),
+    duration: 1500,
+    translateY: ['-2rem', 0],
+    opacity: [0, 1],
+    direction: 'normal',
+    easing: 'spring(1, 80, 10, 0)',
+  });
 })();
 
 const getBtns = (id) => {

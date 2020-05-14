@@ -200,11 +200,16 @@ body {
   margin-bottom: 1em;
 }
 
-a > img {
+#report-container > a > img,
+#willmore-container > a > img,
+#aoe-bcard-container > a > img {
   border: 3px solid rgba(255, 136, 0, 0);
 }
 
-a > img:hover {
+#report-container > a > img:hover,
+#willmore-container > a > img:hover,
+#aoe-box > a > img:hover,
+#personal-bcard > a > img:hover {
   opacity: 0.6;
   transition-property: opacity;
   transition-duration: 0.3s;
@@ -514,7 +519,7 @@ table {
 @media only screen and (min-width: 700px) {
   #icon-container {
     position: absolute;
-    top: 2em;
+    top: 1.4em;
     right: 0.7em;
     width: fit-content;
     height: fit-content;
@@ -527,7 +532,6 @@ table {
   height: 2.2rem;
   margin: 0.3em;
   justify-content: space-between;
-  transition-duration: 0.5s;
   border: none;
 }
 
@@ -542,13 +546,13 @@ table {
   margin-left: -0.1rem;
 }
 
+#icon-container > a {
+  text-decoration: none;
+}
+
 .icon:hover {
   opacity: 0.4;
   border: none;
-}
-
-#icon-container > a {
-  text-decoration: none;
 }
 
 /*# sourceMappingURL=index.css.map */
