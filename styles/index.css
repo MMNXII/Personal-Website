@@ -72,7 +72,7 @@ body {
   width: 100%;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 950px) {
   #banner {
     display: none;
   }
@@ -257,20 +257,12 @@ body {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 1100px) and (max-width: 1200px) {
-  .page-links {
-    font-size: 1.5em;
-  }
-
-  .page-anchors {
-    color: #9890a6;
-  }
-
-  #page-links-container {
-    margin: 1em auto auto auto;
-  }
+.page-anchors:hover {
+  transition-duration: 0.25s;
+  color: #ccc1e0;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1339px) {
+
+@media only screen and (min-width: 950px) and (max-width: 1339px) {
   .page-links {
     font-size: 1.5em;
   }
