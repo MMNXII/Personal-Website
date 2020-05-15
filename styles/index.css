@@ -67,9 +67,13 @@ body {
 }
 
 /***************** Top Banner ******************/
-#banner {
+.top-banner {
   position: absolute;
-  width: 100%;
+}
+
+.bot-banner {
+  position: relative;
+  bottom: 0;
 }
 
 /***************** Logo ******************/
@@ -167,6 +171,7 @@ body {
 @media only screen and (max-width: 750px) {
   .header {
     line-height: 1em;
+    margin-top: 0.4em;
   }
 
   .name {
@@ -201,7 +206,7 @@ body {
     display: block;
     width: fit-content;
     background-color: #0e152400;
-    margin-bottom: 5em;
+    margin-bottom: 9em;
     margin-left: 8em;
     margin-top: -0.7em;
   }
@@ -285,28 +290,27 @@ body {
 }
 /***************** Introduction ******************/
 #intro-container {
-  width: 80%;
   margin: auto auto 5em auto;
   text-align: center;
 }
 
 @media only screen and (max-width: 750px) {
   #intro-container {
-    margin-top: 7em;
+    margin-top: 6em;
   }
 }
 .hello,
 .comma-welcome,
 .intro-para {
   color: #78b1b8;
-  font-size: 1.8em;
+  font-size: 2.5em;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .hello,
 .comma-welcome,
 .intro-para {
-    font-size: 1.5em;
+    font-size: 1.75em;
   }
 }
 .hello,
@@ -316,9 +320,9 @@ body {
 
 .intro-para {
   line-height: 1.2em;
-  text-align: left;
+  text-align: center;
   margin: 1em auto auto auto;
-  width: 90%;
+  width: 70%;
   min-width: 300px;
   max-width: 750px;
 }
@@ -635,6 +639,11 @@ table {
 #client-list-right {
     display: block;
   }
+}
+#ic,
+#ic2 {
+  width: 60px;
+  height: 60px;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -2,8 +2,8 @@ document.getElementById('show').style.display = 'block';
 
 (introAnime = () => {
   const banner = anime({
-    targets: '#banner',
-    delay: 700,
+    targets: '.top-banner',
+    delay: anime.stagger(200),
     duration: 1500,
     translateY: ['-2rem', 0],
     opacity: [0, 1],
