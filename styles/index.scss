@@ -70,27 +70,19 @@ body {
   position: absolute;
   width: 100%;
 }
-@media only screen and (max-width: 950px) {
-  #banner {
-    display: none;
-  }
-}
 
 /***************** Logo ******************/
 #logo-container {
   width: fit-content;
-  min-width: 100px;
-  min-height: 100px;
-  max-width: 100px;
-  max-height: 100px;
-  margin: 0.7em auto 1em auto;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 85px;
+  max-height: 85px;
+  // margin: 0.7em auto 1em auto;
+  display: inline-block;
+  margin: 0.7em;
 }
-@media only screen and (min-width: 700px) {
-  #logo-container {
-    display: inline-block;
-    margin: 0.7em;
-  }
-}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -123,17 +115,18 @@ body {
 #header-container {
   width: fit-content;
   text-align: center;
-  margin: 0 auto;
   margin-bottom: 5em;
+  display: inline-block;
+  margin-top: 1.3em;
+  margin-bottom: 0;
+  vertical-align: top;
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (max-width: 550px) {
   #header-container {
-    display: inline-block;
-    margin-top: 1.3em;
-    margin-bottom: 0;
-    vertical-align: top;
+    display: none;
   }
 }
+
 .header {
   text-align: center;
   font-family: header;
@@ -144,6 +137,7 @@ body {
   color: #ae677d;
   font-size: 3em;
 }
+
 .web,
 .graphic {
   display: inline-block;
@@ -166,12 +160,26 @@ body {
     font-size: 1em;
   }
 }
+@media only screen and (max-width: 750px) {
+  .header {
+    line-height: 1em;
+  }
+  .name {
+    font-size: 2em;
+  }
+  .web,
+  .graphic,
+  .divide {
+    font-size: 0.65em;
+  }
+}
 
 /***************** Social Media Icons ******************/
 #social-media-icon-container {
   position: fixed;
   display: inline-block;
   bottom: 0;
+  left: 0;
   width: 100%;
   text-align: center;
   background-color: #0e1524;
@@ -181,15 +189,15 @@ body {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 750px) {
   #social-media-icon-container {
     position: relative;
     display: block;
     width: fit-content;
     background-color: #0e152400;
     margin-bottom: 5em;
-    margin-left: 9.2em;
-    margin-top: -1.6em;
+    margin-left: 8em;
+    margin-top: -0.7em;
   }
 }
 
@@ -201,7 +209,7 @@ body {
   border: none;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 750px) {
   .icon {
     width: 2rem;
     height: 2rem;
@@ -241,15 +249,20 @@ body {
   font-size: 1.3em;
   margin: auto 0.7em auto auto;
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 650px) {
   .page-links {
     display: block;
     text-align: right;
   }
 }
+@media only screen and (min-width: 1340px) {
+  .page-links {
+    font-size: 1.7em;
+  }
+}
 
 .page-anchors {
-  color: #9890a6;
+  color: #ccc1e0;
   text-decoration: none;
 }
 .page-anchors:hover {
@@ -261,27 +274,22 @@ body {
   .page-links {
     font-size: 1.5em;
   }
-  .page-anchors {
-    color: #202435;
-  }
+
   #page-links-container {
     margin: 1em auto auto auto;
-  }
-}
-@media only screen and (min-width: 1340px) {
-  .page-links {
-    font-size: 1.7em;
-  }
-  .page-anchors {
-    color: #202435;
   }
 }
 
 /***************** Introduction ******************/
 #intro-container {
-  width: 99%;
+  width: 80%;
   margin: auto auto 5em auto;
   text-align: center;
+}
+@media only screen and (max-width: 750px) {
+  #intro-container {
+    margin-top: 7em;
+  }
 }
 
 .hello,
@@ -289,6 +297,13 @@ body {
 .intro-para {
   color: #78b1b8;
   font-size: 1.8em;
+}
+@media only screen and (max-width: 600px) {
+  .hello,
+  .comma-welcome,
+  .intro-para {
+    font-size: 1.5em;
+  }
 }
 
 .hello,
@@ -298,19 +313,11 @@ body {
 
 .intro-para {
   line-height: 1.2em;
-  text-align: center;
+  text-align: left;
   margin: 1em auto auto auto;
-  width: 85%;
+  width: 90%;
   min-width: 300px;
   max-width: 750px;
-}
-
-@media only screen and (max-width: 600px) {
-  .hello,
-  .comma-welcome,
-  .intro-para {
-    font-size: 1.5em;
-  }
 }
 
 /***************** Work General ******************/
