@@ -190,3 +190,12 @@ getBtns('willmore-container');
 
 showImages((slideIndex = 1), 'report-images', 'report-markers');
 showImages((slideIndex = 1), 'willmore-images', 'willmore-markers');
+
+// const main = document.getElementById('main-container');
+// const get = document.getElementById('person2');
+// get.addEventListener(
+//   'click',
+//   (erase = () => {
+//     main.innerHTML = '';
+//   })
+// );
