@@ -238,35 +238,33 @@ body {
   margin: auto;
   top: 0;
   right: 0;
-  // border: 0.2px solid yellow;
 }
 .icons-container {
   position: relative;
   display: inline-block;
-  // border: 0.2px solid yellow;
   margin: 1em;
 }
-@media only screen and (max-width: 450px) {
+
+@media only screen and (max-width: 550px) {
   .icons-container {
-    margin: 1.7em 0.2em 0.2em 0.2em;
+    margin: 0.7em 0.2em 0.2em 0.2em;
   }
 }
-@media only screen and (min-width: 451px) and (max-width: 750px) {
+@media only screen and (min-width: 551px) and (max-width: 750px) {
   .icons-container {
-    margin: 1.7em 0.4em 1em 0.4em;
+    margin: 2em 0.4em 1em 0.4em;
   }
 }
 
 .page-icons {
   width: 60px;
   height: 60px;
-  // border: 0.2px solid yellow;
 }
+
 @media only screen and (max-width: 750px) {
   .page-icons {
     width: 40px;
     height: 40px;
-    // border: 0.2px solid yellow;
   }
 }
 
