@@ -114,7 +114,9 @@ showIcon = (container, front, back) => {
   );
 };
 
-showIcon('person-container', 'person', 'person-handup');
+showIcon('person-container', 'person1', 'person2');
+showIcon('web-container', 'web1', 'web2');
+showIcon('graphic-container', 'graphic1', 'graphic2');
 
 const getBtns = (id) => {
   const btn = document.getElementById(id).getElementsByTagName('button');
