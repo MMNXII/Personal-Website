@@ -78,15 +78,45 @@ document.getElementById('show').style.display = 'block';
     direction: 'normal',
     easing: 'spring(1, 80, 10, 0)',
   });
-  const work = anime({
-    targets: '#work-container',
-    delay: 8000,
-    duration: 3000,
-    opacity: [0, 1],
-    easing: 'easeInOutExpo',
-    direction: 'normal',
-  });
+  // const work = anime({
+  //   targets: '#work-container',
+  //   delay: 8000,
+  //   duration: 3000,
+  //   opacity: [0, 1],
+  //   easing: 'easeInOutExpo',
+  //   direction: 'normal',
+  // });
 })();
+
+showIcon = (container, front, back) => {
+  const containerId = document.getElementById(container);
+  const frontId = document.getElementById(front);
+  const backId = document.getElementById(back);
+
+  containerId.addEventListener(
+    'mouseover',
+    (show = () => {
+      if (frontId.style.display !== 'none') {
+        frontId.style.display = 'none';
+        backId.style.display = 'block';
+      }
+    })
+  );
+
+  containerId.addEventListener(
+    'mouseout',
+    (hide = () => {
+      if (frontId.style.display !== 'block') {
+        frontId.style.display = 'block';
+        backId.style.display = 'none';
+      }
+    })
+  );
+};
+
+showIcon('person-container', 'person1', 'person2');
+showIcon('web-container', 'web1', 'web2');
+showIcon('graphic-container', 'graphic1', 'graphic2');
 
 const getBtns = (id) => {
   const btn = document.getElementById(id).getElementsByTagName('button');

@@ -236,58 +236,48 @@ body {
 }
 
 /***************** Page Links ******************/
-#page-links-container {
+#page-icons-container {
   position: absolute;
-  margin: 1.3em auto auto auto;
+  margin: auto;
   top: 0;
   right: 0;
 }
 
-#page-links-container > ul {
-  list-style-type: none;
-}
-
-#divide1,
-#divide2 {
-  color: #78b1b8;
-}
-
-.page-links {
+.icons-container {
+  position: relative;
   display: inline-block;
-  font-size: 1.3em;
-  margin: auto 0.7em auto auto;
+  margin: 1em;
 }
 
-@media only screen and (max-width: 650px) {
-  .page-links {
-    display: block;
-    text-align: right;
+@media only screen and (max-width: 450px) {
+  .icons-container {
+    margin: 1.7em 0.2em 0.2em 0.2em;
   }
 }
-@media only screen and (min-width: 1340px) {
-  .page-links {
-    font-size: 1.7em;
+@media only screen and (min-width: 451px) and (max-width: 750px) {
+  .icons-container {
+    margin: 1.7em 0.4em 1em 0.4em;
   }
 }
-.page-anchors {
-  color: #ccc1e0;
-  text-decoration: none;
+.page-icons {
+  width: 60px;
+  height: 60px;
 }
 
-.page-anchors:hover {
-  transition-duration: 0.25s;
-  color: #ccc1e0;
-}
-
-@media only screen and (min-width: 950px) and (max-width: 1339px) {
-  .page-links {
-    font-size: 1.5em;
-  }
-
-  #page-links-container {
-    margin: 1em auto auto auto;
+@media only screen and (max-width: 750px) {
+  .page-icons {
+    width: 40px;
+    height: 40px;
   }
 }
+.front {
+  display: block;
+}
+
+.back {
+  display: none;
+}
+
 /***************** Introduction ******************/
 #intro-container {
   margin: auto auto 5em auto;
@@ -639,11 +629,6 @@ table {
 #client-list-right {
     display: block;
   }
-}
-#ic,
-#ic2 {
-  width: 60px;
-  height: 60px;
 }
 
 /*# sourceMappingURL=index.css.map */
