@@ -1,6 +1,8 @@
-document.getElementById('show').style.display = 'block';
+/* Show Page and Introductory Animations */
 
-(introAnime = () => {
+document.getElementById('body').style.display = 'block';
+
+(introAnimations = () => {
   const banner = anime({
     targets: '.top-banner',
     delay: anime.stagger(200),
@@ -88,6 +90,8 @@ document.getElementById('show').style.display = 'block';
   });
 })();
 
+/* Page Icons */
+
 showIcon = (container, front, back) => {
   const containerId = document.getElementById(container);
   const frontId = document.getElementById(front);
@@ -117,6 +121,8 @@ showIcon = (container, front, back) => {
 showIcon('person-container', 'person1', 'person2');
 showIcon('web-container', 'web1', 'web2');
 showIcon('graphic-container', 'graphic1', 'graphic2');
+
+/* Report / Willmore image galleries */
 
 const getBtns = (id) => {
   const btn = document.getElementById(id).getElementsByTagName('button');
@@ -191,8 +197,8 @@ getBtns('willmore-container');
 showImages((slideIndex = 1), 'report-images', 'report-markers');
 showImages((slideIndex = 1), 'willmore-images', 'willmore-markers');
 
-// const main = document.getElementById('main-container');
-// const get = document.getElementById('person2');
+// const mainContainer = document.getElementById('main-container');
+// const get = document.getElementsByClassName('page-icons');
 // get.addEventListener(
 //   'click',
 //   (erase = () => {
