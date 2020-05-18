@@ -23,7 +23,6 @@
 
 %sub-headers {
   font-size: 2em;
-  border-radius: 14em;
   background: rgb(231, 0, 145);
   background: linear-gradient(
     90deg,
@@ -32,12 +31,7 @@
     rgba(255, 0, 0, 0) 100%
   );
   transition-duration: 0.5s;
-  margin-top: 2em;
   margin-bottom: 0.2em;
-}
-
-%work-sections {
-  border-radius: 1em;
 }
 
 %web-dev-img-height-width {
@@ -70,10 +64,17 @@ body {
   position: absolute;
 }
 
-.bot-banner {
-  position: relative;
-  bottom: 0;
-}
+// .bot-banner {
+//   position: relative;
+//   margin-top: 2em;
+//   bottom: 0;
+// }
+
+// @media only screen and (max-width: 750px) {
+//   .bot-banner {
+//     margin-bottom: 49.78px;
+//   }
+// }
 
 /***************** Logo ******************/
 #logo-container {
@@ -260,6 +261,9 @@ body {
   width: 60px;
   height: 60px;
 }
+.page-icons:hover {
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 750px) {
   .page-icons {
@@ -323,13 +327,14 @@ body {
 }
 #report-container > a > img,
 #willmore-container > a > img,
-#aoe-bcard-container > a > img {
+#aoe-container > a > img,
+#bcard-container > a > img {
   border: 3px solid rgba(255, 136, 0, 0);
 }
 #report-container > a > img:hover,
 #willmore-container > a > img:hover,
-#aoe-box > a > img:hover,
-#personal-bcard > a > img:hover {
+#aoe-container > a > img:hover,
+#bcard-container > a > img:hover {
   opacity: 0.6;
   transition-property: opacity;
   transition-duration: 0.3s;
@@ -339,9 +344,12 @@ body {
   @extend %sub-headers;
   color: #636fa1;
 }
-.work-section {
-  @extend %work-sections;
+@media only screen and (max-width: 750px) {
+  .sub-headers {
+    margin-top: 3em;
+  }
 }
+
 #web-dev-content,
 #graphic-des-content {
   padding: 2em;
@@ -439,12 +447,13 @@ body {
   @extend %flex-and-wrap;
   justify-content: space-evenly;
 }
-
-@media only screen and (min-width: 1000px) {
-  #aoe-bcard-container {
-    width: 100%;
-  }
+#graphic-des-content > div {
+  margin: 2em;
 }
+#web-dev-content > div {
+  margin-bottom: 2em;
+}
+
 #report-container > a,
 #willmore-container > a {
   display: contents;
@@ -542,10 +551,7 @@ body {
 #willmore-marker-1 {
   background-color: rgba(255, 255, 255, 0.801);
 }
-#aoe-bcard-container {
-  @extend %flex-and-wrap;
-  justify-content: space-evenly;
-}
+
 #aoe-image {
   width: auto;
   height: 15em;
@@ -556,20 +562,33 @@ body {
     height: 22em;
   }
 }
-#personal-bcard1,
-#personal-bcard2 {
+.personal-bcard {
   width: 22em;
   height: auto;
 }
 @media only screen and (min-width: 650px) {
-  #personal-bcard1,
-  #personal-bcard2 {
+  .personal-bcard {
     width: auto;
     height: 15em;
   }
 }
 
 /***************** Resume ******************/
+
+#about-content > p {
+  text-align: center;
+  font-size: 2em;
+  width: 80%;
+  max-width: 1000px;
+  margin: 1em auto auto auto;
+  color: #78b1b8;
+}
+@media only screen and (max-width: 750px) {
+  #about-content > p {
+    font-size: 1.5em;
+  }
+}
+
 #resume-content {
   padding: 2em;
 }
