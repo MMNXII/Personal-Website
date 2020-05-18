@@ -1,4 +1,4 @@
-/* Show Page and Introductory Animations */
+/****** Show Page and Introductory Animations *****/
 
 document.getElementById('body').style.display = 'block';
 
@@ -80,17 +80,9 @@ document.getElementById('body').style.display = 'block';
     direction: 'normal',
     easing: 'spring(1, 80, 10, 0)',
   });
-  const work = anime({
-    targets: '#work-container',
-    delay: 8000,
-    duration: 3000,
-    opacity: [0, 1],
-    easing: 'easeInOutExpo',
-    direction: 'normal',
-  });
 })();
 
-/* Page Icons */
+/***** Page Icons *****/
 
 showIcon = (container, front, back) => {
   const containerId = document.getElementById(container);
@@ -122,7 +114,7 @@ showIcon('person-container', 'person1', 'person2');
 showIcon('web-container', 'web1', 'web2');
 showIcon('graphic-container', 'graphic1', 'graphic2');
 
-/* Report / Willmore image galleries */
+/***** Report / Willmore image galleries *****/
 
 const getBtns = (id) => {
   const btn = document.getElementById(id).getElementsByTagName('button');
@@ -191,17 +183,390 @@ const showImages = (n, className, classMarkers) => {
   markersArray[slideIndex - 1].style.transitionDuration = '.5s';
 };
 
-getBtns('report-container');
-getBtns('willmore-container');
+/***** Content *****/
 
-showImages((slideIndex = 1), 'report-images', 'report-markers');
-showImages((slideIndex = 1), 'willmore-images', 'willmore-markers');
+/****** Create Containers ******/
 
-// const mainContainer = document.getElementById('main-container');
-// const get = document.getElementsByClassName('page-icons');
-// get.addEventListener(
-//   'click',
-//   (erase = () => {
-//     main.innerHTML = '';
-//   })
-// );
+const webPageContent = (function () {
+  const mainContainer = document.getElementById('main-container');
+  let workContainer;
+  let contentContainer;
+  let ItemContainer;
+
+  const clearMainContainer = () => {
+    mainContainer.innerHTML = '';
+
+    createWorkContainer();
+  };
+
+  const createWorkContainer = () => {
+    workContainer = document.createElement('div');
+    workContainer.id = 'work-container';
+    mainContainer.appendChild(workContainer);
+
+    return workContainer;
+  };
+
+  const createH3 = (className, text) => {
+    const h3 = document.createElement('h3');
+    h3.className = className;
+    h3.textContent = text;
+
+    workContainer.appendChild(h3);
+
+    return h3;
+  };
+
+  const createContentContainer = (id) => {
+    contentContainer = document.createElement('div');
+    contentContainer.id = id;
+    workContainer.appendChild(contentContainer);
+
+    return contentContainer;
+  };
+
+  const createItemContainer = (id) => {
+    ItemContainer = document.createElement('div');
+    ItemContainer.id = id;
+    contentContainer.appendChild(ItemContainer);
+
+    return ItemContainer;
+  };
+
+  /****** Create Content ******/
+
+  /****** Web Development Image Objects ******/
+
+  const rps = {
+    alt: 'Rock Paper Scissors Screenshot',
+    id: 'rps-image',
+    src: 'images/web-development-work/rockpaperscissors.png',
+  };
+  const italy = {
+    alt: 'Italy Screenshot',
+    id: 'italy-image',
+    src: 'images/web-development-work/italy.png',
+  };
+  const etch = {
+    alt: 'Etch-A-Sketch Screenshot',
+    id: 'etchasketch-image',
+    src: 'images/web-development-work/etchasketch.png',
+  };
+  const rpg = {
+    alt: 'RPG Game Screenshot',
+    id: 'rpg-image',
+    src: 'images/web-development-work/rpg.png',
+  };
+
+  /****** Create Web Dev Functions ******/
+
+  const createWebImageContent = ({ alt, id, src }) => {
+    const img = document.createElement('img');
+    img.alt = alt;
+    img.id = id;
+    img.src = src;
+
+    ItemContainer.appendChild(img);
+  };
+
+  const createWebButtonContent = (href, btnText) => {
+    const anchor = document.createElement('a');
+    anchor.href = href;
+    anchor.target = '_blank';
+
+    const btn = document.createElement('btn');
+    btn.className = 'project-buttons';
+    btn.textContent = btnText;
+
+    anchor.appendChild(btn);
+    ItemContainer.appendChild(anchor);
+  };
+
+  /****** Initialize Web Dev Functions ******/
+
+  const showRPS = () => {
+    createItemContainer('rps');
+    createWebImageContent(rps);
+    createWebButtonContent(
+      'https://rockpaperscissors.matthewmneal.com/',
+      'Live'
+    );
+    createWebButtonContent(
+      'https://github.com/MMNXII/rock-paper-scissors',
+      'Code'
+    );
+    createFigCaption('captions', 'Rock, Paper, Scissors');
+    createFigCaption(
+      'sub-captions',
+      '  The popular hand sign game turned into an interactive web application'
+    );
+  };
+
+  const showItaly = () => {
+    createItemContainer('italy');
+    createWebImageContent(italy);
+    createWebButtonContent('https://italy.matthewmneal.com/', 'Live');
+    createWebButtonContent(
+      'https://github.com/MMNXII/italia-memoriam-mmxix',
+      'Code'
+    );
+    createFigCaption('captions', 'Italia Memoriam MMXIX');
+    createFigCaption(
+      'sub-captions',
+      'Website dedicated to a trip to Italy taken with my girlfriend'
+    );
+  };
+
+  const showEtch = () => {
+    createItemContainer('etch');
+    createWebImageContent(etch);
+    createWebButtonContent('https://etchasketch.matthewmneal.com/', 'Live');
+    createWebButtonContent('https://github.com/MMNXII/etch-a-sketch', 'Code');
+    createFigCaption('captions', 'Etch-A-Sketch');
+    createFigCaption('sub-captions', 'Etch-A-Sketch but now in digital form');
+  };
+
+  const showRPG = () => {
+    createItemContainer('rpg');
+    createWebImageContent(rpg);
+    createWebButtonContent('https://rpg.matthewmneal.com/', 'Live');
+    createWebButtonContent('https://github.com/MMNXII/rpg', 'Code');
+    createFigCaption('captions', 'RPG');
+    createFigCaption(
+      'sub-captions',
+      'Text based RPG character creation simulator'
+    );
+  };
+
+  /****** Graphic Design Image Objects ******/
+  const reportImages = {
+    href:
+      'https://s3images.coroflot.com/user_files/individual_files/385559_sTayJegwr3reCiwSwJzxqkPhi.pdf',
+    alt: 'Annual Report',
+    className: 'report-images',
+    one: {
+      src: 'images/graphic-design-work/annual-report/report-image1.jpg',
+    },
+    two: {
+      src: 'images/graphic-design-work/annual-report/report-image2.jpg',
+    },
+    three: {
+      src: 'images/graphic-design-work/annual-report/report-image3.jpg',
+    },
+  };
+
+  const willmoreImages = {
+    href: 'https://www.coroflot.com/MatthewNeal/Willmore-Wine-Bar',
+    alt: 'Willmore Wine Bar',
+    className: 'willmore-images',
+    one: {
+      src: 'images/graphic-design-work/willmore/willmore-image1.jpg',
+    },
+    two: {
+      src: 'images/graphic-design-work/willmore/willmore-image2.jpg',
+    },
+    three: {
+      src: 'images/graphic-design-work/willmore/willmore-logo-final.jpg',
+    },
+  };
+
+  const aoeImage = {
+    href: 'https://www.coroflot.com/MatthewNeal/Game-Box-Re-Design',
+    alt: 'Age of Empires II Box Remodel',
+    id: 'aoe-image',
+    src: 'images/graphic-design-work/aoe-box/aoe-image1.jpg',
+  };
+
+  const bCardImages = {
+    href:
+      'https://s3images.coroflot.com/user_files/individual_files/385559_YnYIctd3Ym5ipRt4eVK9Xmzyw.pdf',
+    alt: 'Personal Business Card',
+    className: 'personal-bcard',
+    front: {
+      src: 'images/graphic-design-work/personal-businss-card/front.jpg',
+    },
+    back: {
+      src: 'images/graphic-design-work/personal-businss-card/back.jpg',
+    },
+  };
+
+  /****** Create Graphic Design Functions ******/
+
+  const createGraphicImageContent = ({ href, alt, className, id }, src) => {
+    const anchor = document.createElement('a');
+    anchor.target = '_blank';
+    anchor.href = href;
+
+    const img = document.createElement('img');
+    img.alt = alt;
+    img.className = className;
+    img.src = src;
+    img.id = id;
+
+    anchor.appendChild(img);
+    ItemContainer.appendChild(anchor);
+  };
+
+  const createGraphicGalleryBtns = (className, text) => {
+    const btn = document.createElement('button');
+    btn.className = className;
+    btn.textContent = text;
+
+    ItemContainer.appendChild(btn);
+  };
+
+  const createGraphicGalleryMarkers = (
+    containingDivId,
+    childDivClass,
+    childDivId
+  ) => {
+    const parentDiv = document.createElement('div');
+    parentDiv.id = containingDivId;
+
+    for (let i = 0; i < 3; i++) {
+      const childDiv = document.createElement('div');
+      childDiv.className = childDivClass;
+      childDiv.id = childDivId[i];
+
+      parentDiv.appendChild(childDiv);
+    }
+
+    ItemContainer.appendChild(parentDiv);
+  };
+
+  const createFigCaption = (className, text) => {
+    const fig = document.createElement('figcaption');
+    fig.className = className;
+    fig.textContent = text;
+
+    ItemContainer.appendChild(fig);
+  };
+
+  /****** Initialize Graphic Design Functions ******/
+
+  const showReport = () => {
+    const figSub =
+      'Created while at University, the design is made in a sleek and clean manner to reflect the luxurious status of the Mercedes-Benz brand.';
+
+    createItemContainer('report-container');
+    createGraphicImageContent(reportImages, reportImages.one.src);
+    createGraphicImageContent(reportImages, reportImages.two.src);
+    createGraphicImageContent(reportImages, reportImages.three.src);
+    createGraphicGalleryBtns('report-image-button back-btn', '<');
+    createGraphicGalleryBtns('report-image-button forward-btn', '>');
+    createGraphicGalleryMarkers('report-markers-container', 'report-markers', [
+      'report-marker-1',
+      'report-marker-2',
+      'report-marker-3',
+    ]);
+    createFigCaption('captions', 'Mock Annual Report');
+    createFigCaption('sub-captions', figSub);
+  };
+
+  const showWillmore = () => {
+    const figSub =
+      'Designed for an up and coming wine bar in Long Beach, CA in 2010. These drafts were created to initialize the branding process, with the final design (last slide) currently being used by Willmore Wine Bar.';
+
+    createItemContainer('willmore-container');
+    createGraphicImageContent(willmoreImages, willmoreImages.one.src);
+    createGraphicImageContent(willmoreImages, willmoreImages.two.src);
+    createGraphicImageContent(willmoreImages, willmoreImages.three.src);
+    createGraphicGalleryBtns('willmore-image-button back-btn', '<');
+    createGraphicGalleryBtns('willmore-image-button forward-btn', '>');
+    createGraphicGalleryMarkers(
+      'willmore-markers-container',
+      'willmore-markers',
+      ['willmore-marker-1', 'willmore-marker-2', 'willmore-marker-3']
+    );
+    createFigCaption('captions', 'Willmore Wine Bar');
+    createFigCaption('sub-captions', figSub);
+  };
+
+  const showAOE = () => {
+    const figSub =
+      'As a personal project at University, I decided to take on the task of redesigning the box art for the real-time strategy game Age of Empires II';
+
+    createItemContainer('aoe-container');
+    createGraphicImageContent(aoeImage, aoeImage.src);
+    createFigCaption('captions', 'Age of Empires II Box Redesign');
+    createFigCaption('sub-captions', figSub);
+  };
+  const showBcard = () => {
+    const figSub =
+      'Designed to showcase my personal branding and advertise for prospective clients';
+
+    createItemContainer('bcard-container');
+    createGraphicImageContent(bCardImages, bCardImages.front.src);
+    createGraphicImageContent(bCardImages, bCardImages.back.src);
+    createFigCaption('captions', 'Personal Business Card');
+    createFigCaption('sub-captions', figSub);
+  };
+
+  /****** Initialize Pages ******/
+
+  fadeInAnimation = () => {
+    const webDevAnime = anime({
+      targets: '#work-container',
+      opacity: [0, 1],
+      duration: 3000,
+      direction: 'easeInOutSine',
+    });
+  };
+
+  const showAbout = () => {
+    clearMainContainer();
+    fadeInAnimation();
+    createH3('sub-headers', 'About');
+    createContentContainer('about-content');
+
+    const summary = document.createElement('p');
+    summary.textContent =
+      'Aspiring web developer with a background in graphic design and skills in various web technologies. Exceptionally creative, dependable, and organized with a keen eye for detail and top notch work ethic. Fast and efficient multi-tasker with a proven track record in project management and customer service. Able to adapt quickly to a changing environment while still producing quality results.';
+    summary.className = 'header';
+    contentContainer.appendChild(summary);
+  };
+
+  const showWebDev = () => {
+    clearMainContainer();
+    fadeInAnimation();
+    createH3('sub-headers', 'Web Development');
+    createContentContainer('web-dev-content');
+
+    showRPS();
+    showItaly();
+    showEtch();
+    showRPG();
+  };
+
+  const showGraphicDes = () => {
+    clearMainContainer();
+    fadeInAnimation();
+    createH3('sub-headers', 'Graphic Design');
+    createContentContainer('graphic-des-content');
+
+    showReport();
+    getBtns('report-container');
+    showImages((slideIndex = 1), 'report-images', 'report-markers');
+
+    showWillmore();
+    getBtns('willmore-container');
+    showImages((slideIndex = 1), 'willmore-images', 'willmore-markers');
+
+    showAOE();
+    showBcard();
+  };
+
+  const icons = document.getElementsByClassName('page-icons');
+  const iconsArr = Array.from(icons);
+
+  iconsArr.forEach((icon) => {
+    icon.addEventListener(
+      'click',
+      (showContent = (e) => {
+        e.target.id == 'person2' ? showAbout() : null;
+        e.target.id == 'web2' ? showWebDev() : null;
+        e.target.id == 'graphic2' ? showGraphicDes() : null;
+      })
+    );
+  });
+})();

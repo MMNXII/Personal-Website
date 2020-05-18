@@ -3,7 +3,7 @@
   font-family: header;
   src: url(../fonts/simple.ttf);
 }
-#aoe-bcard-container, #graphic-des-content, #main-container {
+#graphic-des-content, #main-container {
   display: flex;
   flex-wrap: wrap;
 }
@@ -25,16 +25,10 @@ table, #resume-content p,
 
 .sub-headers {
   font-size: 2em;
-  border-radius: 14em;
   background: #e70091;
   background: linear-gradient(90deg, rgba(231, 0, 145, 0) 0%, #313344 53%, rgba(255, 0, 0, 0) 100%);
   transition-duration: 0.5s;
-  margin-top: 2em;
   margin-bottom: 0.2em;
-}
-
-.work-section {
-  border-radius: 1em;
 }
 
 #rps-image,
@@ -69,11 +63,6 @@ body {
 /***************** Top Banner ******************/
 .top-banner {
   position: absolute;
-}
-
-.bot-banner {
-  position: relative;
-  bottom: 0;
 }
 
 /***************** Logo ******************/
@@ -264,6 +253,10 @@ body {
   height: 60px;
 }
 
+.page-icons:hover {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 750px) {
   .page-icons {
     width: 40px;
@@ -327,14 +320,15 @@ body {
 
 #report-container > a > img,
 #willmore-container > a > img,
-#aoe-bcard-container > a > img {
+#aoe-container > a > img,
+#bcard-container > a > img {
   border: 3px solid rgba(255, 136, 0, 0);
 }
 
 #report-container > a > img:hover,
 #willmore-container > a > img:hover,
-#aoe-box > a > img:hover,
-#personal-bcard > a > img:hover {
+#aoe-container > a > img:hover,
+#bcard-container > a > img:hover {
   opacity: 0.6;
   transition-property: opacity;
   transition-duration: 0.3s;
@@ -344,6 +338,11 @@ body {
   color: #636fa1;
 }
 
+@media only screen and (max-width: 750px) {
+  .sub-headers {
+    margin-top: 3em;
+  }
+}
 #web-dev-content,
 #graphic-des-content {
   padding: 2em;
@@ -438,11 +437,14 @@ body {
   justify-content: space-evenly;
 }
 
-@media only screen and (min-width: 1000px) {
-  #aoe-bcard-container {
-    width: 100%;
-  }
+#graphic-des-content > div {
+  margin: 2em;
 }
+
+#web-dev-content > div {
+  margin-bottom: 2em;
+}
+
 #report-container > a,
 #willmore-container > a {
   display: contents;
@@ -551,10 +553,6 @@ body {
   background-color: rgba(255, 255, 255, 0.801);
 }
 
-#aoe-bcard-container {
-  justify-content: space-evenly;
-}
-
 #aoe-image {
   width: auto;
   height: 15em;
@@ -566,20 +564,32 @@ body {
     height: 22em;
   }
 }
-#personal-bcard1,
-#personal-bcard2 {
+.personal-bcard {
   width: 22em;
   height: auto;
 }
 
 @media only screen and (min-width: 650px) {
-  #personal-bcard1,
-#personal-bcard2 {
+  .personal-bcard {
     width: auto;
     height: 15em;
   }
 }
 /***************** Resume ******************/
+#about-content > p {
+  text-align: center;
+  font-size: 2em;
+  width: 80%;
+  max-width: 1000px;
+  margin: 1em auto auto auto;
+  color: #78b1b8;
+}
+
+@media only screen and (max-width: 750px) {
+  #about-content > p {
+    font-size: 1.5em;
+  }
+}
 #resume-content {
   padding: 2em;
 }
