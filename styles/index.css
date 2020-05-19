@@ -8,27 +8,16 @@
   flex-wrap: wrap;
 }
 
-.captions, .sub-headers {
+.captions {
   font-family: "Righteous", cursive;
   text-align: center;
   color: #508caf;
 }
 
-#prof-exp > h3,
-#education > h3,
-table, #resume-content p,
-#resume-content li, .sub-captions {
+.sub-captions {
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
   color: #cecece;
-}
-
-.sub-headers {
-  font-size: 2em;
-  background: #e70091;
-  background: linear-gradient(90deg, rgba(231, 0, 145, 0) 0%, #313344 53%, rgba(255, 0, 0, 0) 100%);
-  transition-duration: 0.5s;
-  margin-bottom: 0.2em;
 }
 
 #rps-image,
@@ -289,6 +278,21 @@ body {
 }
 
 /***************** Work General ******************/
+.sub-header {
+  font-family: header;
+  text-align: center;
+  color: #78b1b8;
+  font-size: 7em;
+  line-height: 1.1em;
+  z-index: 0;
+}
+
+@media only screen and (max-width: 750px) {
+  .sub-header {
+    margin-top: 1em;
+    font-size: 4em;
+  }
+}
 #work-container {
   text-align: center;
   justify-content: center;
@@ -312,15 +316,6 @@ body {
   transition-duration: 0.3s;
 }
 
-.sub-headers {
-  color: #636fa1;
-}
-
-@media only screen and (max-width: 750px) {
-  .sub-headers {
-    margin-top: 3em;
-  }
-}
 #web-dev-content,
 #graphic-des-content {
   padding: 2em;
@@ -335,13 +330,6 @@ body {
   width: 268px;
   font-size: 1.3em;
   margin: 0 auto;
-}
-
-.code-captions {
-  font-size: 1em;
-  margin-top: 0.8em;
-  margin-bottom: 2em;
-  color: #5088aa;
 }
 
 @media only screen and (min-width: 700px) {
@@ -566,56 +554,6 @@ body {
 @media only screen and (max-width: 750px) {
   #about-content > p {
     font-size: 1.5em;
-  }
-}
-#resume-content {
-  padding: 2em;
-}
-
-@media only screen and (min-width: 1060px) {
-  #resume-content {
-    width: 1060px;
-  }
-}
-#resume-content h2 {
-  text-align: left;
-}
-
-#resume-content div {
-  margin-bottom: 1.5em;
-}
-
-#resume-content p,
-#resume-content li {
-  text-align: left;
-  font-size: 1.2em;
-}
-
-#resume-content li {
-  margin-top: 0.3em;
-  margin-left: 1.5em;
-}
-
-#prof-exp > h3,
-#education > h3,
-table {
-  text-align: left;
-  font-size: 1.2em;
-}
-
-#client-list {
-  margin-top: 0.6em;
-  display: inline-block;
-}
-
-#client-list-right {
-  display: inline-block;
-}
-
-@media only screen and (max-width: 605px) {
-  #client-list,
-#client-list-right {
-    display: block;
   }
 }
 

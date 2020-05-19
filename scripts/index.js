@@ -207,14 +207,12 @@ const webPageContent = (function () {
     return workContainer;
   };
 
-  const createH3 = (className, text) => {
-    const h3 = document.createElement('h3');
-    h3.className = className;
-    h3.textContent = text;
+  const createHeader = (text) => {
+    const h1 = document.createElement('h1');
+    h1.className = 'sub-header';
+    h1.textContent = text;
 
-    workContainer.appendChild(h3);
-
-    return h3;
+    workContainer.appendChild(h1);
   };
 
   const createContentContainer = (id) => {
@@ -516,7 +514,8 @@ const webPageContent = (function () {
   const showAbout = () => {
     clearMainContainer();
     fadeInAnimation();
-    createH3('sub-headers', 'About');
+    createHeader('About');
+    // createH3('About');
     createContentContainer('about-content');
 
     const summary = document.createElement('p');
@@ -529,7 +528,7 @@ const webPageContent = (function () {
   const showWebDev = () => {
     clearMainContainer();
     fadeInAnimation();
-    createH3('sub-headers', 'Web Development');
+    createHeader('Web Development');
     createContentContainer('web-dev-content');
 
     showRPS();
@@ -541,7 +540,7 @@ const webPageContent = (function () {
   const showGraphicDes = () => {
     clearMainContainer();
     fadeInAnimation();
-    createH3('sub-headers', 'Graphic Design');
+    createHeader('Graphic Design');
     createContentContainer('graphic-des-content');
 
     showReport();
