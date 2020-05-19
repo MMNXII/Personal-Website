@@ -76,6 +76,12 @@ body {
   margin: 0.7em;
 }
 
+@media only screen and (max-width: 750px) {
+  #logo-container {
+    min-width: 65px;
+    min-height: 65px;
+  }
+}
 /***************** Headers ******************/
 #header-container {
   width: fit-content;
