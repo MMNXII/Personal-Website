@@ -515,14 +515,22 @@ const webPageContent = (function () {
     clearMainContainer();
     fadeInAnimation();
     createHeader('About');
-    // createH3('About');
     createContentContainer('about-content');
 
-    const summary = document.createElement('p');
-    summary.textContent =
-      'Aspiring web developer with a background in graphic design and skills in various web technologies. Exceptionally creative, dependable, and organized with a keen eye for detail and top notch work ethic. Fast and efficient multi-tasker with a proven track record in project management and customer service. Able to adapt quickly to a changing environment while still producing quality results.';
-    summary.className = 'header';
-    contentContainer.appendChild(summary);
+    const about1 = document.createElement('p');
+    about1.textContent = 'Designer at heart, Developer on the rise.';
+    about1.className = 'header content-intro';
+    contentContainer.appendChild(about1);
+
+    const about2 = document.createElement('p');
+    about2.textContent =
+      "I've always had an interest in being visually creative, and through design and development I am able to bring it to fruition.";
+    about2.className = 'header content-intro';
+    contentContainer.appendChild(about2);
+
+    const skillsContainer = document.createElement('div');
+    skillsContainer.className = 'skills-container';
+    contentContainer.appendChild(skillsContainer);
   };
 
   const showWebDev = () => {

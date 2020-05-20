@@ -49,11 +49,6 @@ body {
   margin: auto;
 }
 
-/***************** Top Banner ******************/
-.top-banner {
-  position: absolute;
-}
-
 /***************** Logo ******************/
 #logo-container {
   width: fit-content;
@@ -95,14 +90,14 @@ body {
 }
 
 .name {
-  color: #ae677d;
+  color: #b88a78;
   font-size: 3em;
 }
 
 .web,
 .graphic {
   display: inline-block;
-  color: #9890a6;
+  color: #b88a78;
   font-size: 0.97em;
 }
 
@@ -252,7 +247,7 @@ body {
 .hello,
 .comma-welcome,
 .intro-para {
-  color: #78b1b8;
+  color: #b88a78;
   font-size: 2.5em;
 }
 
@@ -281,7 +276,7 @@ body {
 .sub-header {
   font-family: header;
   text-align: center;
-  color: #78b1b8;
+  color: #a05d00;
   font-size: 7em;
   line-height: 1.1em;
   z-index: 0;
@@ -337,6 +332,28 @@ body {
     width: 450px;
   }
 }
+/***************** About ******************/
+.content-intro {
+  text-align: center;
+  font-size: 2em;
+  width: 80%;
+  max-width: 700px;
+  margin: 1em auto auto auto;
+  color: #b88a78;
+}
+
+@media only screen and (max-width: 750px) {
+  .content-intro {
+    font-size: 1.5em;
+  }
+}
+.skills-container {
+  margin-top: 1em;
+  border: 1px solid yellow;
+  width: 100%;
+  height: 50px;
+}
+
 /***************** Web Development ******************/
 @media only screen and (min-width: 1000px) {
   #web-dev-content {
@@ -539,21 +556,6 @@ body {
   .personal-bcard {
     width: auto;
     height: 15em;
-  }
-}
-/***************** Resume ******************/
-#about-content > p {
-  text-align: center;
-  font-size: 2em;
-  width: 80%;
-  max-width: 1000px;
-  margin: 1em auto auto auto;
-  color: #78b1b8;
-}
-
-@media only screen and (max-width: 750px) {
-  #about-content > p {
-    font-size: 1.5em;
   }
 }
 
