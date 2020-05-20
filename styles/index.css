@@ -338,6 +338,7 @@ body {
   font-size: 2em;
   width: 80%;
   max-width: 700px;
+  min-width: 372px;
   margin: 1em auto auto auto;
   color: #b88a78;
 }

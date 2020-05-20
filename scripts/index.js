@@ -517,7 +517,7 @@ const webPageContent = (function () {
     createHeader('About');
     createContentContainer('about-content');
 
-    const about1 = document.createElement('p');
+    const about1 = document.createElement('h5');
     about1.textContent = 'Designer at heart, Developer on the rise.';
     about1.className = 'header content-intro';
     contentContainer.appendChild(about1);
