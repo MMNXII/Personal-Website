@@ -531,6 +531,19 @@ const webPageContent = (function () {
     const skillsContainer = document.createElement('div');
     skillsContainer.className = 'skills-container';
     contentContainer.appendChild(skillsContainer);
+
+    const arr = ['1', '2', '3'];
+
+    for (let i = 0; i < 3; i++) {
+      const div = document.createElement('div');
+      div.className = 'aboutDiv';
+      const h2 = document.createElement('h2');
+      h2.className = 'header aboutText';
+      h2.textContent = arr[i];
+
+      div.appendChild(h2);
+      skillsContainer.appendChild(div);
+    }
   };
 
   const showWebDev = () => {
