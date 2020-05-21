@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /***************** SASS Classes ******************/
 @font-face {
   font-family: header;
@@ -100,7 +101,7 @@ body {
     justify-content: space-between;
     margin-left: 1.1em;
     margin-bottom: 5em;
-    border-left: 6px solid #62133b;
+    border-left: 3px solid #62133b;
     border-radius: 2px;
   }
 }
@@ -140,14 +141,9 @@ body {
   margin: 1em;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 750px) {
   .icons-container {
-    margin: 0.7em 0.2em 0.2em 0.2em;
-  }
-}
-@media only screen and (min-width: 551px) and (max-width: 750px) {
-  .icons-container {
-    margin: 2em 0.4em 1em 0.4em;
+    margin: 0.7em 0.3em 0.3em 0.3em;
   }
 }
 .page-icons {
@@ -218,7 +214,7 @@ body {
   font-family: header;
   text-align: center;
   color: #b88a78;
-  font-size: 7em;
+  font-size: 5em;
   line-height: 1.1em;
   z-index: 0;
 }
@@ -226,7 +222,7 @@ body {
 @media only screen and (max-width: 750px) {
   .sub-header {
     margin-top: 1em;
-    font-size: 4em;
+    font-size: 3em;
   }
 }
 #work-container {
@@ -297,16 +293,69 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 1em;
-  border: 1px solid yellow;
+  margin-top: 2em;
   width: 100%;
   height: 50px;
 }
 
-.aboutText {
+.aboutDiv {
+  width: 33%;
+  margin-bottom: 4em;
+}
+
+#toolsDiv {
+  border-left: 1px solid #62133b;
+  border-right: 1px solid #62133b;
+}
+
+.aboutTextTitles {
+  color: #a05d00;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5em;
+}
+
+.list-item {
+  font-family: header;
+  text-align: center;
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
   color: #b88a78;
-  border: 1px solid yellow;
-  width: 3em;
+}
+
+@media only screen and (min-width: 550px) and (max-width: 749px) {
+  .aboutTextTitles {
+    font-size: 1.9em;
+  }
+
+  .list-item {
+    font-size: 1.7em;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .skills-container {
+    margin-top: 4em;
+  }
+
+  .aboutTextTitles {
+    font-size: 2.4em;
+  }
+
+  .list-item {
+    line-height: 1.2em;
+    font-size: 2.2em;
+  }
+}
+.aboutDiv > ul {
+  list-style: none;
+}
+
+.aboutDiv > ul > li::before {
+  content: "•";
+  color: #62133b;
+  font-weight: bold;
+  display: inline-block;
+  width: 0.5em;
+  margin-left: -0.5em;
 }
 
 /***************** Web Development ******************/
