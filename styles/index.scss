@@ -64,20 +64,6 @@ body {
   }
 }
 /***************** Headers ******************/
-#header-container {
-  width: fit-content;
-  text-align: center;
-  margin-bottom: 5em;
-  display: inline-block;
-  margin-top: 1em;
-  margin-bottom: 0;
-  vertical-align: top;
-}
-@media only screen and (max-width: 550px) {
-  #header-container {
-    display: none;
-  }
-}
 
 .header {
   text-align: center;
@@ -85,45 +71,11 @@ body {
   letter-spacing: 0.1em;
   line-height: 1.1em;
 }
-.name {
-  color: #b88a78;
-  font-size: 3em;
-}
 
-.web,
-.graphic {
-  display: inline-block;
-  color: #b88a78;
-  font-size: 0.97em;
-}
-.divide {
-  display: inline-block;
-  color: #78b1b8;
-  margin: auto 0.2em auto 0.2em;
-  font-size: 0.9em;
-}
-@media only screen and (max-width: 360px) {
-  .name {
-    font-size: 2.5em;
-  }
-  .web,
-  .graphic,
-  .divide {
-    font-size: 1em;
-  }
-}
 @media only screen and (max-width: 750px) {
   .header {
     line-height: 1em;
     margin-top: 0.4em;
-  }
-  .name {
-    font-size: 2em;
-  }
-  .web,
-  .graphic,
-  .divide {
-    font-size: 0.65em;
   }
 }
 
@@ -145,32 +97,39 @@ body {
 @media only screen and (min-width: 750px) {
   #social-media-icon-container {
     position: relative;
-    display: block;
-    width: fit-content;
+    display: inline-block;
+    width: 10em;
+    height: 7em;
     background-color: #0e152400;
-    margin-bottom: 9em;
-    margin-left: 8em;
-    margin-top: -0.7em;
+    justify-content: space-between;
+    margin-left: 1.1em;
+    margin-bottom: 5em;
+    border-left: 6px solid #62133b;
+    border-radius: 2px;
   }
 }
 
 .icon {
-  width: 2.2rem;
-  height: 2.2rem;
-  margin: 0.3em;
-  justify-content: space-between;
-  border: none;
+  width: 2.3rem;
+  height: 2.3rem;
+  margin: 0.6em;
+}
+
+@media only screen and (max-width: 750px) {
+  .icon {
+    margin: 0.3em;
+  }
 }
 
 @media only screen and (min-width: 750px) {
-  .icon {
-    width: 2rem;
-    height: 2rem;
+  #linkedin,
+  #mail {
+    margin-left: 1em;
   }
 }
 
 .icon:hover {
-  filter: brightness(0.7);
+  filter: opacity(0.6);
   transition-duration: 0.25s;
 }
 

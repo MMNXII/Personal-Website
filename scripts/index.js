@@ -3,15 +3,6 @@
 document.getElementById('body').style.display = 'block';
 
 (introAnimations = () => {
-  const banner = anime({
-    targets: '.top-banner',
-    delay: anime.stagger(200),
-    duration: 1500,
-    translateY: ['-2rem', 0],
-    opacity: [0, 1],
-    direction: 'normal',
-    easing: 'spring(1, 80, 10, 0)',
-  });
   const logo = anime({
     targets: '#logo-container',
     duration: 2500,
@@ -20,26 +11,8 @@ document.getElementById('body').style.display = 'block';
     direction: 'normal',
     easing: 'spring(1, 80, 10, 0)',
   });
-  const name = anime({
-    targets: '.name',
-    delay: 600,
-    duration: 1500,
-    translateY: ['-2rem', 0],
-    opacity: [0, 1],
-    direction: 'normal',
-    easing: 'spring(1, 80, 10, 0)',
-  });
-  const titles = anime({
-    targets: '.web, .divide, .graphic',
-    delay: 700,
-    duration: 1500,
-    translateY: ['-2rem', 0],
-    opacity: [0, 1],
-    direction: 'normal',
-    easing: 'spring(1, 80, 10, 0)',
-  });
   const icon = anime({
-    targets: '.icon',
+    targets: '#social-media-icon-container',
     delay: anime.stagger(50, { start: 700 }),
     translateY: ['-2rem', 0],
     opacity: [0, 1],
