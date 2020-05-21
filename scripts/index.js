@@ -517,33 +517,79 @@ const webPageContent = (function () {
     createHeader('About');
     createContentContainer('about-content');
 
-    const about1 = document.createElement('p');
-    about1.textContent = 'Designer at heart, Developer on the rise.';
-    about1.className = 'header content-intro';
-    contentContainer.appendChild(about1);
+    (createAboutParagraphs = (text) => {
+      const about = document.createElement('p');
+      about.textContent = text;
+      about.className = 'header content-intro';
 
-    const about2 = document.createElement('p');
-    about2.textContent =
-      "I've always had an interest in being visually creative, and through design and development I am able to bring it to fruition.";
-    about2.className = 'header content-intro';
-    contentContainer.appendChild(about2);
+      contentContainer.appendChild(about);
+    })();
+
+    createAboutParagraphs('Designer at heart, Developer on the rise.');
+    createAboutParagraphs(
+      "I've always had an interest in being visually creative, and through graphic design and web development I am able to showcase my vision and bring my creativity to fruition."
+    );
 
     const skillsContainer = document.createElement('div');
     skillsContainer.className = 'skills-container';
     contentContainer.appendChild(skillsContainer);
 
-    const arr = ['1', '2', '3'];
+    const skillsTitles = ['Lanuages:', 'Tools:', 'Software:'];
 
-    for (let i = 0; i < 3; i++) {
+    skillsTitles.forEach((skills) => {
       const div = document.createElement('div');
       div.className = 'aboutDiv';
+
       const h2 = document.createElement('h2');
-      h2.className = 'header aboutText';
-      h2.textContent = arr[i];
+      h2.className = 'header aboutTextTitles';
+      h2.textContent = skills;
 
       div.appendChild(h2);
       skillsContainer.appendChild(div);
-    }
+    });
+
+    const languagesDiv = document.getElementsByClassName('aboutDiv')[0];
+    const toolsDiv = document.getElementsByClassName('aboutDiv')[1];
+    toolsDiv.id = 'toolsDiv';
+    const softwareDiv = document.getElementsByClassName('aboutDiv')[2];
+
+    const languages = ['HTML', 'CSS', 'SCSS / SASS', 'JavaScript'];
+    const tools = [
+      'Visual Studio Code',
+      'GitHub',
+      'Git',
+      'CLI',
+      'Webpack',
+      'NPM',
+    ];
+    const software = [
+      'Affinity Designer',
+      'Photoshop',
+      'Illustrator',
+      'InDesign',
+      'Acrobat',
+      'MS Office',
+      'Windows OS',
+      'Mac OS',
+      'Linux (Ubuntu)',
+    ];
+
+    applyLists = (array, containingDiv) => {
+      const list = document.createElement('ul');
+
+      array.forEach((item) => {
+        const listItem = document.createElement('li');
+        listItem.className = 'header list-item';
+        listItem.textContent = item;
+
+        list.appendChild(listItem);
+      });
+      containingDiv.appendChild(list);
+    };
+
+    applyLists(languages, languagesDiv);
+    applyLists(tools, toolsDiv);
+    applyLists(software, softwareDiv);
   };
 
   const showWebDev = () => {
