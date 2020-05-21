@@ -3,11 +3,38 @@
 document.getElementById('body').style.display = 'block';
 
 (introAnimations = () => {
+  const banner = anime({
+    targets: '.top-banner',
+    delay: anime.stagger(200),
+    duration: 1500,
+    translateY: ['-2rem', 0],
+    opacity: [0, 1],
+    direction: 'normal',
+    easing: 'spring(1, 80, 10, 0)',
+  });
   const logo = anime({
     targets: '#logo-container',
     duration: 2500,
     delay: 300,
     translateY: ['-20rem', 0],
+    direction: 'normal',
+    easing: 'spring(1, 80, 10, 0)',
+  });
+  const name = anime({
+    targets: '.name',
+    delay: 600,
+    duration: 1500,
+    translateY: ['-2rem', 0],
+    opacity: [0, 1],
+    direction: 'normal',
+    easing: 'spring(1, 80, 10, 0)',
+  });
+  const titles = anime({
+    targets: '.web, .divide, .graphic',
+    delay: 700,
+    duration: 1500,
+    translateY: ['-2rem', 0],
+    opacity: [0, 1],
     direction: 'normal',
     easing: 'spring(1, 80, 10, 0)',
   });
@@ -406,7 +433,7 @@ const webPageContent = (function () {
   };
 
   const createFigCaption = (className, text) => {
-    const fig = document.createElement('figcaption');
+    const fig = document.createElement('h3');
     fig.className = className;
     fig.textContent = text;
 

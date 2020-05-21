@@ -8,16 +8,10 @@
   flex-wrap: wrap;
 }
 
-.captions {
-  font-family: "Righteous", cursive;
+.project-buttons, .sub-captions, .captions {
+  font-family: header;
   text-align: center;
-  color: #508caf;
-}
-
-.sub-captions {
-  font-family: "Roboto Condensed", sans-serif;
-  text-align: center;
-  color: #cecece;
+  color: #b88a78;
 }
 
 #rps-image,
@@ -263,19 +257,23 @@ body {
 }
 
 .captions {
-  font-size: 1.6em;
+  color: #62133b;
+  font-size: 1.8em;
+  letter-spacing: 0.05em;
   margin-top: 0.2em;
 }
 
 .sub-captions {
   width: 268px;
-  font-size: 1.3em;
-  margin: 0 auto;
+  font-size: 1.6em;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+  margin: 0.3em auto auto auto;
 }
 
 @media only screen and (min-width: 700px) {
   .sub-captions {
-    width: 450px;
+    width: 460px;
   }
 }
 /***************** About ******************/
@@ -343,23 +341,21 @@ body {
 }
 
 .project-buttons {
-  font-size: 0.85em;
-  text-align: center;
+  font-size: 1.3em;
   padding: 0.3em;
-  margin: 0.5em;
+  margin: 0.35em;
   display: inline-block;
-  color: #70cbff;
-  background-color: #313344da;
+  background-color: #31334400;
   border-radius: 10%;
   opacity: 0.8;
-  border: 1px solid #70cbff;
+  border: 1px solid #b88a78;
 }
 
 .project-buttons:hover {
   cursor: pointer;
   transition-property: color;
   transition-duration: 0.3s;
-  color: #ff8800;
+  color: #a05d00;
 }
 
 /***************** Graphic Design ******************/
@@ -423,12 +419,12 @@ body {
 .willmore-image-button {
   width: 2em;
   height: 2em;
-  color: #508caf;
-  background-color: #313344da;
+  color: #b88a78;
+  background-color: #31334400;
   margin: 0.5em;
   border-radius: 50%;
   opacity: 0.8;
-  border: 1px solid #70cbff;
+  border: 1px solid #b88a78;
 }
 
 .report-image-button:hover,

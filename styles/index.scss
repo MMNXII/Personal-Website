@@ -9,16 +9,10 @@
   flex-wrap: wrap;
 }
 
-%script-text {
-  font-family: 'Righteous', cursive;
+%caption-header {
+  font-family: header;
   text-align: center;
-  color: rgb(80, 140, 175);
-}
-
-%standard-text {
-  font-family: 'Roboto Condensed', sans-serif;
-  text-align: center;
-  color: #cecece;
+  color: #b88a78;
 }
 
 %web-dev-img-height-width {
@@ -263,20 +257,24 @@ body {
   padding: 2em;
 }
 .captions {
-  @extend %script-text;
-  font-size: 1.6em;
+  @extend %caption-header;
+  color: #62133b;
+  font-size: 1.8em;
+  letter-spacing: 0.05em;
   margin-top: 0.2em;
 }
 .sub-captions {
-  @extend %standard-text;
+  @extend %caption-header;
   width: 268px;
-  font-size: 1.3em;
-  margin: 0 auto;
+  font-size: 1.6em;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+  margin: 0.3em auto auto auto;
 }
 
 @media only screen and (min-width: 700px) {
   .sub-captions {
-    width: 450px;
+    width: 460px;
   }
 }
 
@@ -351,22 +349,21 @@ body {
   margin: 0 auto;
 }
 .project-buttons {
-  font-size: 0.85em;
-  text-align: center;
+  @extend %caption-header;
+  font-size: 1.3em;
   padding: 0.3em;
-  margin: 0.5em;
+  margin: 0.35em;
   display: inline-block;
-  color: rgb(112, 203, 255);
-  background-color: #313344da;
+  background-color: #31334400;
   border-radius: 10%;
   opacity: 0.8;
-  border: 1px solid rgb(112, 203, 255);
+  border: 1px solid #b88a78;
 }
 .project-buttons:hover {
   cursor: pointer;
   transition-property: color;
   transition-duration: 0.3s;
-  color: rgb(255, 136, 0);
+  color: #a05d00;
 }
 
 /***************** Graphic Design ******************/
@@ -424,12 +421,12 @@ body {
 .willmore-image-button {
   width: 2em;
   height: 2em;
-  color: rgb(80, 140, 175);
-  background-color: #313344da;
+  color: #b88a78;
+  background-color: #31334400;
   margin: 0.5em;
   border-radius: 50%;
   opacity: 0.8;
-  border: 1px solid rgb(112, 203, 255);
+  border: 1px solid #b88a78;
 }
 .report-image-button:hover,
 .willmore-image-button:hover {
