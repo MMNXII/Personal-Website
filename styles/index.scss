@@ -25,7 +25,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  // border: 0.2px solid yellow;
 }
 html {
   background-color: #0e1524;
@@ -281,20 +280,57 @@ body {
 
 /***************** About ******************/
 
+@media only screen and (min-width: 750px) {
+  .intro-about-container {
+    display: flex;
+    justify-content: center;
+  }
+  .intro-para-container {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 2em;
+  }
+}
+@media only screen and (min-width: 990px) {
+  .intro-para-container {
+    margin-top: 3em;
+  }
+}
+@media only screen and (max-width: 749px) {
+  .profile {
+    margin: 1.5em auto 1.5em auto;
+    max-width: 130px;
+    max-height: auto;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .profile {
+    margin: 2em;
+    max-width: 180px;
+    max-height: auto;
+  }
+}
+
 .content-intro {
   text-align: center;
   font-size: 2em;
-  width: 80%;
   max-width: 700px;
   min-width: 372px;
-  margin: 1em auto auto auto;
+  margin-top: 0.5em;
+  margin-right: 0em;
   color: #b88a78;
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 749px) {
   .content-intro {
     font-size: 1.5em;
   }
 }
+@media only screen and (min-width: 749px) {
+  .content-intro {
+    text-align: left;
+  }
+}
+
 .skills-container {
   display: flex;
   flex-wrap: wrap;

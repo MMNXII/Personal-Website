@@ -517,13 +517,26 @@ const webPageContent = (function () {
     createHeader('About');
     createContentContainer('about-content');
 
-    (createAboutParagraphs = (text) => {
+    const introAboutContainer = document.createElement('div');
+    introAboutContainer.className = 'intro-about-container';
+    contentContainer.appendChild(introAboutContainer);
+
+    const img = document.createElement('img');
+    img.className = 'profile';
+    img.src = './images/me2.jpg';
+    introAboutContainer.appendChild(img);
+
+    const introParaContainer = document.createElement('div');
+    introParaContainer.className = 'intro-para-container';
+    introAboutContainer.appendChild(introParaContainer);
+
+    createAboutParagraphs = (text) => {
       const about = document.createElement('p');
       about.textContent = text;
       about.className = 'header content-intro';
 
-      contentContainer.appendChild(about);
-    })();
+      introParaContainer.appendChild(about);
+    };
 
     createAboutParagraphs('Designer at heart, Developer on the rise.');
     createAboutParagraphs(
@@ -563,6 +576,7 @@ const webPageContent = (function () {
       'NPM',
     ];
     const software = [
+      'Affinity Photo',
       'Affinity Designer',
       'Photoshop',
       'Illustrator',
