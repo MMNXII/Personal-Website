@@ -523,7 +523,7 @@ const webPageContent = (function () {
 
     const img = document.createElement('img');
     img.className = 'profile';
-    img.src = './images/me2.jpg';
+    img.src = './images/profile.jpg';
     introAboutContainer.appendChild(img);
 
     const introParaContainer = document.createElement('div');
