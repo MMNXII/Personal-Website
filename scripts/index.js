@@ -540,7 +540,7 @@ const webPageContent = (function () {
 
     createAboutParagraphs('Designer at heart, Developer on the rise.');
     createAboutParagraphs(
-      "I've always had an interest in being visually creative, and through graphic design and web development I am able to showcase my vision and bring my creativity to fruition."
+      "I've always had an interest in being visually imaginative. Using graphic design to express on the digital canvas, and web development to take that expression to new heights. Combining visual communication and user interaction enables me to showcase my creativity, and make it a reality."
     );
 
     const skillsContainer = document.createElement('div');
