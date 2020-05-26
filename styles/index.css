@@ -315,8 +315,8 @@ body {
 }
 .content-intro {
   text-align: center;
-  font-size: 2em;
-  max-width: 700px;
+  font-size: 1.5em;
+  max-width: 650px;
   min-width: 372px;
   margin-top: 0.5em;
   margin-right: 0em;
@@ -325,7 +325,9 @@ body {
 
 @media only screen and (max-width: 749px) {
   .content-intro {
-    font-size: 1.5em;
+    font-size: 1.3em;
+    max-width: 430px;
+    margin: 0.5em auto auto auto;
   }
 }
 @media only screen and (min-width: 749px) {
