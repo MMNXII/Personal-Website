@@ -72,6 +72,22 @@ body {
   }
 }
 
+.sub-header {
+  font-family: header;
+  text-align: center;
+  color: #b88a78;
+  font-size: 3em;
+  line-height: 1.1em;
+  z-index: 0;
+}
+
+@media only screen and (max-width: 750px) {
+  .sub-header {
+    margin-top: 1em;
+    font-size: 3em;
+  }
+}
+
 /***************** Social Media Icons ******************/
 #social-media-icon-container {
   position: fixed;
@@ -215,22 +231,6 @@ body {
 
 /***************** Work General ******************/
 
-.sub-header {
-  font-family: header;
-  text-align: center;
-  color: #b88a78;
-  font-size: 5em;
-  line-height: 1.1em;
-  z-index: 0;
-}
-
-@media only screen and (max-width: 750px) {
-  .sub-header {
-    margin-top: 1em;
-    font-size: 3em;
-  }
-}
-
 #work-container {
   text-align: center;
   justify-content: center;
@@ -341,7 +341,7 @@ body {
   width: 100%;
   height: 50px;
 }
-.aboutDiv {
+.about-div {
   width: 33%;
   margin-bottom: 4em;
 }
@@ -349,7 +349,7 @@ body {
   border-left: 1px solid #62133b;
   border-right: 1px solid #62133b;
 }
-.aboutTextTitles {
+.about-text-titles {
   color: #a05d00;
   letter-spacing: 0.05em;
   margin-bottom: 0.5em;
@@ -362,7 +362,7 @@ body {
   color: #b88a78;
 }
 @media only screen and (min-width: 550px) and (max-width: 749px) {
-  .aboutTextTitles {
+  .about-text-titles {
     font-size: 1.9em;
   }
   .list-item {
@@ -373,7 +373,7 @@ body {
   .skills-container {
     margin-top: 4em;
   }
-  .aboutTextTitles {
+  .about-text-titles {
     font-size: 2.4em;
   }
   .list-item {
@@ -382,11 +382,11 @@ body {
   }
 }
 
-.aboutDiv > ul {
+.about-div > ul {
   list-style: none;
 }
 
-.aboutDiv > ul > li::before {
+.about-div > ul > li::before {
   content: '\2022';
   color: #62133b;
   font-weight: bold;
@@ -609,5 +609,47 @@ body {
   padding-top: 40%;
   background-color: #62133af5;
   color: #a05d00;
-  font-size: 5em;
+  font-size: 4em;
+}
+
+.page-header {
+  color: #a05d00;
+}
+
+#elements-container {
+  text-align: center;
+}
+.elements-intro {
+  color: #b88a78;
+  font-size: 1.6em;
+  max-width: 650px;
+  min-width: 372px;
+  margin: 2em auto 2em auto;
+}
+
+.elements-icons-container {
+  margin: auto auto 2em auto;
+}
+
+@media only screen and (min-width: 450px) and (max-width: 650px) {
+  .elements-icons-container {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .elements-images {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .elements-icons-container {
+    display: flex;
+    justify-content: center;
+  }
+  .elements-images {
+    width: 250px;
+    height: 250px;
+  }
 }

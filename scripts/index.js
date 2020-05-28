@@ -207,9 +207,9 @@ const webPageContent = (function () {
     return workContainer;
   };
 
-  const createHeader = (text) => {
+  const createHeader = (text, className) => {
     const h1 = document.createElement('h1');
-    h1.className = 'sub-header';
+    h1.className = className;
     h1.textContent = text;
 
     workContainer.appendChild(h1);
@@ -270,20 +270,20 @@ const webPageContent = (function () {
 
     skillsTitles.forEach((skills) => {
       const div = document.createElement('div');
-      div.className = 'aboutDiv';
+      div.className = 'about-div';
 
       const h2 = document.createElement('h2');
-      h2.className = 'header aboutTextTitles';
+      h2.className = 'header about-text-titles';
       h2.textContent = skills;
 
       div.appendChild(h2);
       skillsContainer.appendChild(div);
     });
 
-    const languagesDiv = document.getElementsByClassName('aboutDiv')[0];
-    const toolsDiv = document.getElementsByClassName('aboutDiv')[1];
+    const languagesDiv = document.getElementsByClassName('about-div')[0];
+    const toolsDiv = document.getElementsByClassName('about-div')[1];
     toolsDiv.id = 'toolsDiv';
-    const softwareDiv = document.getElementsByClassName('aboutDiv')[2];
+    const softwareDiv = document.getElementsByClassName('about-div')[2];
 
     const languages = ['HTML', 'CSS', 'SCSS / SASS', 'JavaScript'];
     const tools = [
@@ -492,9 +492,45 @@ const webPageContent = (function () {
     src: 'images/graphic-design-work/annual-report/report-collage.jpg',
   };
 
+  const fireBlack = {
+    src: 'images/graphic-design-work/elements/fire-black.svg',
+  };
+
+  const waterBlack = {
+    src: 'images/graphic-design-work/elements/water-black.svg',
+  };
+
+  const earthBlack = {
+    src: 'images/graphic-design-work/elements/earth-black.svg',
+  };
+
+  const airBlack = {
+    src: 'images/graphic-design-work/elements/air-black.svg',
+  };
+
+  const elementImagesIconBlack = [fireBlack, waterBlack, earthBlack, airBlack];
+
+  const fireWhite = {
+    src: 'images/graphic-design-work/elements/fire-white.svg',
+  };
+
+  const waterWhite = {
+    src: 'images/graphic-design-work/elements/water-white.svg',
+  };
+
+  const earthWhite = {
+    src: 'images/graphic-design-work/elements/earth-white.svg',
+  };
+
+  const airWhite = {
+    src: 'images/graphic-design-work/elements/air-white.svg',
+  };
+
+  const elementImagesIconWhite = [fireWhite, waterWhite, earthWhite, airWhite];
+
   /****** Create Graphic Design Functions ******/
 
-  const createImages = ({ src }, text, id) => {
+  const createGraphicDesImages = ({ src }, text, id) => {
     const imgContainter = document.createElement('div');
     imgContainter.className = 'imgContainer';
 
@@ -513,7 +549,7 @@ const webPageContent = (function () {
 
     imgContainter.addEventListener(
       'mouseover',
-      (show = (e) => {
+      (showHoverText = (e) => {
         if (e.target.className == 'hover-text') {
           txt.style.opacity = '1';
           txt.style.transition = 'opacity .2s linear';
@@ -523,7 +559,7 @@ const webPageContent = (function () {
 
     imgContainter.addEventListener(
       'mouseout',
-      (hide = (e) => {
+      (hideHoverText = (e) => {
         if (e.target.className == 'hover-text') {
           txt.style.opacity = '0';
           txt.style.transition = 'opacity .2s linear';
@@ -533,12 +569,82 @@ const webPageContent = (function () {
 
     imgContainter.addEventListener(
       'click',
-      (showElements = (e) => {
-        if (e.target.className == 'txt') {
-          clearMainContainer();
+      (showPages = (e) => {
+        if (
+          e.target.className == 'hover-text' &&
+          e.target.id == 'elements-text'
+        ) {
+          showElements();
+        } else if (
+          e.target.className == 'hover-text' &&
+          e.target.id == 'willmore-text'
+        ) {
+          showWillmoreWineBar();
+        } else if (
+          e.target.className == 'hover-text' &&
+          e.target.id == 'report-text'
+        ) {
+          showAnnualReport();
         }
       })
     );
+  };
+
+  /***** Create Elements *******/
+  createElementPara = (text) => {
+    const para = document.createElement('p');
+    para.textContent = text;
+    para.className = 'header elements-intro';
+
+    contentContainer.appendChild(para);
+  };
+
+  createElementImages = (imgArr, appendTo) => {
+    imgArr = imgArr;
+    imgArr.forEach((element) => {
+      const img = document.createElement('img');
+      img.src = element.src;
+      img.className = 'elements-images';
+
+      appendTo.appendChild(img);
+    });
+  };
+
+  const showElements = () => {
+    clearMainContainer();
+    fadeInAnimation();
+    createHeader('Elements', 'page-header sub-header');
+    createContentContainer('elements-container');
+
+    createElementPara(
+      'Personal project of mine using the four classical elements as the subject matter. Fire, water, earth, and air were seen by ancient cultures as the elements that encompass all life, and though they have been disproven to be by modern science, they still represent an all-important part of our daily lives.'
+    );
+
+    const elementContainerBlack = document.createElement('div');
+    elementContainerBlack.className =
+      'elements-icons-container icons--container-black';
+    contentContainer.appendChild(elementContainerBlack);
+
+    createElementImages(elementImagesIconBlack, elementContainerBlack);
+
+    const elementContainerWhite = document.createElement('div');
+    elementContainerWhite.className =
+      'elements-icons-container icons-container-white';
+    contentContainer.appendChild(elementContainerWhite);
+
+    createElementImages(elementImagesIconWhite, elementContainerWhite);
+  };
+
+  const showWillmoreWineBar = () => {
+    clearMainContainer();
+    fadeInAnimation();
+    createHeader('Willmore Wine Bar', 'page-header sub-header');
+  };
+
+  const showAnnualReport = () => {
+    clearMainContainer();
+    fadeInAnimation();
+    createHeader('Annual Report', 'page-header sub-header');
   };
 
   const createGraphicImageContent = ({ href, alt, className, id }, src) => {
@@ -665,7 +771,7 @@ const webPageContent = (function () {
   const showAbout = () => {
     clearMainContainer();
     fadeInAnimation();
-    createHeader('About');
+    createHeader('About', 'sub-header');
     createContentContainer('about-content');
     createAboutContent();
   };
@@ -673,7 +779,7 @@ const webPageContent = (function () {
   const showWebDev = () => {
     clearMainContainer();
     fadeInAnimation();
-    createHeader('Web Development');
+    createHeader('Web Development', 'sub-header');
     createContentContainer('web-dev-content');
 
     showRPS();
@@ -685,12 +791,12 @@ const webPageContent = (function () {
   const showGraphicDes = () => {
     clearMainContainer();
     fadeInAnimation();
-    createHeader('Graphic Design');
+    createHeader('Graphic Design', 'sub-header');
     createContentContainer('graphic-des-content');
 
-    createImages(elements, 'Elements', 'elements-text');
-    createImages(willmore, 'Willmore', 'willmore-text');
-    createImages(report, 'Report', 'report-text');
+    createGraphicDesImages(elements, 'Elements', 'elements-text');
+    createGraphicDesImages(willmore, 'Willmore', 'willmore-text');
+    createGraphicDesImages(report, 'Report', 'report-text');
 
     showReport();
     getBtns('report-container');
