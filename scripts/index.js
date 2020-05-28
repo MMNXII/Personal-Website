@@ -233,6 +233,98 @@ const webPageContent = (function () {
 
   /****** Create Content ******/
 
+  /******* Create About Functions *******/
+
+  const createAboutContent = () => {
+    const introAboutContainer = document.createElement('div');
+    introAboutContainer.className = 'intro-about-container';
+    contentContainer.appendChild(introAboutContainer);
+
+    const img = document.createElement('img');
+    img.className = 'profile';
+    img.src = './images/profile.jpg';
+    introAboutContainer.appendChild(img);
+
+    const introParaContainer = document.createElement('div');
+    introParaContainer.className = 'intro-para-container';
+    introAboutContainer.appendChild(introParaContainer);
+
+    createAboutParagraphs = (text) => {
+      const about = document.createElement('p');
+      about.textContent = text;
+      about.className = 'header content-intro';
+
+      introParaContainer.appendChild(about);
+    };
+
+    createAboutParagraphs('Designer at heart, Developer on the rise.');
+    createAboutParagraphs(
+      "I've always had an interest in being visually imaginative. Using graphic design to express on the digital canvas, and web development to take that expression to new heights. Combining visual communication and user interaction enables me to showcase my creativity, and make it a reality."
+    );
+
+    const skillsContainer = document.createElement('div');
+    skillsContainer.className = 'skills-container';
+    contentContainer.appendChild(skillsContainer);
+
+    const skillsTitles = ['Lanuages:', 'Tools:', 'Software:'];
+
+    skillsTitles.forEach((skills) => {
+      const div = document.createElement('div');
+      div.className = 'aboutDiv';
+
+      const h2 = document.createElement('h2');
+      h2.className = 'header aboutTextTitles';
+      h2.textContent = skills;
+
+      div.appendChild(h2);
+      skillsContainer.appendChild(div);
+    });
+
+    const languagesDiv = document.getElementsByClassName('aboutDiv')[0];
+    const toolsDiv = document.getElementsByClassName('aboutDiv')[1];
+    toolsDiv.id = 'toolsDiv';
+    const softwareDiv = document.getElementsByClassName('aboutDiv')[2];
+
+    const languages = ['HTML', 'CSS', 'SCSS / SASS', 'JavaScript'];
+    const tools = [
+      'Visual Studio Code',
+      'GitHub',
+      'Git',
+      'CLI',
+      'Webpack',
+      'NPM',
+    ];
+    const software = [
+      'Affinity Photo',
+      'Affinity Designer',
+      'Photoshop',
+      'Illustrator',
+      'InDesign',
+      'Acrobat',
+      'MS Office',
+      'Windows OS',
+      'Mac OS',
+      'Linux (Ubuntu)',
+    ];
+
+    applyLists = (array, containingDiv) => {
+      const list = document.createElement('ul');
+
+      array.forEach((item) => {
+        const listItem = document.createElement('li');
+        listItem.className = 'header list-item';
+        listItem.textContent = item;
+
+        list.appendChild(listItem);
+      });
+      containingDiv.appendChild(list);
+    };
+
+    applyLists(languages, languagesDiv);
+    applyLists(tools, toolsDiv);
+    applyLists(software, softwareDiv);
+  };
+
   /****** Web Development Image Objects ******/
 
   const rps = {
@@ -388,7 +480,66 @@ const webPageContent = (function () {
     },
   };
 
+  const elements = {
+    src: 'images/graphic-design-work/elements/elements-collage.svg',
+  };
+
+  const willmore = {
+    src: 'images/graphic-design-work/willmore/willmore-collage.svg',
+  };
+
+  const report = {
+    src: 'images/graphic-design-work/annual-report/report-collage.jpg',
+  };
+
   /****** Create Graphic Design Functions ******/
+
+  const createImages = ({ src }, text, id) => {
+    const imgContainter = document.createElement('div');
+    imgContainter.className = 'imgContainer';
+
+    const img = document.createElement('img');
+    img.className = 'img';
+    img.src = src;
+
+    const txt = document.createElement('h2');
+    txt.className = 'hover-text';
+    txt.id = id;
+    txt.textContent = text;
+    imgContainter.appendChild(txt);
+
+    imgContainter.appendChild(img);
+    contentContainer.appendChild(imgContainter);
+
+    imgContainter.addEventListener(
+      'mouseover',
+      (show = (e) => {
+        if (e.target.className == 'hover-text') {
+          txt.style.opacity = '1';
+          txt.style.transition = 'opacity .2s linear';
+        }
+      })
+    );
+
+    imgContainter.addEventListener(
+      'mouseout',
+      (hide = (e) => {
+        if (e.target.className == 'hover-text') {
+          txt.style.opacity = '0';
+          txt.style.transition = 'opacity .2s linear';
+        }
+      })
+    );
+
+    imgContainter.addEventListener(
+      'click',
+      (showElements = (e) => {
+        if (e.target.className == 'txt') {
+          clearMainContainer();
+        }
+      })
+    );
+  };
 
   const createGraphicImageContent = ({ href, alt, className, id }, src) => {
     const anchor = document.createElement('a');
@@ -516,94 +667,7 @@ const webPageContent = (function () {
     fadeInAnimation();
     createHeader('About');
     createContentContainer('about-content');
-
-    const introAboutContainer = document.createElement('div');
-    introAboutContainer.className = 'intro-about-container';
-    contentContainer.appendChild(introAboutContainer);
-
-    const img = document.createElement('img');
-    img.className = 'profile';
-    img.src = './images/profile.jpg';
-    introAboutContainer.appendChild(img);
-
-    const introParaContainer = document.createElement('div');
-    introParaContainer.className = 'intro-para-container';
-    introAboutContainer.appendChild(introParaContainer);
-
-    createAboutParagraphs = (text) => {
-      const about = document.createElement('p');
-      about.textContent = text;
-      about.className = 'header content-intro';
-
-      introParaContainer.appendChild(about);
-    };
-
-    createAboutParagraphs('Designer at heart, Developer on the rise.');
-    createAboutParagraphs(
-      "I've always had an interest in being visually imaginative. Using graphic design to express on the digital canvas, and web development to take that expression to new heights. Combining visual communication and user interaction enables me to showcase my creativity, and make it a reality."
-    );
-
-    const skillsContainer = document.createElement('div');
-    skillsContainer.className = 'skills-container';
-    contentContainer.appendChild(skillsContainer);
-
-    const skillsTitles = ['Lanuages:', 'Tools:', 'Software:'];
-
-    skillsTitles.forEach((skills) => {
-      const div = document.createElement('div');
-      div.className = 'aboutDiv';
-
-      const h2 = document.createElement('h2');
-      h2.className = 'header aboutTextTitles';
-      h2.textContent = skills;
-
-      div.appendChild(h2);
-      skillsContainer.appendChild(div);
-    });
-
-    const languagesDiv = document.getElementsByClassName('aboutDiv')[0];
-    const toolsDiv = document.getElementsByClassName('aboutDiv')[1];
-    toolsDiv.id = 'toolsDiv';
-    const softwareDiv = document.getElementsByClassName('aboutDiv')[2];
-
-    const languages = ['HTML', 'CSS', 'SCSS / SASS', 'JavaScript'];
-    const tools = [
-      'Visual Studio Code',
-      'GitHub',
-      'Git',
-      'CLI',
-      'Webpack',
-      'NPM',
-    ];
-    const software = [
-      'Affinity Photo',
-      'Affinity Designer',
-      'Photoshop',
-      'Illustrator',
-      'InDesign',
-      'Acrobat',
-      'MS Office',
-      'Windows OS',
-      'Mac OS',
-      'Linux (Ubuntu)',
-    ];
-
-    applyLists = (array, containingDiv) => {
-      const list = document.createElement('ul');
-
-      array.forEach((item) => {
-        const listItem = document.createElement('li');
-        listItem.className = 'header list-item';
-        listItem.textContent = item;
-
-        list.appendChild(listItem);
-      });
-      containingDiv.appendChild(list);
-    };
-
-    applyLists(languages, languagesDiv);
-    applyLists(tools, toolsDiv);
-    applyLists(software, softwareDiv);
+    createAboutContent();
   };
 
   const showWebDev = () => {
@@ -624,49 +688,9 @@ const webPageContent = (function () {
     createHeader('Graphic Design');
     createContentContainer('graphic-des-content');
 
-    const imgCont = document.createElement('div');
-    imgCont.className = 'imgCont';
-
-    const img = document.createElement('img');
-    img.className = 'img';
-    img.src = 'images/graphic-design-work/elements/elements.svg';
-
-    const txt = document.createElement('h2');
-    txt.className = 'txt';
-    txt.textContent = 'Elements';
-    imgCont.appendChild(txt);
-
-    imgCont.appendChild(img);
-    contentContainer.appendChild(imgCont);
-
-    imgCont.addEventListener(
-      'mouseover',
-      (show = (e) => {
-        if (e.target.className == 'txt') {
-          txt.style.opacity = '1';
-          txt.style.transition = 'opacity .3s linear';
-        }
-      })
-    );
-
-    imgCont.addEventListener(
-      'mouseout',
-      (hide = (e) => {
-        if (e.target.className == 'txt') {
-          txt.style.opacity = '0';
-          txt.style.transition = 'opacity .3s linear';
-        }
-      })
-    );
-
-    imgCont.addEventListener(
-      'click',
-      (showElements = (e) => {
-        if (e.target.className == 'txt') {
-          clearMainContainer();
-        }
-      })
-    );
+    createImages(elements, 'Elements', 'elements-text');
+    createImages(willmore, 'Willmore', 'willmore-text');
+    createImages(report, 'Report', 'report-text');
 
     showReport();
     getBtns('report-container');

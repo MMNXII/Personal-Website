@@ -590,7 +590,7 @@ body {
   }
 }
 
-.imgCont {
+.imgContainer {
   position: relative;
   width: 400px;
   height: 400px;
@@ -599,13 +599,15 @@ body {
   width: 400px;
   height: 400px;
 }
-.txt {
+.hover-text {
+  font-family: header;
+  letter-spacing: 0.01em;
   opacity: 0;
   position: absolute;
   width: 100%;
   height: 100%;
-  padding-top: 35%;
-  background-color: #8080807e;
-  color: white;
+  padding-top: 40%;
+  background-color: #62133af5;
+  color: #a05d00;
   font-size: 5em;
 }
