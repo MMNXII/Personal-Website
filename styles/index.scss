@@ -589,3 +589,23 @@ body {
     height: 15em;
   }
 }
+
+.imgCont {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+.img {
+  width: 400px;
+  height: 400px;
+}
+.txt {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 35%;
+  background-color: #8080807e;
+  color: white;
+  font-size: 5em;
+}

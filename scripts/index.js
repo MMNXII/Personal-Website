@@ -624,6 +624,50 @@ const webPageContent = (function () {
     createHeader('Graphic Design');
     createContentContainer('graphic-des-content');
 
+    const imgCont = document.createElement('div');
+    imgCont.className = 'imgCont';
+
+    const img = document.createElement('img');
+    img.className = 'img';
+    img.src = 'images/graphic-design-work/elements/elements.svg';
+
+    const txt = document.createElement('h2');
+    txt.className = 'txt';
+    txt.textContent = 'Elements';
+    imgCont.appendChild(txt);
+
+    imgCont.appendChild(img);
+    contentContainer.appendChild(imgCont);
+
+    imgCont.addEventListener(
+      'mouseover',
+      (show = (e) => {
+        if (e.target.className == 'txt') {
+          txt.style.opacity = '1';
+          txt.style.transition = 'opacity .3s linear';
+        }
+      })
+    );
+
+    imgCont.addEventListener(
+      'mouseout',
+      (hide = (e) => {
+        if (e.target.className == 'txt') {
+          txt.style.opacity = '0';
+          txt.style.transition = 'opacity .3s linear';
+        }
+      })
+    );
+
+    imgCont.addEventListener(
+      'click',
+      (showElements = (e) => {
+        if (e.target.className == 'txt') {
+          clearMainContainer();
+        }
+      })
+    );
+
     showReport();
     getBtns('report-container');
     showImages((slideIndex = 1), 'report-images', 'report-markers');
