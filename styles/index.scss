@@ -25,6 +25,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  // border: 0.2px solid yellow;
 }
 html {
   background-color: #0e1524;
@@ -58,6 +59,73 @@ body {
 }
 /***************** Headers ******************/
 
+.about-header {
+  top: 0;
+  right: 0;
+}
+@media only screen and (max-width: 749px) {
+  .about-header,
+  .graphic-header {
+    font-size: 9em;
+    margin-top: 0.2em;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 950px) {
+  .about-header,
+  .graphic-header {
+    font-size: 15em;
+    margin-top: 0.25em;
+  }
+}
+@media only screen and (min-width: 951px) {
+  .about-header,
+  .graphic-header {
+    font-size: 25em;
+  }
+}
+
+.web-header {
+  text-align: right;
+  top: 0;
+  right: 0;
+  margin-top: 0.2em;
+}
+@media only screen and (max-width: 570px) {
+  .web-header {
+    margin-top: 0.5em;
+    font-size: 5em;
+  }
+}
+@media only screen and (min-width: 570px) and (max-width: 750px) {
+  .web-header {
+    margin-top: 0.3em;
+    font-size: 8em;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 939px) {
+  .web-header {
+    margin-top: 0.4em;
+    font-size: 9em;
+  }
+}
+@media only screen and (min-width: 940px) and (max-width: 1103px) {
+  .web-header {
+    margin-top: 0.3em;
+    font-size: 12em;
+  }
+}
+@media only screen and (min-width: 1104px) {
+  .web-header {
+    font-size: 15em;
+  }
+}
+
+.graphic-header {
+  text-align: right;
+  top: 0;
+  right: 0;
+}
+
 .header {
   text-align: center;
   font-family: header;
@@ -73,19 +141,10 @@ body {
 }
 
 .sub-header {
+  position: absolute;
   font-family: header;
-  text-align: center;
-  color: #b88a78;
-  font-size: 3em;
-  line-height: 1.1em;
+  color: #b88a781c;
   z-index: 0;
-}
-
-@media only screen and (max-width: 750px) {
-  .sub-header {
-    margin-top: 1em;
-    font-size: 3em;
-  }
 }
 
 /***************** Social Media Icons ******************/
@@ -112,7 +171,7 @@ body {
     background-color: #0e152400;
     justify-content: space-between;
     margin-left: 1.1em;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
     border-left: 3px solid #62133b;
     border-radius: 2px;
   }
@@ -149,6 +208,7 @@ body {
   margin: auto;
   top: 0;
   right: 0;
+  z-index: 2;
 }
 .icons-container {
   position: relative;
@@ -232,6 +292,7 @@ body {
 /***************** Work General ******************/
 
 #work-container {
+  // position: relative;
   text-align: center;
   justify-content: center;
   width: 96%;
@@ -252,10 +313,6 @@ body {
   transition-duration: 0.3s;
 }
 
-#web-dev-content,
-#graphic-des-content {
-  padding: 2em;
-}
 .captions {
   @extend %caption-header;
   color: #62133b;
@@ -279,6 +336,9 @@ body {
 }
 
 /***************** About ******************/
+.intro-para-container {
+  z-index: 2;
+}
 
 @media only screen and (min-width: 750px) {
   .intro-about-container {
@@ -295,6 +355,10 @@ body {
   .intro-para-container {
     margin-top: 3em;
   }
+}
+.profile {
+  position: relative;
+  z-index: 2;
 }
 @media only screen and (max-width: 749px) {
   .profile {
@@ -462,11 +526,10 @@ body {
 /***************** Graphic Design ******************/
 #graphic-des-content {
   @extend %flex-and-wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  margin-top: 14em;
 }
-#graphic-des-content > div {
-  margin: 2em;
-}
+
 #web-dev-content > div {
   margin-bottom: 2em;
 }
@@ -590,10 +653,11 @@ body {
   }
 }
 
-.imgContainer {
+.img-container {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: fit-content;
+  height: fit-content;
+  margin: 0.5em;
 }
 .img {
   width: 400px;

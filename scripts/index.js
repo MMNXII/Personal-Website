@@ -3,38 +3,11 @@
 document.getElementById('body').style.display = 'block';
 
 (introAnimations = () => {
-  const banner = anime({
-    targets: '.top-banner',
-    delay: anime.stagger(200),
-    duration: 1500,
-    translateY: ['-2rem', 0],
-    opacity: [0, 1],
-    direction: 'normal',
-    easing: 'spring(1, 80, 10, 0)',
-  });
   const logo = anime({
     targets: '#logo-container',
     duration: 2500,
     delay: 300,
     translateY: ['-20rem', 0],
-    direction: 'normal',
-    easing: 'spring(1, 80, 10, 0)',
-  });
-  const name = anime({
-    targets: '.name',
-    delay: 600,
-    duration: 1500,
-    translateY: ['-2rem', 0],
-    opacity: [0, 1],
-    direction: 'normal',
-    easing: 'spring(1, 80, 10, 0)',
-  });
-  const titles = anime({
-    targets: '.web, .divide, .graphic',
-    delay: 700,
-    duration: 1500,
-    translateY: ['-2rem', 0],
-    opacity: [0, 1],
     direction: 'normal',
     easing: 'spring(1, 80, 10, 0)',
   });
@@ -46,9 +19,17 @@ document.getElementById('body').style.display = 'block';
     direction: 'normal',
     easing: 'spring(1, 80, 10, 0)',
   });
+  const pageLinks = anime({
+    targets: '.page-icons',
+    delay: anime.stagger(50, { start: 700 }),
+    translateY: ['-2rem', 0],
+    opacity: [0, 1],
+    direction: 'normal',
+    easing: 'spring(1, 80, 10, 0)',
+  });
   const introHeader = anime({
     targets: '#intro-container',
-    delay: 2500,
+    delay: 1500,
     duration: 2500,
     opacity: [0, 1],
     direction: 'normal',
@@ -58,7 +39,7 @@ document.getElementById('body').style.display = 'block';
   });
   const introHeaderCommaWelcome = anime({
     targets: '.comma-welcome',
-    delay: 3500,
+    delay: 2500,
     duration: 2000,
     easing: 'easeInOutExpo',
     opacity: [0, 1],
@@ -66,19 +47,11 @@ document.getElementById('body').style.display = 'block';
   });
   const intro = anime({
     targets: '.intro-para',
-    delay: 6000,
+    delay: 3200,
     duration: 2000,
     easing: 'easeInOutExpo',
     opacity: [0, 1],
     direction: 'normal',
-  });
-  const pageLinks = anime({
-    targets: '.page-icons',
-    delay: anime.stagger(50, { start: 700 }),
-    translateY: ['-2rem', 0],
-    opacity: [0, 1],
-    direction: 'normal',
-    easing: 'spring(1, 80, 10, 0)',
   });
 })();
 
@@ -532,7 +505,7 @@ const webPageContent = (function () {
 
   const createGraphicDesImages = ({ src }, text, id) => {
     const imgContainter = document.createElement('div');
-    imgContainter.className = 'imgContainer';
+    imgContainter.className = 'img-container';
 
     const img = document.createElement('img');
     img.className = 'img';
@@ -617,7 +590,7 @@ const webPageContent = (function () {
     createContentContainer('elements-container');
 
     createElementPara(
-      'Personal project of mine using the four classical elements as the subject matter. Fire, water, earth, and air were seen by ancient cultures as the elements that encompass all life, and though they have been disproven to be by modern science, they still represent an all-important part of our daily lives.'
+      'Personal project using the four classical elements as the subject matter. Fire, water, earth, and air were seen by ancient cultures as the elements that encompass all life, and though they have been disproven to be by modern science, they still represent an all-important part of our daily lives.'
     );
 
     const elementContainerBlack = document.createElement('div');
@@ -771,7 +744,7 @@ const webPageContent = (function () {
   const showAbout = () => {
     clearMainContainer();
     fadeInAnimation();
-    createHeader('About', 'sub-header');
+    createHeader('About', 'sub-header about-header');
     createContentContainer('about-content');
     createAboutContent();
   };
@@ -779,7 +752,7 @@ const webPageContent = (function () {
   const showWebDev = () => {
     clearMainContainer();
     fadeInAnimation();
-    createHeader('Web Development', 'sub-header');
+    createHeader('Development', 'sub-header web-header');
     createContentContainer('web-dev-content');
 
     showRPS();
@@ -791,11 +764,11 @@ const webPageContent = (function () {
   const showGraphicDes = () => {
     clearMainContainer();
     fadeInAnimation();
-    createHeader('Graphic Design', 'sub-header');
+    createHeader('Design', 'sub-header graphic-header');
     createContentContainer('graphic-des-content');
 
-    createGraphicDesImages(elements, 'Elements', 'elements-text');
     createGraphicDesImages(willmore, 'Willmore', 'willmore-text');
+    createGraphicDesImages(elements, 'Elements', 'elements-text');
     createGraphicDesImages(report, 'Report', 'report-text');
 
     showReport();
