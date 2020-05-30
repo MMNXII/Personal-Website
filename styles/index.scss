@@ -20,11 +20,12 @@
   height: auto;
 }
 
-/***************** General ******************/
+/******************** General ********************/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  // border: 0.2px solid yellow;
 }
 html {
   background-color: #0e1524;
@@ -39,7 +40,8 @@ body {
   margin: auto;
 }
 
-/***************** Logo ******************/
+/******************** Logo ********************/
+
 #logo-container {
   width: fit-content;
   min-width: 75px;
@@ -56,7 +58,69 @@ body {
     min-height: 55px;
   }
 }
-/***************** Headers ******************/
+/******************** Headers ********************/
+
+.about-header,
+.graphic-header {
+  top: 0;
+  right: 0;
+}
+@media only screen and (max-width: 749px) {
+  .about-header,
+  .graphic-header {
+    font-size: 9em;
+    margin-top: 0.2em;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 950px) {
+  .about-header,
+  .graphic-header {
+    font-size: 15em;
+    margin-top: 0.25em;
+  }
+}
+@media only screen and (min-width: 951px) {
+  .about-header,
+  .graphic-header {
+    font-size: 25em;
+  }
+}
+
+.web-header {
+  text-align: right;
+  top: 0;
+  right: 0;
+  margin-top: 0.2em;
+}
+@media only screen and (max-width: 570px) {
+  .web-header {
+    margin-top: 0.5em;
+    font-size: 5em;
+  }
+}
+@media only screen and (min-width: 570px) and (max-width: 750px) {
+  .web-header {
+    margin-top: 0.3em;
+    font-size: 8em;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 939px) {
+  .web-header {
+    margin-top: 0.4em;
+    font-size: 9em;
+  }
+}
+@media only screen and (min-width: 940px) and (max-width: 1103px) {
+  .web-header {
+    margin-top: 0.3em;
+    font-size: 12em;
+  }
+}
+@media only screen and (min-width: 1104px) {
+  .web-header {
+    font-size: 15em;
+  }
+}
 
 .header {
   text-align: center;
@@ -72,7 +136,14 @@ body {
   }
 }
 
-/***************** Social Media Icons ******************/
+.sub-header {
+  position: absolute;
+  font-family: header;
+  color: #b88a781c;
+  z-index: 0;
+}
+
+/******************** Social Media Links ********************/
 #social-media-icon-container {
   position: fixed;
   display: inline-block;
@@ -96,7 +167,7 @@ body {
     background-color: #0e152400;
     justify-content: space-between;
     margin-left: 1.1em;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
     border-left: 3px solid #62133b;
     border-radius: 2px;
   }
@@ -126,13 +197,14 @@ body {
   transition-duration: 0.25s;
 }
 
-/***************** Page Links ******************/
+/******************** Page Links ********************/
 
 #page-icons-container {
   position: absolute;
   margin: auto;
   top: 0;
   right: 0;
+  z-index: 2;
 }
 .icons-container {
   position: relative;
@@ -173,7 +245,8 @@ body {
   }
 }
 
-/***************** Introduction ******************/
+/******************** Introduction ********************/
+
 #intro-container {
   margin: auto auto 5em auto;
   text-align: center;
@@ -213,49 +286,15 @@ body {
   max-width: 750px;
 }
 
-/***************** Work General ******************/
-
-.sub-header {
-  font-family: header;
-  text-align: center;
-  color: #b88a78;
-  font-size: 5em;
-  line-height: 1.1em;
-  z-index: 0;
-}
-
-@media only screen and (max-width: 750px) {
-  .sub-header {
-    margin-top: 1em;
-    font-size: 3em;
-  }
-}
+/******************** Work General ********************/
 
 #work-container {
   text-align: center;
   justify-content: center;
   width: 96%;
-  margin-bottom: 1em;
-}
-#report-container > a > img,
-#willmore-container > a > img,
-#aoe-container > a > img,
-#bcard-container > a > img {
-  border: 3px solid rgba(255, 136, 0, 0);
-}
-#report-container > a > img:hover,
-#willmore-container > a > img:hover,
-#aoe-container > a > img:hover,
-#bcard-container > a > img:hover {
-  opacity: 0.6;
-  transition-property: opacity;
-  transition-duration: 0.3s;
+  // margin-bottom: 5em;
 }
 
-#web-dev-content,
-#graphic-des-content {
-  padding: 2em;
-}
 .captions {
   @extend %caption-header;
   color: #62133b;
@@ -278,7 +317,21 @@ body {
   }
 }
 
-/***************** About ******************/
+#bottom-border {
+  margin: auto;
+  position: relative;
+  bottom: 0;
+  width: 90%;
+  height: 2px;
+  margin-bottom: 4em;
+  border-bottom: 1px solid #62133b;
+}
+
+/******************** About ********************/
+
+.intro-para-container {
+  z-index: 2;
+}
 
 @media only screen and (min-width: 750px) {
   .intro-about-container {
@@ -296,9 +349,13 @@ body {
     margin-top: 3em;
   }
 }
+.profile {
+  position: relative;
+  z-index: 2;
+}
 @media only screen and (max-width: 749px) {
   .profile {
-    margin: 1.5em auto 1.5em auto;
+    margin: 3em auto 1.5em auto;
     max-width: 130px;
     max-height: auto;
   }
@@ -341,7 +398,7 @@ body {
   width: 100%;
   height: 50px;
 }
-.aboutDiv {
+.about-div {
   width: 33%;
   margin-bottom: 4em;
 }
@@ -349,7 +406,7 @@ body {
   border-left: 1px solid #62133b;
   border-right: 1px solid #62133b;
 }
-.aboutTextTitles {
+.about-text-titles {
   color: #a05d00;
   letter-spacing: 0.05em;
   margin-bottom: 0.5em;
@@ -362,7 +419,7 @@ body {
   color: #b88a78;
 }
 @media only screen and (min-width: 550px) and (max-width: 749px) {
-  .aboutTextTitles {
+  .about-text-titles {
     font-size: 1.9em;
   }
   .list-item {
@@ -373,7 +430,7 @@ body {
   .skills-container {
     margin-top: 4em;
   }
-  .aboutTextTitles {
+  .about-text-titles {
     font-size: 2.4em;
   }
   .list-item {
@@ -382,11 +439,11 @@ body {
   }
 }
 
-.aboutDiv > ul {
+.about-div > ul {
   list-style: none;
 }
 
-.aboutDiv > ul > li::before {
+.about-div > ul > li::before {
   content: '\2022';
   color: #62133b;
   font-weight: bold;
@@ -395,13 +452,28 @@ body {
   margin-left: -0.5em;
 }
 
-/***************** Web Development ******************/
+/******************** Web Development ********************/
+
+#web-dev-content {
+  margin-top: 5em;
+}
+#rpg {
+  margin-bottom: 5em;
+}
+
+#rps,
+#italy,
+#etch {
+  margin-bottom: 2em;
+}
+
 @media only screen and (min-width: 1000px) {
   #web-dev-content {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    margin-top: 8em;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -459,133 +531,266 @@ body {
   color: #a05d00;
 }
 
-/***************** Graphic Design ******************/
+/******************** Graphic Design ********************/
+
 #graphic-des-content {
   @extend %flex-and-wrap;
-  justify-content: space-evenly;
-}
-#graphic-des-content > div {
-  margin: 2em;
-}
-#web-dev-content > div {
-  margin-bottom: 2em;
+  justify-content: center;
+  margin-top: 14em;
+  margin-bottom: 5em;
 }
 
-#report-container > a,
-#willmore-container > a {
-  display: contents;
-}
-.report-images {
-  display: inline-block;
-  width: auto;
-  height: 7em;
-  margin: 0 auto;
-}
-@media only screen and (min-width: 650px) and (max-width: 999px) {
-  .report-images {
-    height: 11.5em;
+@media only screen and (max-width: 749px) {
+  #graphic-des-content {
+    margin-top: 4em;
   }
 }
-@media only screen and (min-width: 1000px) {
-  .report-images {
-    height: 16em;
-  }
-}
-.willmore-images {
-  display: block;
-  margin: 0 auto;
-  margin-top: 0.5em;
-  width: auto;
-  height: 15em;
-}
-@media only screen and (min-width: 650px) {
-  .willmore-images {
-    height: 19.5em;
-  }
-}
-.sub-captions > a {
-  text-decoration: none;
-  color: rgb(98, 175, 219);
-}
-.sub-captions > a:hover {
-  color: rgb(80, 140, 175);
-}
-.report-image-button,
-.willmore-image-button {
-  width: 2em;
-  height: 2em;
-  color: #b88a78;
-  background-color: #31334400;
+
+.graphic-des-img-container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
   margin: 0.5em;
-  border-radius: 50%;
-  opacity: 0.8;
-  border: 1px solid #b88a78;
-}
-.report-image-button:hover,
-.willmore-image-button:hover {
-  cursor: pointer;
-  transition-property: color;
-  transition-duration: 0.3s;
-  color: rgb(255, 136, 0);
-}
-#report-markers-container,
-#willmore-markers-container {
-  position: absolute;
-  display: inline-block;
-  color: white;
-  text-align: right;
-  margin-top: 0.5em;
-  margin-left: 3em;
-}
-#willmore-markers-container {
-  margin-left: 1.5em;
-}
-@media only screen and (min-width: 650px) {
-  #report-markers-container {
-    margin-left: 8em;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  #report-markers-container {
-    margin-left: 16em;
-  }
-}
-@media only screen and (min-width: 650px) {
-  #willmore-markers-container {
-    margin-left: 3em;
-  }
-}
-.report-markers,
-.willmore-markers {
-  margin: 0.2em;
-  display: inline-block;
-  width: 0.7em;
-  height: 0.7em;
-  background-color: rgba(255, 255, 255, 0.267);
-  border-radius: 50%;
-}
-#report-marker-1,
-#willmore-marker-1 {
-  background-color: rgba(255, 255, 255, 0.801);
 }
 
-#aoe-image {
-  width: auto;
-  height: 15em;
-}
-@media only screen and (min-width: 650px) {
-  #aoe-image {
-    width: auto;
-    height: 22em;
+@media only screen and (max-width: 999px) {
+  .graphic-des-img {
+    width: 200px;
   }
 }
-.personal-bcard {
-  width: 22em;
+@media only screen and (min-width: 1000px) and (max-width: 1310px) {
+  .graphic-des-img {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 1310px) {
+  .graphic-des-img {
+    width: 400px;
+  }
+}
+
+.hover-text {
+  cursor: pointer;
+  font-family: header;
+  letter-spacing: 0.01em;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 40%;
+  background-color: #62133af5;
+  color: #a05d00;
+  font-size: 3em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .hover-text {
+    font-size: 4em;
+  }
+}
+
+.content-header {
+  color: #a05d00;
+  font-size: 2.5em;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+/******************** Willmore ********************/
+
+.willmore-drafts-container {
+  margin: 2em auto auto auto;
+  width: 60%;
+  max-width: 800px;
+}
+.willmore-drafts {
+  width: 200px;
+  height: auto;
+  margin: 0.5em;
+}
+
+.willmore-final {
+  width: 300px;
+  height: auto;
+  margin: 4em auto auto auto;
+}
+
+.willmore-addtl-img-container {
+  margin: 4em auto 2em auto;
+}
+.willmore-addtl-images {
+  margin: 1em;
+}
+#willmore-outdoor {
+  width: auto;
+  height: 300px;
+}
+#willmore-flyer {
+  width: 300px;
   height: auto;
 }
-@media only screen and (min-width: 650px) {
-  .personal-bcard {
-    width: auto;
-    height: 15em;
+
+@media only screen and (min-width: 625px) and (max-width: 899px) {
+  .willmore-drafts-container {
+    width: 80%;
   }
+  .willmore-drafts {
+    width: 245px;
+  }
+
+  .willmore-final {
+    width: 425px;
+  }
+  #willmore-outdoor {
+    height: 350px;
+  }
+  #willmore-flyer {
+    width: 450px;
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1099px) {
+  .willmore-drafts-container {
+    margin: 4em auto auto auto;
+    width: 82%;
+  }
+  .willmore-drafts {
+    width: 325px;
+  }
+
+  .willmore-final {
+    width: 470px;
+  }
+  #willmore-outdoor {
+    height: 450px;
+  }
+  #willmore-flyer {
+    width: 500px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .willmore-drafts-container {
+    margin: 4em auto auto auto;
+    width: 75%;
+  }
+  .willmore-drafts {
+    width: 375px;
+  }
+
+  .willmore-final {
+    width: 700px;
+  }
+  #willmore-outdoor {
+    height: 450px;
+  }
+  #willmore-flyer {
+    width: 550px;
+  }
+}
+
+.willmore-content-para {
+  margin: 2em auto 2em auto;
+  font-family: header;
+  font-size: 1.3em;
+  width: 75%;
+  max-width: 650px;
+  min-width: 372px;
+  color: #b88a78;
+  letter-spacing: 0.1em;
+  line-height: 1.1em;
+  text-align: left;
+}
+
+@media only screen and (min-width: 750px) {
+  .willmore-content-para {
+    font-size: 1.4em;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .willmore-content-para {
+    font-size: 1.4em;
+  }
+}
+
+/******************** Elements ********************/
+
+#elements-container {
+  margin-bottom: 5em;
+}
+.intro-content-para {
+  color: #b88a78;
+  font-size: 1.2em;
+  max-width: 650px;
+  min-width: 320px;
+  padding-bottom: 2em;
+  margin: 3em auto 1em auto;
+  border-bottom: 1px solid #62133b;
+}
+
+@media only screen and (max-width: 749px) {
+  .intro-content-para {
+    max-width: 400px;
+    min-width: 320px;
+  }
+}
+
+.element {
+  width: 450px;
+}
+
+.element-section {
+  display: block;
+  text-align: center;
+}
+
+.element-para {
+  margin: 3em 1em 1em 1em;
+  font-family: header;
+  font-size: 1.2em;
+  max-width: 650px;
+  min-width: 372px;
+  color: #b88a78;
+  letter-spacing: 0.1em;
+  line-height: 1.1em;
+}
+
+#para-left,
+#para-right {
+  text-align: center;
+}
+
+@media only screen and (max-width: 749px) {
+  .element {
+    width: 250px;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .intro-content-para {
+    font-size: 1.6em;
+  }
+  .element-section {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+  }
+  .element-para {
+    font-size: 1.4em;
+  }
+  #para-left {
+    text-align: left;
+  }
+
+  #para-right {
+    text-align: right;
+  }
+}
+
+/******************** Annual Report ********************/
+
+#report-container {
+  height: 300px;
 }
