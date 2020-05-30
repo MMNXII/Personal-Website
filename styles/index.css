@@ -23,7 +23,7 @@
   height: auto;
 }
 
-/***************** General ******************/
+/******************** General ********************/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -44,7 +44,7 @@ body {
   margin: auto;
 }
 
-/***************** Logo ******************/
+/******************** Logo ********************/
 #logo-container {
   width: fit-content;
   min-width: 75px;
@@ -61,7 +61,7 @@ body {
     min-height: 55px;
   }
 }
-/***************** Headers ******************/
+/******************** Headers ********************/
 .about-header,
 .graphic-header {
   top: 0;
@@ -144,7 +144,7 @@ body {
   z-index: 0;
 }
 
-/***************** Social Media Icons ******************/
+/******************** Social Media Links ********************/
 #social-media-icon-container {
   position: fixed;
   display: inline-block;
@@ -196,7 +196,7 @@ body {
   transition-duration: 0.25s;
 }
 
-/***************** Page Links ******************/
+/******************** Page Links ********************/
 #page-icons-container {
   position: absolute;
   margin: auto;
@@ -247,7 +247,7 @@ body {
     margin-left: 0.5em;
   }
 }
-/***************** Introduction ******************/
+/******************** Introduction ********************/
 #intro-container {
   margin: auto auto 5em auto;
   text-align: center;
@@ -287,24 +287,11 @@ body {
   max-width: 750px;
 }
 
-/***************** Work General ******************/
+/******************** Work General ********************/
 #work-container {
   text-align: center;
   justify-content: center;
   width: 96%;
-  margin-bottom: 1em;
-}
-
-#report-container > a > img,
-#willmore-container > a > img {
-  border: 3px solid rgba(255, 136, 0, 0);
-}
-
-#report-container > a > img:hover,
-#willmore-container > a > img:hover {
-  opacity: 0.6;
-  transition-property: opacity;
-  transition-duration: 0.3s;
 }
 
 .captions {
@@ -327,7 +314,17 @@ body {
     width: 460px;
   }
 }
-/***************** About ******************/
+#bottom-border {
+  margin: auto;
+  position: relative;
+  bottom: 0;
+  width: 90%;
+  height: 2px;
+  margin-bottom: 4em;
+  border-bottom: 1px solid #62133b;
+}
+
+/******************** About ********************/
 .intro-para-container {
   z-index: 2;
 }
@@ -459,12 +456,18 @@ body {
   margin-left: -0.5em;
 }
 
-/***************** Web Development ******************/
+/******************** Web Development ********************/
 #web-dev-content {
   margin-top: 5em;
 }
 
-#web-dev-content > div {
+#rpg {
+  margin-bottom: 5em;
+}
+
+#rps,
+#italy,
+#etch {
   margin-bottom: 2em;
 }
 
@@ -527,10 +530,11 @@ body {
   color: #a05d00;
 }
 
-/***************** Graphic Design ******************/
+/******************** Graphic Design ********************/
 #graphic-des-content {
   justify-content: center;
   margin-top: 14em;
+  margin-bottom: 5em;
 }
 
 @media only screen and (max-width: 749px) {
@@ -538,116 +542,7 @@ body {
     margin-top: 4em;
   }
 }
-#report-container > a,
-#willmore-container > a {
-  display: contents;
-}
-
-.report-images {
-  display: inline-block;
-  width: auto;
-  height: 7em;
-  margin: 0 auto;
-}
-
-@media only screen and (min-width: 650px) and (max-width: 999px) {
-  .report-images {
-    height: 11.5em;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .report-images {
-    height: 16em;
-  }
-}
-.willmore-images {
-  display: block;
-  margin: 0 auto;
-  margin-top: 0.5em;
-  width: auto;
-  height: 15em;
-}
-
-@media only screen and (min-width: 650px) {
-  .willmore-images {
-    height: 19.5em;
-  }
-}
-.sub-captions > a {
-  text-decoration: none;
-  color: #62afdb;
-}
-
-.sub-captions > a:hover {
-  color: #508caf;
-}
-
-.report-image-button,
-.willmore-image-button {
-  width: 2em;
-  height: 2em;
-  color: #b88a78;
-  background-color: #31334400;
-  margin: 0.5em;
-  border-radius: 50%;
-  opacity: 0.8;
-  border: 1px solid #b88a78;
-}
-
-.report-image-button:hover,
-.willmore-image-button:hover {
-  cursor: pointer;
-  transition-property: color;
-  transition-duration: 0.3s;
-  color: #ff8800;
-}
-
-#report-markers-container,
-#willmore-markers-container {
-  position: absolute;
-  display: inline-block;
-  color: white;
-  text-align: right;
-  margin-top: 0.5em;
-  margin-left: 3em;
-}
-
-#willmore-markers-container {
-  margin-left: 1.5em;
-}
-
-@media only screen and (min-width: 650px) {
-  #report-markers-container {
-    margin-left: 8em;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  #report-markers-container {
-    margin-left: 16em;
-  }
-}
-@media only screen and (min-width: 650px) {
-  #willmore-markers-container {
-    margin-left: 3em;
-  }
-}
-.report-markers,
-.willmore-markers {
-  margin: 0.2em;
-  display: inline-block;
-  width: 0.7em;
-  height: 0.7em;
-  background-color: rgba(255, 255, 255, 0.267);
-  border-radius: 50%;
-}
-
-#report-marker-1,
-#willmore-marker-1 {
-  background-color: rgba(255, 255, 255, 0.801);
-}
-
-/**** Graphic Design ****/
-.img-container {
+.graphic-des-img-container {
   position: relative;
   width: fit-content;
   height: fit-content;
@@ -655,17 +550,17 @@ body {
 }
 
 @media only screen and (max-width: 999px) {
-  .img {
+  .graphic-des-img {
     width: 200px;
   }
 }
 @media only screen and (min-width: 1000px) and (max-width: 1310px) {
-  .img {
+  .graphic-des-img {
     width: 300px;
   }
 }
 @media only screen and (min-width: 1310px) {
-  .img {
+  .graphic-des-img {
     width: 400px;
   }
 }
@@ -696,7 +591,132 @@ body {
   left: 0;
 }
 
-/***** Elements *****/
+/******************** Willmore ********************/
+.willmore-drafts-container {
+  margin: 2em auto auto auto;
+  width: 60%;
+  max-width: 800px;
+}
+
+.willmore-drafts {
+  width: 200px;
+  height: auto;
+  margin: 0.5em;
+}
+
+.willmore-final {
+  width: 300px;
+  height: auto;
+  margin: 4em auto auto auto;
+}
+
+.willmore-addtl-img-container {
+  margin: 4em auto 2em auto;
+}
+
+.willmore-addtl-images {
+  margin: 1em;
+}
+
+#willmore-outdoor {
+  width: auto;
+  height: 300px;
+}
+
+#willmore-flyer {
+  width: 300px;
+  height: auto;
+}
+
+@media only screen and (min-width: 625px) and (max-width: 899px) {
+  .willmore-drafts-container {
+    width: 80%;
+  }
+
+  .willmore-drafts {
+    width: 245px;
+  }
+
+  .willmore-final {
+    width: 425px;
+  }
+
+  #willmore-outdoor {
+    height: 350px;
+  }
+
+  #willmore-flyer {
+    width: 450px;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1099px) {
+  .willmore-drafts-container {
+    margin: 4em auto auto auto;
+    width: 82%;
+  }
+
+  .willmore-drafts {
+    width: 325px;
+  }
+
+  .willmore-final {
+    width: 470px;
+  }
+
+  #willmore-outdoor {
+    height: 450px;
+  }
+
+  #willmore-flyer {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .willmore-drafts-container {
+    margin: 4em auto auto auto;
+    width: 75%;
+  }
+
+  .willmore-drafts {
+    width: 375px;
+  }
+
+  .willmore-final {
+    width: 700px;
+  }
+
+  #willmore-outdoor {
+    height: 450px;
+  }
+
+  #willmore-flyer {
+    width: 550px;
+  }
+}
+.willmore-content-para {
+  margin: 2em auto 2em auto;
+  font-family: header;
+  font-size: 1.3em;
+  width: 75%;
+  max-width: 650px;
+  min-width: 372px;
+  color: #b88a78;
+  letter-spacing: 0.1em;
+  line-height: 1.1em;
+  text-align: left;
+}
+
+@media only screen and (min-width: 750px) {
+  .willmore-content-para {
+    font-size: 1.4em;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .willmore-content-para {
+    font-size: 1.4em;
+  }
+}
+/******************** Elements ********************/
 #elements-container {
   margin-bottom: 5em;
 }
@@ -753,6 +773,7 @@ body {
   }
 
   .element-section {
+    margin-top: 2em;
     display: flex;
     justify-content: center;
   }
@@ -768,6 +789,10 @@ body {
   #para-right {
     text-align: right;
   }
+}
+/******************** Annual Report ********************/
+#report-container {
+  height: 300px;
 }
 
 /*# sourceMappingURL=index.css.map */

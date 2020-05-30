@@ -1,4 +1,4 @@
-/****** Show Page and Introductory Animations *****/
+/******************** Show Page / Intro Animations ********************/
 
 document.getElementById('body').style.display = 'block';
 
@@ -55,110 +55,16 @@ document.getElementById('body').style.display = 'block';
   });
 })();
 
-/***** Page Icons *****/
-
-showIcon = (container, front, back) => {
-  const containerId = document.getElementById(container);
-  const frontId = document.getElementById(front);
-  const backId = document.getElementById(back);
-
-  containerId.addEventListener(
-    'mouseover',
-    (show = () => {
-      if (frontId.style.display !== 'none') {
-        frontId.style.display = 'none';
-        backId.style.display = 'block';
-      }
-    })
-  );
-
-  containerId.addEventListener(
-    'mouseout',
-    (hide = () => {
-      if (frontId.style.display !== 'block') {
-        frontId.style.display = 'block';
-        backId.style.display = 'none';
-      }
-    })
-  );
-};
-
-showIcon('person-container', 'person1', 'person2');
-showIcon('web-container', 'web1', 'web2');
-showIcon('graphic-container', 'graphic1', 'graphic2');
-
-/***** Report / Willmore image galleries *****/
-
-const getBtns = (id) => {
-  const btn = document.getElementById(id).getElementsByTagName('button');
-  const btnArray = Array.from(btn);
-
-  btnArray.forEach((arr) => {
-    arr.addEventListener(
-      'click',
-      (initiateDivs = (e) => {
-        e.target.parentNode.id == 'report-container' &&
-        e.target.classList.contains('back-btn')
-          ? showImages((slideIndex += -1), 'report-images', 'report-markers')
-          : null;
-
-        e.target.parentNode.id == 'report-container' &&
-        e.target.classList.contains('forward-btn')
-          ? showImages((slideIndex += +1), 'report-images', 'report-markers')
-          : null;
-
-        e.target.parentNode.id == 'willmore-container' &&
-        e.target.classList.contains('back-btn')
-          ? showImages(
-              (slideIndex += -1),
-              'willmore-images',
-              'willmore-markers'
-            )
-          : null;
-
-        e.target.parentNode.id == 'willmore-container' &&
-        e.target.classList.contains('forward-btn')
-          ? showImages(
-              (slideIndex += +1),
-              'willmore-images',
-              'willmore-markers'
-            )
-          : null;
-      })
-    );
+fadeInAnimation = () => {
+  const webDevAnime = anime({
+    targets: '#work-container',
+    opacity: [0, 1],
+    duration: 3000,
+    direction: 'easeInOutSine',
   });
 };
 
-const showImages = (n, className, classMarkers) => {
-  const images = document.getElementsByClassName(className);
-  const imagesArray = Array.from(images);
-
-  const markers = document.getElementsByClassName(classMarkers);
-  const markersArray = Array.from(markers);
-
-  n > images.length ? (slideIndex = 1) : null;
-  n < 1 ? (slideIndex = images.length) : null;
-
-  imagesArray.forEach((img) => {
-    img.style.display = 'none';
-  });
-
-  markersArray.forEach((marker) => {
-    marker.style.backgroundColor = 'rgba(255, 255, 255, 0.267)';
-    marker.style.opacity = '.5';
-  });
-
-  imagesArray[slideIndex - 1].style.display = 'block';
-  markersArray[slideIndex - 1].style.backgroundColor =
-    'rgba(255, 255, 255, 0.801)';
-  markersArray[slideIndex - 1].style.opacity = '1';
-  markersArray[slideIndex - 1].style.transitionProperty = 'opacity';
-  markersArray[slideIndex - 1].style.transitionDuration = '.5s';
-};
-
-/***** Content *****/
-
-/****** Create Containers ******/
+/******************** Containers ********************/
 
 const webPageContent = (function () {
   const mainContainer = document.getElementById('main-container');
@@ -208,9 +114,13 @@ const webPageContent = (function () {
     return ItemContainer;
   };
 
-  /****** Create Content ******/
+  const createBottomBorder = () => {
+    const div = document.createElement('div');
+    div.id = 'bottom-border';
+    mainContainer.appendChild(div);
+  };
 
-  /******* Create About Functions *******/
+  /******************** About ********************/
 
   const createAboutContent = () => {
     const introAboutContainer = document.createElement('div');
@@ -220,6 +130,7 @@ const webPageContent = (function () {
     const img = document.createElement('img');
     img.className = 'profile';
     img.src = './images/profile.jpg';
+    img.alt = 'profile';
     introAboutContainer.appendChild(img);
 
     const introParaContainer = document.createElement('div');
@@ -302,7 +213,15 @@ const webPageContent = (function () {
     applyLists(software, softwareDiv);
   };
 
-  /****** Web Development Image Objects ******/
+  const showAbout = () => {
+    clearMainContainer();
+    fadeInAnimation();
+    createHeader('About', 'sub-header about-header');
+    createContentContainer('about-content');
+    createAboutContent();
+  };
+
+  /******************** Web Development ********************/
 
   const rps = {
     alt: 'Rock Paper Scissors Screenshot',
@@ -325,8 +244,6 @@ const webPageContent = (function () {
     src: 'images/web-development-work/rpg.png',
   };
 
-  /****** Create Web Dev Functions ******/
-
   const createWebImageContent = ({ alt, id, src }) => {
     const img = document.createElement('img');
     img.alt = alt;
@@ -348,8 +265,6 @@ const webPageContent = (function () {
     anchor.appendChild(btn);
     ItemContainer.appendChild(anchor);
   };
-
-  /****** Initialize Web Dev Functions ******/
 
   const showRPS = () => {
     createItemContainer('rps');
@@ -405,59 +320,43 @@ const webPageContent = (function () {
     );
   };
 
-  /****** Graphic Design Image Objects ******/
-  const reportImages = {
-    href:
-      'https://s3images.coroflot.com/user_files/individual_files/385559_sTayJegwr3reCiwSwJzxqkPhi.pdf',
-    alt: 'Annual Report',
-    className: 'report-images',
-    one: {
-      src: 'images/graphic-design-work/annual-report/report-image1.jpg',
-    },
-    two: {
-      src: 'images/graphic-design-work/annual-report/report-image2.jpg',
-    },
-    three: {
-      src: 'images/graphic-design-work/annual-report/report-image3.jpg',
-    },
+  const showWebDev = () => {
+    clearMainContainer();
+    fadeInAnimation();
+    createHeader('Development', 'sub-header web-header');
+    createContentContainer('web-dev-content');
+
+    showRPS();
+    showItaly();
+    showEtch();
+    showRPG();
   };
 
-  const willmoreImages = {
-    href: 'https://www.coroflot.com/MatthewNeal/Willmore-Wine-Bar',
-    alt: 'Willmore Wine Bar',
-    className: 'willmore-images',
-    one: {
-      src: 'images/graphic-design-work/willmore/willmore-image1.jpg',
-    },
-    two: {
-      src: 'images/graphic-design-work/willmore/willmore-image2.jpg',
-    },
-    three: {
-      src: 'images/graphic-design-work/willmore/willmore-logo-final.jpg',
-    },
-  };
+  /******************** Graphic Design ********************/
 
   const elements = {
+    alt: 'elements',
     src: 'images/graphic-design-work/elements/elements-collage.svg',
   };
 
   const willmore = {
+    alt: 'willmore',
     src: 'images/graphic-design-work/willmore/willmore-collage.svg',
   };
 
   const report = {
+    alt: 'report',
     src: 'images/graphic-design-work/annual-report/report-collage.jpg',
   };
 
-  /****** Create Graphic Design Functions ******/
-
-  const createGraphicDesImages = ({ src }, text, id) => {
+  const createGraphicDesImages = ({ src, alt }, text, id) => {
     const imgContainter = document.createElement('div');
-    imgContainter.className = 'img-container';
+    imgContainter.className = 'graphic-des-img-container';
 
     const img = document.createElement('img');
-    img.className = 'img';
+    img.className = 'graphic-des-img';
     img.src = src;
+    img.alt = alt;
 
     const txt = document.createElement('h2');
     txt.className = 'hover-text';
@@ -511,7 +410,19 @@ const webPageContent = (function () {
     );
   };
 
-  /***** Create Elements *******/
+  const showGraphicDes = () => {
+    clearMainContainer();
+    fadeInAnimation();
+    createHeader('Design', 'sub-header graphic-header');
+    createContentContainer('graphic-des-content');
+
+    createGraphicDesImages(willmore, 'Willmore', 'willmore-text');
+    createGraphicDesImages(elements, 'Elements', 'elements-text');
+    createGraphicDesImages(report, 'Report', 'report-text');
+
+    createBottomBorder();
+  };
+
   createIntroContentPara = (text) => {
     const para = document.createElement('p');
     para.textContent = text;
@@ -519,6 +430,115 @@ const webPageContent = (function () {
 
     contentContainer.appendChild(para);
   };
+
+  /******************** Willmore ********************/
+
+  const willmoreImages = {
+    draft1: {
+      alt: 'Willmore Draft 1',
+      src: 'images/graphic-design-work/willmore/willmore-draft-1.jpg',
+    },
+    draft2: {
+      alt: 'Willmore Draft 2',
+      src: 'images/graphic-design-work/willmore/willmore-draft-2.jpg',
+    },
+    draft3: {
+      alt: 'Willmore Draft 3',
+      src: 'images/graphic-design-work/willmore/willmore-draft-3.jpg',
+    },
+    draft4: {
+      alt: 'Willmore Draft 4',
+      src: 'images/graphic-design-work/willmore/willmore-draft-4.jpg',
+    },
+    flyer: {
+      alt: 'Willmore Flyer',
+      id: 'willmore-flyer',
+      src: 'images/graphic-design-work/willmore/willmore-flyer.jpg',
+    },
+    outdoor: {
+      alt: 'Willmore Outdoor',
+      id: 'willmore-outdoor',
+      src: 'images/graphic-design-work/willmore/willmore-outdoor.jpg',
+    },
+  };
+
+  createWillmoreDrafts = () => {
+    const div = document.createElement('div');
+    div.className = 'willmore-drafts-container';
+    const { draft1, draft2, draft3, draft4 } = willmoreImages;
+    const imgSrcArr = [draft1.src, draft2.src, draft3.src, draft4.src];
+
+    imgSrcArr.forEach((src) => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.className = 'willmore-drafts';
+      div.appendChild(img);
+    });
+
+    contentContainer.appendChild(div);
+  };
+
+  createWillmoreFinal = () => {
+    const img = document.createElement('img');
+    img.className = 'willmore-final';
+    img.alt = 'Willmore Final';
+    img.src = 'images/graphic-design-work/willmore/willmore-final.jpg';
+    contentContainer.appendChild(img);
+  };
+
+  createWillmoreAddtlImages = () => {
+    const div = document.createElement('div');
+    div.className = 'willmore-addtl-img-container';
+    const { flyer, outdoor } = willmoreImages;
+    const imgSrcArr = [outdoor, flyer];
+
+    imgSrcArr.forEach((image) => {
+      const img = document.createElement('img');
+      img.src = image.src;
+      img.className = 'willmore-addtl-images';
+      img.id = image.id;
+      div.appendChild(img);
+    });
+
+    contentContainer.appendChild(div);
+  };
+
+  createWillmorePara = (id, text) => {
+    const p = document.createElement('p');
+    p.textContent = text;
+    p.id = id;
+    p.className = 'willmore-content-para';
+
+    contentContainer.appendChild(p);
+  };
+
+  const showWillmoreWineBar = () => {
+    clearMainContainer();
+    fadeInAnimation();
+    workContainerRelative();
+    createHeader('Willmore Wine Bar', 'sub-header content-header');
+    createContentContainer('willmore-container');
+    createIntroContentPara(
+      'One of my first commissions as a designer was to produce the branding for an upcoming business located in Long Beach, CA. Working through this project helped reveal many important aspects of the graphic design process, both with technical design itself as well as more business focused topics.'
+    );
+
+    createWillmoreDrafts();
+    createWillmorePara(
+      'drafts-para',
+      'When I was approached with the task to brand a wine bar, immediately the general idea was to implement imagery of wine with the wordmark. I wanted to work with how different typefaces created different negative space allowing for compatible imagery. Presenting the client with different design directions was my goal, from elegant and modern, to more traditional.'
+    );
+    createWillmoreFinal();
+    createWillmorePara(
+      'final-para',
+      'The final version of the logo presents a more refined version than shown in the concept drafts. It accomplishes the same task of combining imagery with typography, but with a more cohesive approach that allows allows accurate representation through different mediums such as print and outdoor signage.'
+    );
+
+    createWillmoreAddtlImages();
+
+    createBottomBorder();
+  };
+
+  /******************** Elements ********************/
 
   createElementImages = (imgArr, appendTo) => {
     imgArr = imgArr;
@@ -531,58 +551,57 @@ const webPageContent = (function () {
     });
   };
 
+  createElementSectionL = (imgSrc, paraText, paraId) => {
+    const elementSection = document.createElement('div');
+    elementSection.className = 'element-section';
+
+    contentContainer.appendChild(elementSection);
+
+    const img = document.createElement('img');
+    img.className = 'element';
+    img.src = imgSrc;
+
+    const p = document.createElement('p');
+    p.textContent = paraText;
+    p.className = 'element-para';
+    p.id = paraId;
+
+    elementSection.appendChild(img);
+    elementSection.appendChild(p);
+  };
+
+  createElementSectionR = (imgSrc, paraText, paraId) => {
+    const elementSection = document.createElement('div');
+    elementSection.className = 'element-section';
+
+    contentContainer.appendChild(elementSection);
+
+    const img = document.createElement('img');
+    img.className = 'element';
+    img.src = imgSrc;
+
+    const p = document.createElement('p');
+    p.textContent = paraText;
+    p.className = 'element-para';
+    p.id = paraId;
+
+    elementSection.appendChild(p);
+    elementSection.appendChild(img);
+  };
+
   const showElements = () => {
     clearMainContainer();
     fadeInAnimation();
     workContainerRelative();
     createHeader('Elements', 'sub-header content-header');
     createContentContainer('elements-container');
-
     createIntroContentPara(
       'Personal project using the four classical elements as the subject matter. Fire, water, earth, and air were seen by ancient cultures as the elements that encompass all life, and though they have been disproven to be by modern science, they still represent an all-important part of our daily lives.'
     );
 
-    createElementSectionL = (imgSrc, paraText, paraId) => {
-      const elementSection = document.createElement('div');
-      elementSection.className = 'element-section';
-
-      contentContainer.appendChild(elementSection);
-
-      const img = document.createElement('img');
-      img.className = 'element';
-      img.src = imgSrc;
-
-      const p = document.createElement('p');
-      p.textContent = paraText;
-      p.className = 'element-para';
-      p.id = paraId;
-
-      elementSection.appendChild(img);
-      elementSection.appendChild(p);
-    };
-
-    createElementSectionR = (imgSrc, paraText, paraId) => {
-      const elementSection = document.createElement('div');
-      elementSection.className = 'element-section';
-
-      contentContainer.appendChild(elementSection);
-
-      const img = document.createElement('img');
-      img.className = 'element';
-      img.src = imgSrc;
-
-      const p = document.createElement('p');
-      p.textContent = paraText;
-      p.className = 'element-para';
-      p.id = paraId;
-
-      elementSection.appendChild(p);
-      elementSection.appendChild(img);
-    };
-
     createElementSectionL(
       'images/graphic-design-work/elements/fire-collage.svg',
-      'There are multiple approaches you can take when producing a type of project such as this one. I decided to go with simple illustrations accompanied by simple wordmarks, with the illustrations being able to stand alone if wanted.',
+      'There are multiple approaches you can take when producing a type of project such as this one. I decided to go with simple illustrations accompanied by simple wordmarks, with the illustrations able to stand alone if wanted.',
       'para-left'
     );
 
@@ -594,75 +613,29 @@ const webPageContent = (function () {
 
     createElementSectionL(
       'images/graphic-design-work/elements/earth-collage.svg',
-      'So to add an extra element for cohesiveness, each wordmark has a feature of the illustration designed somewhere within. this demonstates a combined technique of both illustration and typography.',
+      'So to add an extra element for cohesiveness, each wordmark has a feature of the illustration designed somewhere within. Using this demonstates a combined technique of both illustration and typography.',
       'para-left'
     );
 
     createElementSectionR(
       'images/graphic-design-work/elements/air-collage.svg',
-      'Each illustration takes on new character once an aspect changes such as background or color spectrum. This is demonstrated through the use of variants, for which two are provided for each.',
+      "Each illustration takes on new character once an aspect changes such as background or color spectrum. Introducing these changes through variants is one way to show how design can be represented differently depending on the medium it's represented through.",
       'para-right'
     );
+
+    createBottomBorder();
   };
 
-  const showWillmoreWineBar = () => {
-    clearMainContainer();
-    fadeInAnimation();
-    workContainerRelative();
-    createHeader('Willmore Wine Bar', 'sub-header content-header');
-    createContentContainer('elements-container');
-    createIntroContentPara(
-      'One of my first commissions as a designer was to produce the branding for this business, a wine bar located in Long Beach, CA. Working through this project helped reveal many important aspects of the graphic design process.'
-    );
-  };
+  /******************** Annual Report ********************/
 
   const showAnnualReport = () => {
     clearMainContainer();
     fadeInAnimation();
     workContainerRelative();
     createHeader('Annual Report', 'sub-header content-header');
-  };
+    createContentContainer('report-container');
 
-  const createGraphicImageContent = ({ href, alt, className, id }, src) => {
-    const anchor = document.createElement('a');
-    anchor.target = '_blank';
-    anchor.href = href;
-
-    const img = document.createElement('img');
-    img.alt = alt;
-    img.className = className;
-    img.src = src;
-    img.id = id;
-
-    anchor.appendChild(img);
-    ItemContainer.appendChild(anchor);
-  };
-
-  const createGraphicGalleryBtns = (className, text) => {
-    const btn = document.createElement('button');
-    btn.className = className;
-    btn.textContent = text;
-
-    ItemContainer.appendChild(btn);
-  };
-
-  const createGraphicGalleryMarkers = (
-    containingDivId,
-    childDivClass,
-    childDivId
-  ) => {
-    const parentDiv = document.createElement('div');
-    parentDiv.id = containingDivId;
-
-    for (let i = 0; i < 3; i++) {
-      const childDiv = document.createElement('div');
-      childDiv.className = childDivClass;
-      childDiv.id = childDivId[i];
-
-      parentDiv.appendChild(childDiv);
-    }
-
-    ItemContainer.appendChild(parentDiv);
+    createBottomBorder();
   };
 
   const createFigCaption = (className, text) => {
@@ -673,95 +646,7 @@ const webPageContent = (function () {
     ItemContainer.appendChild(fig);
   };
 
-  /****** Initialize Graphic Design Functions ******/
-
-  const showReport = () => {
-    const figSub =
-      'Created while at University, the design is made in a sleek and clean manner to reflect the luxurious status of the Mercedes-Benz brand.';
-
-    createItemContainer('report-container');
-    createGraphicImageContent(reportImages, reportImages.one.src);
-    createGraphicImageContent(reportImages, reportImages.two.src);
-    createGraphicImageContent(reportImages, reportImages.three.src);
-    createGraphicGalleryBtns('report-image-button back-btn', '<');
-    createGraphicGalleryBtns('report-image-button forward-btn', '>');
-    createGraphicGalleryMarkers('report-markers-container', 'report-markers', [
-      'report-marker-1',
-      'report-marker-2',
-      'report-marker-3',
-    ]);
-    createFigCaption('captions', 'Mock Annual Report');
-    createFigCaption('sub-captions', figSub);
-  };
-
-  const showWillmore = () => {
-    const figSub =
-      'Designed for an up and coming wine bar in Long Beach, CA in 2010. These drafts were created to initialize the branding process, with the final design (last slide) currently being used by Willmore Wine Bar.';
-
-    createItemContainer('willmore-container');
-    createGraphicImageContent(willmoreImages, willmoreImages.one.src);
-    createGraphicImageContent(willmoreImages, willmoreImages.two.src);
-    createGraphicImageContent(willmoreImages, willmoreImages.three.src);
-    createGraphicGalleryBtns('willmore-image-button back-btn', '<');
-    createGraphicGalleryBtns('willmore-image-button forward-btn', '>');
-    createGraphicGalleryMarkers(
-      'willmore-markers-container',
-      'willmore-markers',
-      ['willmore-marker-1', 'willmore-marker-2', 'willmore-marker-3']
-    );
-    createFigCaption('captions', 'Willmore Wine Bar');
-    createFigCaption('sub-captions', figSub);
-  };
-
-  /****** Initialize Pages ******/
-
-  fadeInAnimation = () => {
-    const webDevAnime = anime({
-      targets: '#work-container',
-      opacity: [0, 1],
-      duration: 3000,
-      direction: 'easeInOutSine',
-    });
-  };
-
-  const showAbout = () => {
-    clearMainContainer();
-    fadeInAnimation();
-    createHeader('About', 'sub-header about-header');
-    createContentContainer('about-content');
-    createAboutContent();
-  };
-
-  const showWebDev = () => {
-    clearMainContainer();
-    fadeInAnimation();
-    createHeader('Development', 'sub-header web-header');
-    createContentContainer('web-dev-content');
-
-    showRPS();
-    showItaly();
-    showEtch();
-    showRPG();
-  };
-
-  const showGraphicDes = () => {
-    clearMainContainer();
-    fadeInAnimation();
-    createHeader('Design', 'sub-header graphic-header');
-    createContentContainer('graphic-des-content');
-
-    createGraphicDesImages(willmore, 'Willmore', 'willmore-text');
-    createGraphicDesImages(elements, 'Elements', 'elements-text');
-    createGraphicDesImages(report, 'Report', 'report-text');
-
-    showReport();
-    getBtns('report-container');
-    showImages((slideIndex = 1), 'report-images', 'report-markers');
-
-    showWillmore();
-    getBtns('willmore-container');
-    showImages((slideIndex = 1), 'willmore-images', 'willmore-markers');
-  };
+  /****** Page Icons ******/
 
   const icons = document.getElementsByClassName('page-icons');
   const iconsArr = Array.from(icons);
@@ -776,4 +661,34 @@ const webPageContent = (function () {
       })
     );
   });
+
+  showIcon = (container, front, back) => {
+    const containerId = document.getElementById(container);
+    const frontId = document.getElementById(front);
+    const backId = document.getElementById(back);
+
+    containerId.addEventListener(
+      'mouseover',
+      (show = () => {
+        if (frontId.style.display !== 'none') {
+          frontId.style.display = 'none';
+          backId.style.display = 'block';
+        }
+      })
+    );
+
+    containerId.addEventListener(
+      'mouseout',
+      (hide = () => {
+        if (frontId.style.display !== 'block') {
+          frontId.style.display = 'block';
+          backId.style.display = 'none';
+        }
+      })
+    );
+  };
+
+  showIcon('person-container', 'person1', 'person2');
+  showIcon('web-container', 'web1', 'web2');
+  showIcon('graphic-container', 'graphic1', 'graphic2');
 })();
