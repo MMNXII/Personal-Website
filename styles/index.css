@@ -62,7 +62,8 @@ body {
   }
 }
 /***************** Headers ******************/
-.about-header {
+.about-header,
+.graphic-header {
   top: 0;
   right: 0;
 }
@@ -123,12 +124,6 @@ body {
     font-size: 15em;
   }
 }
-.graphic-header {
-  text-align: right;
-  top: 0;
-  right: 0;
-}
-
 .header {
   text-align: center;
   font-family: header;
@@ -301,16 +296,12 @@ body {
 }
 
 #report-container > a > img,
-#willmore-container > a > img,
-#aoe-container > a > img,
-#bcard-container > a > img {
+#willmore-container > a > img {
   border: 3px solid rgba(255, 136, 0, 0);
 }
 
 #report-container > a > img:hover,
-#willmore-container > a > img:hover,
-#aoe-container > a > img:hover,
-#bcard-container > a > img:hover {
+#willmore-container > a > img:hover {
   opacity: 0.6;
   transition-property: opacity;
   transition-duration: 0.3s;
@@ -365,7 +356,7 @@ body {
 
 @media only screen and (max-width: 749px) {
   .profile {
-    margin: 1.5em auto 1.5em auto;
+    margin: 3em auto 1.5em auto;
     max-width: 130px;
     max-height: auto;
   }
@@ -469,12 +460,21 @@ body {
 }
 
 /***************** Web Development ******************/
+#web-dev-content {
+  margin-top: 5em;
+}
+
+#web-dev-content > div {
+  margin-bottom: 2em;
+}
+
 @media only screen and (min-width: 1000px) {
   #web-dev-content {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    margin-top: 8em;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -533,10 +533,11 @@ body {
   margin-top: 14em;
 }
 
-#web-dev-content > div {
-  margin-bottom: 2em;
+@media only screen and (max-width: 749px) {
+  #graphic-des-content {
+    margin-top: 4em;
+  }
 }
-
 #report-container > a,
 #willmore-container > a {
   display: contents;
@@ -645,28 +646,7 @@ body {
   background-color: rgba(255, 255, 255, 0.801);
 }
 
-#aoe-image {
-  width: auto;
-  height: 15em;
-}
-
-@media only screen and (min-width: 650px) {
-  #aoe-image {
-    width: auto;
-    height: 22em;
-  }
-}
-.personal-bcard {
-  width: 22em;
-  height: auto;
-}
-
-@media only screen and (min-width: 650px) {
-  .personal-bcard {
-    width: auto;
-    height: 15em;
-  }
-}
+/**** Graphic Design ****/
 .img-container {
   position: relative;
   width: fit-content;
@@ -674,12 +654,23 @@ body {
   margin: 0.5em;
 }
 
-.img {
-  width: 400px;
-  height: 400px;
+@media only screen and (max-width: 999px) {
+  .img {
+    width: 200px;
+  }
 }
-
+@media only screen and (min-width: 1000px) and (max-width: 1310px) {
+  .img {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 1310px) {
+  .img {
+    width: 400px;
+  }
+}
 .hover-text {
+  cursor: pointer;
   font-family: header;
   letter-spacing: 0.01em;
   opacity: 0;
@@ -689,49 +680,93 @@ body {
   padding-top: 40%;
   background-color: #62133af5;
   color: #a05d00;
-  font-size: 4em;
+  font-size: 3em;
 }
 
-.page-header {
+@media only screen and (min-width: 1000px) {
+  .hover-text {
+    font-size: 4em;
+  }
+}
+.content-header {
   color: #a05d00;
+  font-size: 2.5em;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
+/***** Elements *****/
 #elements-container {
+  margin-bottom: 5em;
+}
+
+.intro-content-para {
+  color: #b88a78;
+  font-size: 1.2em;
+  max-width: 650px;
+  min-width: 320px;
+  padding-bottom: 2em;
+  margin: 3em auto 1em auto;
+  border-bottom: 1px solid #62133b;
+}
+
+@media only screen and (max-width: 749px) {
+  .intro-content-para {
+    max-width: 400px;
+    min-width: 320px;
+  }
+}
+.element {
+  width: 450px;
+}
+
+.element-section {
+  display: block;
   text-align: center;
 }
 
-.elements-intro {
-  color: #b88a78;
-  font-size: 1.6em;
+.element-para {
+  margin: 3em 1em 1em 1em;
+  font-family: header;
+  font-size: 1.2em;
   max-width: 650px;
   min-width: 372px;
-  margin: 2em auto 2em auto;
+  color: #b88a78;
+  letter-spacing: 0.1em;
+  line-height: 1.1em;
 }
 
-.elements-icons-container {
-  margin: auto auto 2em auto;
+#para-left,
+#para-right {
+  text-align: center;
 }
 
-@media only screen and (min-width: 450px) and (max-width: 650px) {
-  .elements-icons-container {
-    width: 70%;
+@media only screen and (max-width: 749px) {
+  .element {
+    width: 250px;
   }
 }
-@media only screen and (max-width: 650px) {
-  .elements-images {
-    width: 150px;
-    height: 150px;
+@media only screen and (min-width: 750px) {
+  .intro-content-para {
+    font-size: 1.6em;
   }
-}
-@media only screen and (min-width: 650px) {
-  .elements-icons-container {
+
+  .element-section {
     display: flex;
     justify-content: center;
   }
 
-  .elements-images {
-    width: 250px;
-    height: 250px;
+  .element-para {
+    font-size: 1.4em;
+  }
+
+  #para-left {
+    text-align: left;
+  }
+
+  #para-right {
+    text-align: right;
   }
 }
 

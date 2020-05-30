@@ -180,6 +180,10 @@ const webPageContent = (function () {
     return workContainer;
   };
 
+  const workContainerRelative = () => {
+    document.getElementById('work-container').style.position = 'relative';
+  };
+
   const createHeader = (text, className) => {
     const h1 = document.createElement('h1');
     h1.className = className;
@@ -433,26 +437,6 @@ const webPageContent = (function () {
     },
   };
 
-  const aoeImage = {
-    href: 'https://www.coroflot.com/MatthewNeal/Game-Box-Re-Design',
-    alt: 'Age of Empires II Box Remodel',
-    id: 'aoe-image',
-    src: 'images/graphic-design-work/aoe-box/aoe-image1.jpg',
-  };
-
-  const bCardImages = {
-    href:
-      'https://s3images.coroflot.com/user_files/individual_files/385559_YnYIctd3Ym5ipRt4eVK9Xmzyw.pdf',
-    alt: 'Personal Business Card',
-    className: 'personal-bcard',
-    front: {
-      src: 'images/graphic-design-work/personal-businss-card/front.jpg',
-    },
-    back: {
-      src: 'images/graphic-design-work/personal-businss-card/back.jpg',
-    },
-  };
-
   const elements = {
     src: 'images/graphic-design-work/elements/elements-collage.svg',
   };
@@ -464,42 +448,6 @@ const webPageContent = (function () {
   const report = {
     src: 'images/graphic-design-work/annual-report/report-collage.jpg',
   };
-
-  const fireBlack = {
-    src: 'images/graphic-design-work/elements/fire-black.svg',
-  };
-
-  const waterBlack = {
-    src: 'images/graphic-design-work/elements/water-black.svg',
-  };
-
-  const earthBlack = {
-    src: 'images/graphic-design-work/elements/earth-black.svg',
-  };
-
-  const airBlack = {
-    src: 'images/graphic-design-work/elements/air-black.svg',
-  };
-
-  const elementImagesIconBlack = [fireBlack, waterBlack, earthBlack, airBlack];
-
-  const fireWhite = {
-    src: 'images/graphic-design-work/elements/fire-white.svg',
-  };
-
-  const waterWhite = {
-    src: 'images/graphic-design-work/elements/water-white.svg',
-  };
-
-  const earthWhite = {
-    src: 'images/graphic-design-work/elements/earth-white.svg',
-  };
-
-  const airWhite = {
-    src: 'images/graphic-design-work/elements/air-white.svg',
-  };
-
-  const elementImagesIconWhite = [fireWhite, waterWhite, earthWhite, airWhite];
 
   /****** Create Graphic Design Functions ******/
 
@@ -564,10 +512,10 @@ const webPageContent = (function () {
   };
 
   /***** Create Elements *******/
-  createElementPara = (text) => {
+  createIntroContentPara = (text) => {
     const para = document.createElement('p');
     para.textContent = text;
-    para.className = 'header elements-intro';
+    para.className = 'header intro-content-para';
 
     contentContainer.appendChild(para);
   };
@@ -586,38 +534,93 @@ const webPageContent = (function () {
   const showElements = () => {
     clearMainContainer();
     fadeInAnimation();
-    createHeader('Elements', 'page-header sub-header');
+    workContainerRelative();
+    createHeader('Elements', 'sub-header content-header');
     createContentContainer('elements-container');
 
-    createElementPara(
+    createIntroContentPara(
       'Personal project using the four classical elements as the subject matter. Fire, water, earth, and air were seen by ancient cultures as the elements that encompass all life, and though they have been disproven to be by modern science, they still represent an all-important part of our daily lives.'
     );
 
-    const elementContainerBlack = document.createElement('div');
-    elementContainerBlack.className =
-      'elements-icons-container icons--container-black';
-    contentContainer.appendChild(elementContainerBlack);
+    createElementSectionL = (imgSrc, paraText, paraId) => {
+      const elementSection = document.createElement('div');
+      elementSection.className = 'element-section';
 
-    createElementImages(elementImagesIconBlack, elementContainerBlack);
+      contentContainer.appendChild(elementSection);
 
-    const elementContainerWhite = document.createElement('div');
-    elementContainerWhite.className =
-      'elements-icons-container icons-container-white';
-    contentContainer.appendChild(elementContainerWhite);
+      const img = document.createElement('img');
+      img.className = 'element';
+      img.src = imgSrc;
 
-    createElementImages(elementImagesIconWhite, elementContainerWhite);
+      const p = document.createElement('p');
+      p.textContent = paraText;
+      p.className = 'element-para';
+      p.id = paraId;
+
+      elementSection.appendChild(img);
+      elementSection.appendChild(p);
+    };
+
+    createElementSectionR = (imgSrc, paraText, paraId) => {
+      const elementSection = document.createElement('div');
+      elementSection.className = 'element-section';
+
+      contentContainer.appendChild(elementSection);
+
+      const img = document.createElement('img');
+      img.className = 'element';
+      img.src = imgSrc;
+
+      const p = document.createElement('p');
+      p.textContent = paraText;
+      p.className = 'element-para';
+      p.id = paraId;
+
+      elementSection.appendChild(p);
+      elementSection.appendChild(img);
+    };
+
+    createElementSectionL(
+      'images/graphic-design-work/elements/fire-collage.svg',
+      'There are multiple approaches you can take when producing a type of project such as this one. I decided to go with simple illustrations accompanied by simple wordmarks, with the illustrations being able to stand alone if wanted.',
+      'para-left'
+    );
+
+    createElementSectionR(
+      'images/graphic-design-work/elements/water-collage.svg',
+      "Each wordmark compliments it's illustration by being represented in a visually cohesive typeface. Fire and earth shown in san-serif and bold fonts to reflect solidity, with water and air shown in script texts to reflect movement.",
+      'para-right'
+    );
+
+    createElementSectionL(
+      'images/graphic-design-work/elements/earth-collage.svg',
+      'So to add an extra element for cohesiveness, each wordmark has a feature of the illustration designed somewhere within. this demonstates a combined technique of both illustration and typography.',
+      'para-left'
+    );
+
+    createElementSectionR(
+      'images/graphic-design-work/elements/air-collage.svg',
+      'Each illustration takes on new character once an aspect changes such as background or color spectrum. This is demonstrated through the use of variants, for which two are provided for each.',
+      'para-right'
+    );
   };
 
   const showWillmoreWineBar = () => {
     clearMainContainer();
     fadeInAnimation();
-    createHeader('Willmore Wine Bar', 'page-header sub-header');
+    workContainerRelative();
+    createHeader('Willmore Wine Bar', 'sub-header content-header');
+    createContentContainer('elements-container');
+    createIntroContentPara(
+      'One of my first commissions as a designer was to produce the branding for this business, a wine bar located in Long Beach, CA. Working through this project helped reveal many important aspects of the graphic design process.'
+    );
   };
 
   const showAnnualReport = () => {
     clearMainContainer();
     fadeInAnimation();
-    createHeader('Annual Report', 'page-header sub-header');
+    workContainerRelative();
+    createHeader('Annual Report', 'sub-header content-header');
   };
 
   const createGraphicImageContent = ({ href, alt, className, id }, src) => {
@@ -710,26 +713,6 @@ const webPageContent = (function () {
     createFigCaption('sub-captions', figSub);
   };
 
-  const showAOE = () => {
-    const figSub =
-      'As a personal project at University, I decided to take on the task of redesigning the box art for the real-time strategy game Age of Empires II';
-
-    createItemContainer('aoe-container');
-    createGraphicImageContent(aoeImage, aoeImage.src);
-    createFigCaption('captions', 'Age of Empires II Box Redesign');
-    createFigCaption('sub-captions', figSub);
-  };
-  const showBcard = () => {
-    const figSub =
-      'Designed to showcase my personal branding and advertise for prospective clients';
-
-    createItemContainer('bcard-container');
-    createGraphicImageContent(bCardImages, bCardImages.front.src);
-    createGraphicImageContent(bCardImages, bCardImages.back.src);
-    createFigCaption('captions', 'Personal Business Card');
-    createFigCaption('sub-captions', figSub);
-  };
-
   /****** Initialize Pages ******/
 
   fadeInAnimation = () => {
@@ -778,9 +761,6 @@ const webPageContent = (function () {
     showWillmore();
     getBtns('willmore-container');
     showImages((slideIndex = 1), 'willmore-images', 'willmore-markers');
-
-    showAOE();
-    showBcard();
   };
 
   const icons = document.getElementsByClassName('page-icons');
