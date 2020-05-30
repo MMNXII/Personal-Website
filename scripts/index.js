@@ -330,6 +330,8 @@ const webPageContent = (function () {
     showItaly();
     showEtch();
     showRPG();
+
+    createBottomBorder();
   };
 
   /******************** Graphic Design ********************/
