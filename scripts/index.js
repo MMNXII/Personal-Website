@@ -518,7 +518,7 @@ const webPageContent = (function () {
     clearMainContainer();
     fadeInAnimation();
     workContainerRelative();
-    createHeader('Willmore Wine Bar', 'sub-header content-header');
+    createHeader('Willmore Wine Bar', 'content-header');
     createContentContainer('willmore-container');
     createIntroContentPara(
       'One of my first commissions as a designer was to produce the branding for an upcoming business located in Long Beach, CA. Working through this project helped reveal many important aspects of the graphic design process, both with technical design itself as well as more business focused topics.'
@@ -595,7 +595,7 @@ const webPageContent = (function () {
     clearMainContainer();
     fadeInAnimation();
     workContainerRelative();
-    createHeader('Elements', 'sub-header content-header');
+    createHeader('Elements', 'content-header');
     createContentContainer('elements-container');
     createIntroContentPara(
       'Personal project using the four classical elements as the subject matter. Fire, water, earth, and air were seen by ancient cultures as the elements that encompass all life, and though they have been disproven to be by modern science, they still represent an all-important part of our daily lives.'
@@ -634,7 +634,7 @@ const webPageContent = (function () {
     clearMainContainer();
     fadeInAnimation();
     workContainerRelative();
-    createHeader('Annual Report', 'sub-header content-header');
+    createHeader('Annual Report', 'content-header');
     createContentContainer('report-container');
 
     createBottomBorder();

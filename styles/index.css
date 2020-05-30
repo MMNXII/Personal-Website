@@ -585,10 +585,8 @@ body {
 }
 .content-header {
   color: #a05d00;
+  font-family: header;
   font-size: 2.5em;
-  top: 0;
-  right: 0;
-  left: 0;
 }
 
 /******************** Willmore ********************/
@@ -727,7 +725,7 @@ body {
   max-width: 650px;
   min-width: 320px;
   padding-bottom: 2em;
-  margin: 3em auto 1em auto;
+  margin: 2em auto 2em auto;
   border-bottom: 1px solid #62133b;
 }
 
