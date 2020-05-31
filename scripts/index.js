@@ -588,7 +588,7 @@ const webPageContent = (function () {
       'images/graphic-design-work/bryan-lab/bryan-final.png'
     );
     createContentPara(
-      'Ultimately, the decided upon design presents a more cohesive piece by carrying over elements from the logo onto the wordmark. Including the background on the typeface allows the design to be used on print media with variations of material color with easy readability. '
+      'Ultimately, the decided upon design presents a more cohesive piece by carrying over elements from the logo onto the wordmark. Including a background on the typeface reflects the logo itself by giving it a containing element, and allows the design as a whole to be used on print media with variations of material color for easy readability. '
     );
 
     createBottomBorder();
