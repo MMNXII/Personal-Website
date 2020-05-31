@@ -431,7 +431,7 @@ const webPageContent = (function () {
     createGraphicDesImages(willmore, 'Willmore Wine Bar', 'willmore-text');
     createGraphicDesImages(elements, 'Elements', 'elements-text');
     createGraphicDesImages(bryan, 'Bryan Laboratory Equipment', 'bryan-text');
-    createGraphicDesImages(report, 'Annual Report', 'report-text');
+    // createGraphicDesImages(report, 'Annual Report', 'report-text');
 
     createBottomBorder();
   };
