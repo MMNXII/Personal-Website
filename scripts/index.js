@@ -581,14 +581,14 @@ const webPageContent = (function () {
     );
     createDrafts('drafts-container', bryanImages, 'drafts');
     createContentPara(
-      'Accepting this project came with two stipulations: use the provided logo and color scheme, and design accordingly to be used with print media. Keeping these in mind, the logo was converted to print ready CMYK while still representing the provided colors, and the design needed to have a horizontal oriented layout. '
+      'Accepting this project came with two stipulations: use the provided logo and color scheme, and design accordingly to be used with print media. Keeping these in mind, the logo was converted to print ready CMYK while still representing the provided colors, and the design needed to have a horizontal orientation to not only accomodate print media layouts, but also the length of the business name. '
     );
     createFinal(
       'Bryan Final',
       'images/graphic-design-work/bryan-lab/bryan-final.png'
     );
     createContentPara(
-      'When I was approached with the task to brand a wine bar, immediately the general idea was to implement imagery of wine with the wordmark. I wanted to work with how different typefaces created different negative space allowing for compatible imagery. Presenting the client with different design directions was my goal, from elegant and modern, to more traditional.'
+      'Ultimately, the decided upon design presents a more cohesive piece by carrying over elements from the logo onto the wordmark. Including the background on the typeface allows the design to be used on print media with variations of material color with easy readability. '
     );
 
     createBottomBorder();
