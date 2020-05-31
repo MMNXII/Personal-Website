@@ -356,14 +356,14 @@ body {
   .profile {
     margin: 3em auto 1.5em auto;
     max-width: 130px;
-    max-height: auto;
+    max-height: 174px;
   }
 }
 @media only screen and (min-width: 750px) {
   .profile {
     margin: 2em;
     max-width: 180px;
-    max-height: auto;
+    max-height: 240px;
   }
 }
 
@@ -771,7 +771,7 @@ body {
     font-size: 1.6em;
   }
   .element-section {
-    margin-top: 2em;
+    // margin-top: 2em;
     display: flex;
     justify-content: center;
   }
