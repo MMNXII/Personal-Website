@@ -535,6 +535,7 @@ body {
   justify-content: center;
   margin-top: 14em;
   margin-bottom: 5em;
+  border: 0.2px solid yellow;
 }
 
 @media only screen and (max-width: 749px) {
@@ -549,19 +550,19 @@ body {
   margin: 0.5em;
 }
 
-@media only screen and (max-width: 999px) {
+@media only screen and (max-width: 1099px) {
   .graphic-des-img {
     width: 200px;
   }
 }
-@media only screen and (min-width: 1000px) and (max-width: 1310px) {
+@media only screen and (min-width: 1100px) and (max-width: 1309px) {
   .graphic-des-img {
-    width: 300px;
+    width: 245px;
   }
 }
 @media only screen and (min-width: 1310px) {
   .graphic-des-img {
-    width: 400px;
+    width: 420px;
   }
 }
 .hover-text {
@@ -575,11 +576,23 @@ body {
   padding-top: 40%;
   background-color: #62133af5;
   color: #a05d00;
-  font-size: 3em;
+  font-size: 2.1em;
+}
+
+#bryan-text {
+  padding-top: 36%;
+}
+
+#elements-text {
+  font-size: 2.5em;
 }
 
 @media only screen and (min-width: 1000px) {
   .hover-text {
+    font-size: 3.4em;
+  }
+
+  #elements-text {
     font-size: 4em;
   }
 }
@@ -590,20 +603,21 @@ body {
   margin-top: 1em;
 }
 
-/******************** Willmore ********************/
-.willmore-drafts-container {
+/******************** WIllmore / Bryan Drafts ********************/
+.drafts-container {
   margin: 2em auto auto auto;
-  width: 60%;
-  max-width: 800px;
+  width: 90%;
+  max-width: 1300px;
 }
 
-.willmore-drafts {
-  width: 200px;
+.drafts {
+  width: 300px;
   height: auto;
   margin: 0.5em;
 }
 
-.willmore-final {
+/******************** Willmore ********************/
+.final {
   width: 300px;
   height: auto;
   margin: 4em auto auto auto;
@@ -618,6 +632,7 @@ body {
 }
 
 #willmore-outdoor {
+  margin: 4em auto auto auto;
   width: auto;
   height: 300px;
 }
@@ -628,15 +643,11 @@ body {
 }
 
 @media only screen and (min-width: 625px) and (max-width: 899px) {
-  .willmore-drafts-container {
-    width: 80%;
+  .drafts {
+    width: 300px;
   }
 
-  .willmore-drafts {
-    width: 245px;
-  }
-
-  .willmore-final {
+  .final {
     width: 425px;
   }
 
@@ -649,16 +660,16 @@ body {
   }
 }
 @media only screen and (min-width: 900px) and (max-width: 1099px) {
-  .willmore-drafts-container {
+  .drafts-container {
     margin: 4em auto auto auto;
-    width: 82%;
+    width: 95%;
   }
 
-  .willmore-drafts {
+  .drafts {
     width: 325px;
   }
 
-  .willmore-final {
+  .final {
     width: 470px;
   }
 
@@ -671,17 +682,17 @@ body {
   }
 }
 @media only screen and (min-width: 1100px) {
-  .willmore-drafts-container {
+  .drafts-container {
     margin: 4em auto auto auto;
-    width: 75%;
+    width: 95%;
   }
 
-  .willmore-drafts {
-    width: 375px;
+  .drafts {
+    width: 425px;
   }
 
-  .willmore-final {
-    width: 700px;
+  .final {
+    width: 800px;
   }
 
   #willmore-outdoor {
@@ -692,7 +703,7 @@ body {
     width: 550px;
   }
 }
-.willmore-content-para {
+.content-para {
   margin: 2em auto 2em auto;
   font-family: header;
   font-size: 1.3em;
@@ -706,12 +717,12 @@ body {
 }
 
 @media only screen and (min-width: 750px) {
-  .willmore-content-para {
+  .content-para {
     font-size: 1.4em;
   }
 }
 @media only screen and (min-width: 750px) {
-  .willmore-content-para {
+  .content-para {
     font-size: 1.4em;
   }
 }

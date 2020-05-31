@@ -351,6 +351,11 @@ const webPageContent = (function () {
     src: 'images/graphic-design-work/annual-report/report-collage.jpg',
   };
 
+  const bryan = {
+    alt: 'bryan',
+    src: 'images/graphic-design-work/bryan-lab/bryan-collage.png',
+  };
+
   const createGraphicDesImages = ({ src, alt }, text, id) => {
     const imgContainter = document.createElement('div');
     imgContainter.className = 'graphic-des-img-container';
@@ -407,6 +412,11 @@ const webPageContent = (function () {
           e.target.id == 'report-text'
         ) {
           showAnnualReport();
+        } else if (
+          e.target.className == 'hover-text' &&
+          e.target.id == 'bryan-text'
+        ) {
+          showBryanLab();
         }
       })
     );
@@ -418,9 +428,10 @@ const webPageContent = (function () {
     createHeader('Design', 'sub-header graphic-header');
     createContentContainer('graphic-des-content');
 
-    createGraphicDesImages(willmore, 'Willmore', 'willmore-text');
+    createGraphicDesImages(willmore, 'Willmore Wine Bar', 'willmore-text');
     createGraphicDesImages(elements, 'Elements', 'elements-text');
-    createGraphicDesImages(report, 'Report', 'report-text');
+    createGraphicDesImages(bryan, 'Bryan Laboratory Equipment', 'bryan-text');
+    createGraphicDesImages(report, 'Annual Report', 'report-text');
 
     createBottomBorder();
   };
@@ -433,7 +444,7 @@ const webPageContent = (function () {
     contentContainer.appendChild(para);
   };
 
-  /******************** Willmore ********************/
+  /******************** Willmore / Bryan ********************/
 
   const willmoreImages = {
     draft1: {
@@ -464,27 +475,54 @@ const webPageContent = (function () {
     },
   };
 
-  createWillmoreDrafts = () => {
+  const bryanImages = {
+    draft1: {
+      alt: 'Bryan Lab Draft 1',
+      src: 'images/graphic-design-work/bryan-lab/bryan-draft-1.png',
+    },
+    draft2: {
+      alt: 'Bryan Lab Draft 2',
+      src: 'images/graphic-design-work/bryan-lab/bryan-draft-2.png',
+    },
+    draft3: {
+      alt: 'Bryan Lab Draft 3',
+      src: 'images/graphic-design-work/bryan-lab/bryan-draft-3.png',
+    },
+    draft4: {
+      alt: 'Bryan Lab Draft 4',
+      src: 'images/graphic-design-work/bryan-lab/bryan-draft-4.png',
+    },
+  };
+
+  createDrafts = (dratfsContainer, imageSet, draftImages) => {
     const div = document.createElement('div');
-    div.className = 'willmore-drafts-container';
-    const { draft1, draft2, draft3, draft4 } = willmoreImages;
+    div.className = dratfsContainer;
+    const { draft1, draft2, draft3, draft4 } = imageSet;
     const imgSrcArr = [draft1.src, draft2.src, draft3.src, draft4.src];
 
     imgSrcArr.forEach((src) => {
       const img = document.createElement('img');
       img.src = src;
-      img.className = 'willmore-drafts';
+      img.className = draftImages;
       div.appendChild(img);
     });
 
     contentContainer.appendChild(div);
   };
 
-  createWillmoreFinal = () => {
+  createContentPara = (text) => {
+    const p = document.createElement('p');
+    p.textContent = text;
+    p.className = 'content-para';
+
+    contentContainer.appendChild(p);
+  };
+
+  createFinal = (alt, src) => {
     const img = document.createElement('img');
-    img.className = 'willmore-final';
-    img.alt = 'Willmore Final';
-    img.src = 'images/graphic-design-work/willmore/willmore-final.jpg';
+    img.className = 'final';
+    img.alt = alt;
+    img.src = src;
     contentContainer.appendChild(img);
   };
 
@@ -505,15 +543,6 @@ const webPageContent = (function () {
     contentContainer.appendChild(div);
   };
 
-  createWillmorePara = (id, text) => {
-    const p = document.createElement('p');
-    p.textContent = text;
-    p.id = id;
-    p.className = 'willmore-content-para';
-
-    contentContainer.appendChild(p);
-  };
-
   const showWillmoreWineBar = () => {
     clearMainContainer();
     fadeInAnimation();
@@ -524,18 +553,43 @@ const webPageContent = (function () {
       'One of my first commissions as a designer was to produce the branding for an upcoming business located in Long Beach, CA. Working through this project helped reveal many important aspects of the graphic design process, both with technical design itself as well as more business focused topics.'
     );
 
-    createWillmoreDrafts();
-    createWillmorePara(
-      'drafts-para',
+    createDrafts('drafts-container', willmoreImages, 'drafts');
+    createContentPara(
       'When I was approached with the task to brand a wine bar, immediately the general idea was to implement imagery of wine with the wordmark. I wanted to work with how different typefaces created different negative space allowing for compatible imagery. Presenting the client with different design directions was my goal, from elegant and modern, to more traditional.'
     );
-    createWillmoreFinal();
-    createWillmorePara(
-      'final-para',
-      'The final version of the logo presents a more refined version than shown in the concept drafts. It accomplishes the same task of combining imagery with typography, but with a more cohesive approach that allows allows accurate representation through different mediums such as print and outdoor signage.'
+    createFinal(
+      'Willmore Final',
+      'images/graphic-design-work/willmore/willmore-final.jpg'
+    );
+    createContentPara(
+      'The final version of the logo presents a more refined design than shown in the concept drafts. It accomplishes the same task of combining imagery with typography, but with a more cohesive approach that allows accurate representation through different mediums such as print and outdoor signage.'
     );
 
     createWillmoreAddtlImages();
+
+    createBottomBorder();
+  };
+
+  const showBryanLab = () => {
+    clearMainContainer();
+    fadeInAnimation();
+    workContainerRelative();
+    createHeader('Bryan Laboratory Equipment', 'content-header');
+    createContentContainer('bryan-container');
+    createIntroContentPara(
+      'This project presented itself differently as the logo and color scheme assets were provided from the onset. In turn, this lead the design process to focus more on supplemental elements and layout, as opposed to typography and illustration, to achieve the goal of a professional business logo.'
+    );
+    createDrafts('drafts-container', bryanImages, 'drafts');
+    createContentPara(
+      'Accepting this project came with two stipulations: use the provided logo and color scheme, and design accordingly to be used with print media. Keeping these in mind, the logo was converted to print ready CMYK while still representing the provided colors, and the design needed to have a horizontal oriented layout. '
+    );
+    createFinal(
+      'Bryan Final',
+      'images/graphic-design-work/bryan-lab/bryan-final.png'
+    );
+    createContentPara(
+      'When I was approached with the task to brand a wine bar, immediately the general idea was to implement imagery of wine with the wordmark. I wanted to work with how different typefaces created different negative space allowing for compatible imagery. Presenting the client with different design directions was my goal, from elegant and modern, to more traditional.'
+    );
 
     createBottomBorder();
   };
