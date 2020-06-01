@@ -252,7 +252,7 @@ body {
   position: absolute;
   width: fit-content;
   bottom: 1em;
-  right: 2em;
+  right: 1em;
   transition-duration: 0.2s;
 }
 
@@ -267,15 +267,24 @@ body {
 }
 
 @media only screen and (min-width: 450px) and (max-width: 1200px) {
+  #page-up-container {
+    right: 2em;
+  }
+
   #page-up1,
 #page-up2 {
     width: 40px;
   }
 }
 @media only screen and (min-width: 1200px) {
+  #page-up-container {
+    right: 3em;
+  }
+
   #page-up1,
 #page-up2 {
     width: 60px;
+    right: 2em;
   }
 }
 /******************** Introduction ********************/
