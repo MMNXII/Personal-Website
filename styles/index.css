@@ -247,6 +247,37 @@ body {
     margin-left: 0.5em;
   }
 }
+/******************** Page Up ********************/
+#page-up-container {
+  position: absolute;
+  width: fit-content;
+  bottom: 1em;
+  right: 2em;
+  transition-duration: 0.2s;
+}
+
+#page-up-container:hover {
+  bottom: 1.5em;
+}
+
+#page-up1,
+#page-up2 {
+  width: 30px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 450px) and (max-width: 1200px) {
+  #page-up1,
+#page-up2 {
+    width: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #page-up1,
+#page-up2 {
+    width: 60px;
+  }
+}
 /******************** Introduction ********************/
 #intro-container {
   margin: auto auto 5em auto;

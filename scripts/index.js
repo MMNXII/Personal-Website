@@ -567,6 +567,8 @@ const webPageContent = (function () {
 
     createWillmoreAddtlImages();
 
+    pageUp();
+
     createBottomBorder();
   };
 
@@ -590,6 +592,8 @@ const webPageContent = (function () {
     createContentPara(
       'Ultimately, the decided upon design presents a more cohesive piece by carrying over elements from the logo onto the wordmark. Including a background on the typeface reflects the logo itself by giving it a containing element, and allows the design as a whole to be used on print media with variations of material color for easy readability. '
     );
+
+    pageUp();
 
     createBottomBorder();
   };
@@ -679,6 +683,8 @@ const webPageContent = (function () {
       'para-right'
     );
 
+    pageUp();
+
     createBottomBorder();
   };
 
@@ -702,7 +708,7 @@ const webPageContent = (function () {
     ItemContainer.appendChild(fig);
   };
 
-  /****** Page Icons ******/
+  /******************** Page Icons ********************/
 
   const icons = document.getElementsByClassName('page-icons');
   const iconsArr = Array.from(icons);
@@ -747,4 +753,32 @@ const webPageContent = (function () {
   showIcon('person-container', 'person1', 'person2');
   showIcon('web-container', 'web1', 'web2');
   showIcon('graphic-container', 'graphic1', 'graphic2');
+
+  /******************** Page Up ********************/
+
+  pageUp = () => {
+    const pageUpContainer = document.createElement('div');
+    pageUpContainer.id = 'page-up-container';
+
+    let a = document.createElement('a');
+    a.href = '#logo-container';
+
+    const pageUpFront = document.createElement('img');
+    pageUpFront.id = 'page-up1';
+    pageUpFront.className = 'front';
+    pageUpFront.src = './images/page-up/page-up1.svg';
+
+    const pageUpBack = document.createElement('img');
+    pageUpBack.id = 'page-up2';
+    pageUpBack.className = 'back';
+    pageUpBack.src = './images/page-up/page-up2.svg';
+
+    a.appendChild(pageUpFront);
+    a.appendChild(pageUpBack);
+
+    pageUpContainer.appendChild(a);
+    contentContainer.appendChild(pageUpContainer);
+
+    showIcon('page-up-container', 'page-up1', 'page-up2');
+  };
 })();
