@@ -27,13 +27,16 @@
   padding: 0;
   // border: 0.2px solid yellow;
 }
+
 html {
   background-color: #0e1524;
 }
+
 body {
   display: none;
   background-color: #0e1524;
 }
+
 #main-container {
   @extend %flex-and-wrap;
   justify-content: center;
@@ -58,6 +61,7 @@ body {
     min-height: 55px;
   }
 }
+
 /******************** Headers ********************/
 
 .about-header,
@@ -65,21 +69,27 @@ body {
   top: 0;
   right: 0;
 }
+
 @media only screen and (max-width: 749px) {
+
   .about-header,
   .graphic-header {
     font-size: 9em;
     margin-top: 0.2em;
   }
 }
+
 @media only screen and (min-width: 750px) and (max-width: 950px) {
+
   .about-header,
   .graphic-header {
     font-size: 15em;
     margin-top: 0.25em;
   }
 }
+
 @media only screen and (min-width: 951px) {
+
   .about-header,
   .graphic-header {
     font-size: 25em;
@@ -92,30 +102,35 @@ body {
   right: 0;
   margin-top: 0.2em;
 }
+
 @media only screen and (max-width: 570px) {
   .web-header {
     margin-top: 0.5em;
     font-size: 5em;
   }
 }
+
 @media only screen and (min-width: 570px) and (max-width: 750px) {
   .web-header {
     margin-top: 0.3em;
     font-size: 8em;
   }
 }
+
 @media only screen and (min-width: 750px) and (max-width: 939px) {
   .web-header {
     margin-top: 0.4em;
     font-size: 9em;
   }
 }
+
 @media only screen and (min-width: 940px) and (max-width: 1103px) {
   .web-header {
     margin-top: 0.3em;
     font-size: 12em;
   }
 }
+
 @media only screen and (min-width: 1104px) {
   .web-header {
     font-size: 15em;
@@ -154,7 +169,8 @@ body {
   background-color: #0e1524;
   z-index: 1;
 }
-#social-media-icon-container > a {
+
+#social-media-icon-container>a {
   text-decoration: none;
 }
 
@@ -186,6 +202,7 @@ body {
 }
 
 @media only screen and (min-width: 750px) {
+
   #linkedin,
   #mail {
     margin-left: 1em;
@@ -206,6 +223,7 @@ body {
   right: 0;
   z-index: 2;
 }
+
 .icons-container {
   position: relative;
   display: inline-block;
@@ -216,6 +234,7 @@ body {
   width: 60px;
   height: 60px;
 }
+
 .page-icons:hover {
   cursor: pointer;
 }
@@ -223,6 +242,7 @@ body {
 .front {
   display: block;
 }
+
 .back {
   display: none;
 }
@@ -231,14 +251,17 @@ body {
   .icons-container {
     margin: 0.7em 0.5em 0.5em 0.5em;
   }
+
   #web-container {
     margin-left: 0.1em;
   }
+
   .page-icons {
     width: 40px;
     height: 40px;
   }
 }
+
 @media only screen and (min-width: 750px) {
   #web-container {
     margin-left: 0.5em;
@@ -254,6 +277,7 @@ body {
   right: 1em;
   transition-duration: 0.2s;
 }
+
 #page-up-container:hover {
   bottom: 1.5em;
 }
@@ -268,6 +292,7 @@ body {
   #page-up-container {
     right: 2em;
   }
+
   #page-up1,
   #page-up2 {
     width: 40px;
@@ -278,6 +303,7 @@ body {
   #page-up-container {
     right: 3em;
   }
+
   #page-up1,
   #page-up2 {
     width: 60px;
@@ -292,6 +318,7 @@ body {
   text-align: center;
   width: 95%;
 }
+
 @media only screen and (max-width: 750px) {
   #intro-container {
     margin-top: 6em;
@@ -304,7 +331,9 @@ body {
   color: #b88a78;
   font-size: 2.5em;
 }
+
 @media only screen and (max-width: 650px) {
+
   .hello,
   .comma-welcome,
   .intro-para {
@@ -341,6 +370,7 @@ body {
   letter-spacing: 0.05em;
   margin-top: 0.2em;
 }
+
 .sub-captions {
   @extend %caption-header;
   width: 268px;
@@ -377,21 +407,25 @@ body {
     display: flex;
     justify-content: center;
   }
+
   .intro-para-container {
     width: fit-content;
     height: fit-content;
     margin-top: 2em;
   }
 }
+
 @media only screen and (min-width: 990px) {
   .intro-para-container {
     margin-top: 3em;
   }
 }
+
 .profile {
   position: relative;
   z-index: 2;
 }
+
 @media only screen and (max-width: 749px) {
   .profile {
     margin: 3em auto 1.5em auto;
@@ -399,6 +433,7 @@ body {
     max-height: 174px;
   }
 }
+
 @media only screen and (min-width: 750px) {
   .profile {
     margin: 2em;
@@ -416,6 +451,7 @@ body {
   margin-right: 0em;
   color: #b88a78;
 }
+
 @media only screen and (max-width: 749px) {
   .content-intro {
     font-size: 1.3em;
@@ -423,6 +459,7 @@ body {
     margin: 0.5em auto auto auto;
   }
 }
+
 @media only screen and (min-width: 749px) {
   .content-intro {
     text-align: left;
@@ -437,19 +474,23 @@ body {
   margin-bottom: 4em;
   width: 100%;
 }
+
 .about-div {
   width: 33%;
   height: fit-content;
 }
+
 #toolsDiv {
   border-left: 1px solid #62133b;
   border-right: 1px solid #62133b;
 }
+
 .about-text-titles {
   color: #a05d00;
   letter-spacing: 0.05em;
   margin-bottom: 0.5em;
 }
+
 .list-item {
   font-family: header;
   text-align: center;
@@ -457,32 +498,37 @@ body {
   letter-spacing: 0.05em;
   color: #b88a78;
 }
+
 @media only screen and (min-width: 550px) and (max-width: 749px) {
   .about-text-titles {
     font-size: 1.9em;
   }
+
   .list-item {
     font-size: 1.7em;
   }
 }
+
 @media only screen and (min-width: 750px) {
   .skills-container {
     margin-top: 4em;
   }
+
   .about-text-titles {
     font-size: 2.4em;
   }
+
   .list-item {
     line-height: 1.2em;
     font-size: 2.2em;
   }
 }
 
-.about-div > ul {
+.about-div>ul {
   list-style: none;
 }
 
-.about-div > ul > li::before {
+.about-div>ul>li::before {
   content: '\2022';
   color: #62133b;
   font-weight: bold;
@@ -496,6 +542,7 @@ body {
 #web-dev-content {
   margin-top: 5em;
 }
+
 #rpg {
   margin-bottom: 5em;
 }
@@ -515,7 +562,9 @@ body {
     margin-top: 8em;
   }
 }
+
 @media only screen and (max-width: 1000px) {
+
   #rps,
   #italy,
   #etch,
@@ -523,7 +572,9 @@ body {
     width: 100%;
   }
 }
+
 @media only screen and (min-width: 1000px) {
+
   #rps,
   #italy,
   #etch,
@@ -531,13 +582,16 @@ body {
     width: 50%;
   }
 }
+
 #rps-image,
 #rpg-image,
 #italy-image,
 #etchasketch-image {
   @extend %web-dev-img-height-width;
 }
+
 @media only screen and (min-width: 1000px) {
+
   #rps-image,
   #italy-image,
   #etchasketch-image {
@@ -545,6 +599,7 @@ body {
     width: auto;
   }
 }
+
 #rps-image,
 #italy-image,
 #etchasketch-image,
@@ -552,6 +607,7 @@ body {
   display: block;
   margin: 0 auto;
 }
+
 .project-buttons {
   @extend %caption-header;
   font-size: 1.3em;
@@ -563,6 +619,7 @@ body {
   opacity: 0.8;
   border: 1px solid #b88a78;
 }
+
 .project-buttons:hover {
   cursor: pointer;
   transition-property: color;
@@ -597,11 +654,13 @@ body {
     width: 200px;
   }
 }
+
 @media only screen and (min-width: 1100px) and (max-width: 1309px) {
   .graphic-des-img {
     width: 245px;
   }
 }
+
 @media only screen and (min-width: 1310px) {
   .graphic-des-img {
     width: 420px;
@@ -625,6 +684,7 @@ body {
 #bryan-text {
   padding-top: 36%;
 }
+
 #elements-text {
   font-size: 2.5em;
 }
@@ -633,6 +693,7 @@ body {
   .hover-text {
     font-size: 3.4em;
   }
+
   #elements-text {
     font-size: 4em;
   }
@@ -653,6 +714,7 @@ body {
   max-width: 1300px;
   // border: 0.2px solid yellow;
 }
+
 .drafts {
   width: 300px;
   height: auto;
@@ -670,14 +732,17 @@ body {
 .willmore-addtl-img-container {
   margin: 4em auto 3em auto;
 }
+
 .willmore-addtl-images {
   margin: 1em;
 }
+
 #willmore-outdoor {
   margin: 4em auto auto auto;
   width: auto;
   height: 300px;
 }
+
 #willmore-flyer {
   width: 300px;
   height: auto;
@@ -692,9 +757,11 @@ body {
   .final {
     width: 425px;
   }
+
   #willmore-outdoor {
     height: 350px;
   }
+
   #willmore-flyer {
     width: 450px;
   }
@@ -705,6 +772,7 @@ body {
     margin: 4em auto auto auto;
     width: 95%;
   }
+
   .drafts {
     width: 325px;
   }
@@ -712,9 +780,11 @@ body {
   .final {
     width: 470px;
   }
+
   #willmore-outdoor {
     height: 450px;
   }
+
   #willmore-flyer {
     width: 500px;
   }
@@ -725,6 +795,7 @@ body {
     margin: 4em auto auto auto;
     width: 95%;
   }
+
   .drafts {
     width: 425px;
   }
@@ -732,9 +803,11 @@ body {
   .final {
     width: 800px;
   }
+
   #willmore-outdoor {
     height: 450px;
   }
+
   #willmore-flyer {
     width: 550px;
   }
@@ -770,6 +843,7 @@ body {
 #elements-container {
   margin-bottom: 5em;
 }
+
 .intro-content-para {
   color: #b88a78;
   font-size: 1.2em;
@@ -822,14 +896,17 @@ body {
   .intro-content-para {
     font-size: 1.6em;
   }
+
   .element-section {
     // margin-top: 2em;
     display: flex;
     justify-content: center;
   }
+
   .element-para {
     font-size: 1.4em;
   }
+
   #para-left {
     text-align: left;
   }
