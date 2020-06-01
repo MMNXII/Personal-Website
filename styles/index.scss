@@ -434,12 +434,12 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 4em;
+  margin-bottom: 4em;
   width: 100%;
-  height: 50px;
 }
 .about-div {
   width: 33%;
-  margin-bottom: 4em;
+  height: fit-content;
 }
 #toolsDiv {
   border-left: 1px solid #62133b;
@@ -489,6 +489,66 @@ body {
   display: inline-block;
   width: 0.5em;
   margin-left: -0.5em;
+}
+
+/******************** Contact ********************/
+
+#contact-container {
+  padding: 2em;
+  border-radius: 0.4em;
+  border: 2px solid #62133b;
+  margin: 2em auto 4em auto;
+  width: 80%;
+  max-width: 450px;
+}
+
+.label-item {
+  display: block;
+  // border: 0.2px solid yellow;
+  font-family: header;
+  text-align: left;
+  font-size: 1.8em;
+  letter-spacing: 0.05em;
+  color: #a05d00;
+  width: fit-content;
+}
+
+#name,
+#email,
+#message {
+  width: 100%;
+  padding: 12px;
+  color: #b88a78;
+  background-color: #0e1524;
+  border: 1px solid #b88a78;
+  border-radius: 0.4em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  outline-offset: 0px !important;
+  outline: none !important;
+  resize: vertical;
+}
+
+// #first-name:focus,
+// #last-name:focus,
+// #message:focus {
+//   border: 1px solid #62133b;
+// }
+
+#submit-btn {
+  margin-top: 1em;
+  background-color: #0e1524;
+  color: #a05d00;
+  padding: 12px 20px;
+  border: 1px solid #a05d00;
+  border-radius: 4px;
+  outline-offset: 0px !important;
+  outline: none !important;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color: #62133b;
 }
 
 /******************** Web Development ********************/
