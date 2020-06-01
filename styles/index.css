@@ -663,7 +663,7 @@ body {
 }
 
 .willmore-addtl-img-container {
-  margin: 4em auto 2em auto;
+  margin: 4em auto 3em auto;
 }
 
 .willmore-addtl-images {
@@ -679,6 +679,7 @@ body {
 #willmore-flyer {
   width: 300px;
   height: auto;
+  margin-bottom: 2em;
 }
 
 @media only screen and (min-width: 625px) and (max-width: 899px) {
