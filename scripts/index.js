@@ -214,70 +214,12 @@ const webPageContent = (function () {
     applyLists(software, softwareDiv);
   };
 
-  createContactForm = () => {
-    createHeader('Contact Me!', 'header about-text-titles');
-    createContentContainer('contact-container');
-
-    const form = document.createElement('form');
-    form.action = 'contact.php';
-    form.method = 'post';
-    contentContainer.appendChild(form);
-
-    createLabel = (forText, text) => {
-      const label = document.createElement('label');
-      label.htmlFor = forText;
-      label.className = 'header label-item';
-      label.textContent = text;
-
-      form.appendChild(label);
-    };
-
-    createInput = (type, id, name, placeHolder) => {
-      const input = document.createElement('input');
-      input.type = type;
-      input.id = id;
-      input.name = name;
-      input.placeholder = placeHolder;
-
-      form.appendChild(input);
-    };
-
-    createLabel('name', 'Your Name:');
-    createInput('text', 'name', 'name_input', 'Enter...');
-    const name = document.getElementById('name');
-    // name.minLength = '2';
-    // name.maxLength = '20';
-    // name.pattern = '/^[a-zA-Z ]*$/';
-    name.required = true;
-
-    createLabel('email', 'Email Address:');
-    createInput('email', 'email', 'email_input', 'Enter...');
-    const email = document.getElementById('email');
-    // email.pattern = '/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6})*$/';
-    email.required = true;
-
-    createLabel('message', 'Say Hey!');
-    const message = document.createElement('textarea');
-    message.id = 'message';
-    message.name = 'message_input';
-    message.placeholder = 'Say Hey!';
-    // message.pattern = '/^[a-zA-Z0-9 ]*$/';
-    message.maxLength = '100';
-    message.required = true;
-
-    form.appendChild(message);
-
-    createInput('submit', 'submit-btn', 'submit');
-  };
-
   const showAbout = () => {
     clearMainContainer();
     fadeInAnimation();
     createHeader('About', 'sub-header about-header');
     createContentContainer('about-content');
     createAboutContent();
-
-    createContactForm();
 
     createBottomBorder();
   };
