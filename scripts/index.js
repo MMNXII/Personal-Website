@@ -785,3 +785,11 @@ const webPageContent = (function () {
     showIcon('page-up-container', 'page-up1', 'page-up2');
   };
 })();
+
+const arr = [1, 2, 3, 4, 5, 6];
+
+const arr1 = arr.filter((item) => {
+  return item / 1 == 3;
+});
+
+console.log(arr1);
