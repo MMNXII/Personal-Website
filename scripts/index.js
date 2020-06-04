@@ -221,6 +221,8 @@ const webPageContent = (function () {
     createContentContainer('about-content');
     createAboutContent();
 
+    createPageUp();
+
     createBottomBorder();
   };
 
@@ -334,6 +336,8 @@ const webPageContent = (function () {
     showEtch();
     showRPG();
 
+    createPageUp();
+
     createBottomBorder();
   };
 
@@ -435,6 +439,8 @@ const webPageContent = (function () {
     createGraphicDesImages(elements, 'Elements', 'elements-text');
     createGraphicDesImages(bryan, 'Bryan Laboratory Equipment', 'bryan-text');
     // createGraphicDesImages(report, 'Annual Report', 'report-text');
+
+    createPageUp();
 
     createBottomBorder();
   };
@@ -570,7 +576,7 @@ const webPageContent = (function () {
 
     createWillmoreAddtlImages();
 
-    pageUp();
+    createPageUp();
 
     createBottomBorder();
   };
@@ -596,7 +602,7 @@ const webPageContent = (function () {
       'Ultimately, the decided upon design presents a more cohesive piece by carrying over elements from the logo onto the wordmark. Including a background on the typeface reflects the logo itself by giving it a containing element, and allows the design as a whole to be used on print media with variations of material color for easy readability. '
     );
 
-    pageUp();
+    createPageUp();
 
     createBottomBorder();
   };
@@ -686,7 +692,7 @@ const webPageContent = (function () {
       'para-right'
     );
 
-    pageUp();
+    createPageUp();
 
     createBottomBorder();
   };
@@ -759,28 +765,28 @@ const webPageContent = (function () {
 
   /******************** Page Up ********************/
 
-  pageUp = () => {
-    const pageUpContainer = document.createElement('div');
-    pageUpContainer.id = 'page-up-container';
+  createPageUp = () => {
+    const createPageUpContainer = document.createElement('div');
+    createPageUpContainer.id = 'page-up-container';
 
     let a = document.createElement('a');
     a.href = '#logo-container';
 
-    const pageUpFront = document.createElement('img');
-    pageUpFront.id = 'page-up1';
-    pageUpFront.className = 'front';
-    pageUpFront.src = './images/page-up/page-up1.svg';
+    const createPageUpFront = document.createElement('img');
+    createPageUpFront.id = 'page-up1';
+    createPageUpFront.className = 'front';
+    createPageUpFront.src = './images/page-up/page-up1.svg';
 
-    const pageUpBack = document.createElement('img');
-    pageUpBack.id = 'page-up2';
-    pageUpBack.className = 'back';
-    pageUpBack.src = './images/page-up/page-up2.svg';
+    const createPageUpBack = document.createElement('img');
+    createPageUpBack.id = 'page-up2';
+    createPageUpBack.className = 'back';
+    createPageUpBack.src = './images/page-up/page-up2.svg';
 
-    a.appendChild(pageUpFront);
-    a.appendChild(pageUpBack);
+    a.appendChild(createPageUpFront);
+    a.appendChild(createPageUpBack);
 
-    pageUpContainer.appendChild(a);
-    contentContainer.appendChild(pageUpContainer);
+    createPageUpContainer.appendChild(a);
+    contentContainer.appendChild(createPageUpContainer);
 
     showIcon('page-up-container', 'page-up1', 'page-up2');
   };
