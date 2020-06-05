@@ -45,7 +45,7 @@ document.getElementById('body').style.display = 'block';
     opacity: [0, 1],
     direction: 'normal',
   });
-  const intro = anime({
+  const introPara = anime({
     targets: '.intro-para',
     delay: 3200,
     duration: 2000,
@@ -53,8 +53,15 @@ document.getElementById('body').style.display = 'block';
     opacity: [0, 1],
     direction: 'normal',
   });
+  const portfolioBtn = anime({
+    targets: '#portfolio-btn-container',
+    delay: 4000,
+    duration: 2000,
+    easing: 'easeInOutExpo',
+    opacity: [0, 1],
+    direction: 'normal',
+  });
 })();
-
 fadeInAnimation = () => {
   const webDevAnime = anime({
     targets: '#work-container',

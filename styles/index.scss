@@ -4,6 +4,11 @@
   src: url(../fonts/simple.ttf);
 }
 
+@font-face {
+  font-family: button;
+  src: url(../fonts/ubuntu.ttf);
+}
+
 %flex-and-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -313,7 +318,7 @@ body {
 /******************** Introduction ********************/
 
 #intro-container {
-  margin: auto auto 5em auto;
+  margin: auto auto 4em auto;
   text-align: center;
   width: 95%;
 }
@@ -353,6 +358,28 @@ body {
   min-width: 300px;
   max-width: 750px;
 }
+
+/******************** Portfolio Button ********************/
+#portfolio-btn {
+  cursor: pointer;
+  font-family: button;
+  font-size: 1.5em;
+  padding: .4em;
+  color: #62133b;
+  background-color: #a05d00;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  transition-duration: .2s;
+}
+
+#portfolio-btn:hover {
+  color: #a05d00;
+  background-color: #62133b;
+
+}
+
+
 
 /******************** Work General ********************/
 
