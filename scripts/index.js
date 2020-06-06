@@ -228,7 +228,7 @@ const webPageContent = (function () {
     createContentContainer('about-content');
     createAboutContent();
 
-    createPageUp();
+    createBtn('Development >', 'nav-btn dev-btn', showWebDev);
 
     createBottomBorder();
   };
@@ -343,7 +343,7 @@ const webPageContent = (function () {
     showEtch();
     showRPG();
 
-    createPageUp();
+    createBtn('design >', 'nav-btn design-btn', showGraphicDes);
 
     createBottomBorder();
   };
@@ -446,8 +446,6 @@ const webPageContent = (function () {
     createGraphicDesImages(elements, 'Elements', 'elements-text');
     createGraphicDesImages(bryan, 'Bryan Laboratory Equipment', 'bryan-text');
     // createGraphicDesImages(report, 'Annual Report', 'report-text');
-
-    createPageUp();
 
     createBottomBorder();
   };
@@ -583,7 +581,7 @@ const webPageContent = (function () {
 
     createWillmoreAddtlImages();
 
-    createPageUp();
+    createBtn('< Design', 'nav-btn design-btn', showGraphicDes);
 
     createBottomBorder();
   };
@@ -609,7 +607,7 @@ const webPageContent = (function () {
       'Ultimately, the decided upon design presents a more cohesive piece by carrying over elements from the logo onto the wordmark. Including a background on the typeface reflects the logo itself by giving it a containing element, and allows the design as a whole to be used on print media with variations of material color for easy readability. '
     );
 
-    createPageUp();
+    createBtn('< Design', 'nav-btn design-btn', showGraphicDes);
 
     createBottomBorder();
   };
@@ -699,7 +697,7 @@ const webPageContent = (function () {
       'para-right'
     );
 
-    createPageUp();
+    createBtn('< Design', 'nav-btn design-btn', showGraphicDes);
 
     createBottomBorder();
   };
@@ -770,39 +768,28 @@ const webPageContent = (function () {
   showIcon('web-container', 'web1', 'web2');
   showIcon('graphic-container', 'graphic1', 'graphic2');
 
-  /******************** Page Up ********************/
+  /******************** Page Nv Buttons ********************/
 
-  createPageUp = () => {
-    const createPageUpContainer = document.createElement('div');
-    createPageUpContainer.id = 'page-up-container';
+  const btn = document.getElementById('portfolio-btn');
+  btn.addEventListener(
+    'click',
+    (showWeb = () => {
+      showWebDev();
+    })
+  );
 
-    let a = document.createElement('a');
-    a.href = '#logo-container';
+  createBtn = (text, className, func) => {
+    window.scrollTo(0, 0);
+    const btn = document.createElement('btn');
+    btn.className = className;
+    btn.textContent = text;
+    contentContainer.appendChild(btn);
 
-    const createPageUpFront = document.createElement('img');
-    createPageUpFront.id = 'page-up1';
-    createPageUpFront.className = 'front';
-    createPageUpFront.src = './images/page-up/page-up1.svg';
-
-    const createPageUpBack = document.createElement('img');
-    createPageUpBack.id = 'page-up2';
-    createPageUpBack.className = 'back';
-    createPageUpBack.src = './images/page-up/page-up2.svg';
-
-    a.appendChild(createPageUpFront);
-    a.appendChild(createPageUpBack);
-
-    createPageUpContainer.appendChild(a);
-    contentContainer.appendChild(createPageUpContainer);
-
-    showIcon('page-up-container', 'page-up1', 'page-up2');
+    btn.addEventListener(
+      'click',
+      (nav = () => {
+        func();
+      })
+    );
   };
 })();
-
-const arr = [1, 2, 3, 4, 5, 6];
-
-const arr1 = arr.filter((item) => {
-  return item / 1 == 3;
-});
-
-console.log(arr1);
