@@ -51,19 +51,22 @@ body {
 /******************** Logo ********************/
 
 #logo-container {
-  width: fit-content;
-  min-width: 75px;
-  min-height: 75px;
-  max-width: 75px;
-  max-height: 75px;
+  min-width: 55px;
+  min-height: 55px;
+  max-width: 55px;
+  max-height: 55px;
   display: inline-block;
-  margin: 0.7em;
+  margin: .5em;
 }
 
-@media only screen and (max-width: 750px) {
+
+@media only screen and (min-width: 750px) {
   #logo-container {
-    min-width: 55px;
-    min-height: 55px;
+    min-width: 80px;
+    min-height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+    margin: .5em .5em .5em 1.5em;
   }
 }
 
@@ -197,7 +200,7 @@ body {
 .icon {
   width: 2.3rem;
   height: 2.3rem;
-  margin: 0.6em;
+  margin: 0.5em;
 }
 
 @media only screen and (max-width: 750px) {
@@ -210,7 +213,7 @@ body {
 
   #linkedin,
   #mail {
-    margin-left: 1em;
+    margin-left: .5em;
   }
 }
 
