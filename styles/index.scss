@@ -405,6 +405,22 @@ body {
   width: 160px;
 }
 
+@media only screen and (max-width: 750px) {
+  .nav-btn {
+    font-size: 1.3em
+  }
+
+  .design-btn {
+    width: 90px;
+  }
+
+  .dev-btn {
+    width: 140px;
+  }
+}
+
+
+
 
 
 
