@@ -56,9 +56,8 @@ body {
   max-width: 55px;
   max-height: 55px;
   display: inline-block;
-  margin: .5em;
+  margin: 0.5em;
 }
-
 
 @media only screen and (min-width: 750px) {
   #logo-container {
@@ -66,7 +65,7 @@ body {
     min-height: 80px;
     max-width: 80px;
     max-height: 80px;
-    margin: .5em .5em .5em 1.5em;
+    margin: 0.5em 0.5em 0.5em 1.5em;
   }
 }
 
@@ -79,7 +78,6 @@ body {
 }
 
 @media only screen and (max-width: 749px) {
-
   .about-header,
   .graphic-header {
     font-size: 9em;
@@ -88,7 +86,6 @@ body {
 }
 
 @media only screen and (min-width: 750px) and (max-width: 950px) {
-
   .about-header,
   .graphic-header {
     font-size: 15em;
@@ -97,7 +94,6 @@ body {
 }
 
 @media only screen and (min-width: 951px) {
-
   .about-header,
   .graphic-header {
     font-size: 25em;
@@ -178,7 +174,7 @@ body {
   z-index: 1;
 }
 
-#social-media-icon-container>a {
+#social-media-icon-container > a {
   text-decoration: none;
 }
 
@@ -210,10 +206,9 @@ body {
 }
 
 @media only screen and (min-width: 750px) {
-
   #linkedin,
   #mail {
-    margin-left: .5em;
+    margin-left: 0.5em;
   }
 }
 
@@ -282,7 +277,7 @@ body {
   position: fixed;
   width: fit-content;
   bottom: 4em;
-  right: .5em;
+  right: 0.5em;
   transition-duration: 0.2s;
 }
 
@@ -340,7 +335,6 @@ body {
 }
 
 @media only screen and (max-width: 650px) {
-
   .hello,
   .comma-welcome,
   .intro-para {
@@ -379,13 +373,13 @@ body {
   cursor: pointer;
   font-family: button;
   font-size: 1.5em;
-  padding: .4em;
+  padding: 0.4em;
   color: #62133b;
   background-color: #a05d00;
   border-radius: 10px;
   border: none;
   text-align: center;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   margin: 2em 1em 1em auto;
 }
 
@@ -410,7 +404,7 @@ body {
 
 @media only screen and (max-width: 750px) {
   .nav-btn {
-    font-size: 1.3em
+    font-size: 1.3em;
   }
 
   .design-btn {
@@ -421,12 +415,6 @@ body {
     width: 140px;
   }
 }
-
-
-
-
-
-
 
 /******************** Work General ********************/
 
@@ -597,11 +585,11 @@ body {
   }
 }
 
-.about-div>ul {
+.about-div > ul {
   list-style: none;
 }
 
-.about-div>ul>li::before {
+.about-div > ul > li::before {
   content: '\2022';
   color: #62133b;
   font-weight: bold;
@@ -637,7 +625,6 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
-
   #rps,
   #italy,
   #etch,
@@ -647,7 +634,6 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
-
   #rps,
   #italy,
   #etch,
@@ -664,7 +650,6 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
-
   #rps-image,
   #italy-image,
   #etchasketch-image {
@@ -912,7 +897,6 @@ body {
 }
 
 /******************** Elements ********************/
-
 
 .intro-content-para {
   color: #b88a78;

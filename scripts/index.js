@@ -193,6 +193,7 @@ const webPageContent = (function () {
     const software = [
       'Affinity Photo',
       'Affinity Designer',
+      'Affinity Publisher',
       'Photoshop',
       'Illustrator',
       'InDesign',
@@ -368,6 +369,12 @@ const webPageContent = (function () {
   const bryan = {
     alt: 'bryan',
     src: 'images/graphic-design-work/bryan-lab/bryan-collage.png',
+  };
+
+  const legacy = {
+    alt: 'legacy',
+    src:
+      '/home/mmnxii/code-projects/personal-website/images/graphic-design-work/legacy/legacy-collage.svg',
   };
 
   const createGraphicDesImages = ({ src, alt }, text, id) => {
@@ -699,26 +706,6 @@ const webPageContent = (function () {
     createBtn('< Design', 'nav-btn design-btn', showGraphicDes);
 
     createBottomBorder();
-  };
-
-  /******************** Annual Report ********************/
-
-  const showAnnualReport = () => {
-    clearMainContainer();
-    fadeInAnimation();
-    workContainerRelative();
-    createHeader('Annual Report', 'content-header');
-    createContentContainer('report-container');
-
-    createBottomBorder();
-  };
-
-  const createFigCaption = (className, text) => {
-    const fig = document.createElement('h3');
-    fig.className = className;
-    fig.textContent = text;
-
-    ItemContainer.appendChild(fig);
   };
 
   /******************** Page Icons ********************/
