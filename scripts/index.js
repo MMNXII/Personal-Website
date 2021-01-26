@@ -374,7 +374,7 @@ const webPageContent = (function () {
   const legacy = {
     alt: 'legacy',
     src:
-      '/home/mmnxii/code-projects/personal-website/images/graphic-design-work/legacy/legacy-collage.svg',
+      '/home/mmnxii/code-projects/personal-website/images/graphic-design-work/legacy/legacy-collage.png',
   };
 
   const createGraphicDesImages = ({ src, alt }, text, id) => {
