@@ -452,6 +452,7 @@ const webPageContent = (function () {
     createGraphicDesImages(willmore, 'Willmore Wine Bar', 'willmore-text');
     createGraphicDesImages(elements, 'Elements', 'elements-text');
     createGraphicDesImages(bryan, 'Bryan Laboratory Equipment', 'bryan-text');
+    createGraphicDesImages(legacy, 'Legacy Leader Group', 'legacy-text');
 
     createBottomBorder();
   };
@@ -706,6 +707,26 @@ const webPageContent = (function () {
     createBtn('< Design', 'nav-btn design-btn', showGraphicDes);
 
     createBottomBorder();
+  };
+
+  /******************** Annual Report ********************/
+
+  const showAnnualReport = () => {
+    clearMainContainer();
+    fadeInAnimation();
+    workContainerRelative();
+    createHeader('Annual Report', 'content-header');
+    createContentContainer('report-container');
+
+    createBottomBorder();
+  };
+
+  const createFigCaption = (className, text) => {
+    const fig = document.createElement('h3');
+    fig.className = className;
+    fig.textContent = text;
+
+    ItemContainer.appendChild(fig);
   };
 
   /******************** Page Icons ********************/
