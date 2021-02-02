@@ -643,6 +643,10 @@ const webPageContent = (function () {
 
     const legacyContainer = document.getElementById('legacy-container');
     legacyContainer.appendChild(legacyLink);
+
+    createBtn('< Design', 'nav-btn design-btn', showGraphicDes);
+
+    createBottomBorder();
   };
 
   /******************** Elements ********************/
