@@ -429,9 +429,9 @@ const webPageContent = (function () {
           showWillmoreWineBar();
         } else if (
           e.target.className == 'hover-text' &&
-          e.target.id == 'report-text'
+          e.target.id == 'legacy-text'
         ) {
-          showAnnualReport();
+          showLegacy();
         } else if (
           e.target.className == 'hover-text' &&
           e.target.id == 'bryan-text'
@@ -616,6 +616,33 @@ const webPageContent = (function () {
     createBtn('< Design', 'nav-btn design-btn', showGraphicDes);
 
     createBottomBorder();
+  };
+
+  const showLegacy = () => {
+    clearMainContainer();
+    fadeInAnimation();
+    workContainerRelative();
+    createHeader('Legacy Leader Group', 'content-header');
+    createContentContainer('legacy-container');
+    createIntroContentPara(
+      'I was approached by a Las Vegas based investment group with ideas for a logo. Through the discovery process, I was able to convert those ideas in a fully rendered professional brand with not just an identity, but an online presence.'
+    );
+
+    /******************** create LLG Link ********************/
+    const legacyLink = document.createElement('a');
+    legacyLink.href = 'http://legacyleadergroup.com/';
+    legacyLink.target = '_blank';
+    legacyLink.style.textDecoration = 'none';
+
+    const legacyBtn = document.createElement('button');
+    legacyBtn.textContent = 'Visit legacyleadergroup.com';
+    legacyBtn.className = 'nav-btn';
+    legacyBtn.style.margin = 'auto';
+
+    legacyLink.appendChild(legacyBtn);
+
+    const legacyContainer = document.getElementById('legacy-container');
+    legacyContainer.appendChild(legacyLink);
   };
 
   /******************** Elements ********************/
