@@ -137,7 +137,7 @@ const webPageContent = (function () {
     const img = document.createElement('img');
     img.className = 'profile';
     img.src = './images/profile.jpg';
-    img.alt = 'profile';
+    img.alt = 'Matthew Neal, Front End Web Developer and Graphic Designer';
     introAboutContainer.appendChild(img);
 
     const introParaContainer = document.createElement('div');
@@ -352,27 +352,22 @@ const webPageContent = (function () {
   /******************** Graphic Design ********************/
 
   const elements = {
-    alt: 'elements',
+    alt: 'Elements Project',
     src: 'images/graphic-design-work/elements/elements-collage.svg',
   };
 
   const willmore = {
-    alt: 'willmore',
+    alt: 'Willmore Wine Bar',
     src: 'images/graphic-design-work/willmore/willmore-collage.svg',
   };
 
-  const report = {
-    alt: 'report',
-    src: 'images/graphic-design-work/annual-report/report-collage.jpg',
-  };
-
   const bryan = {
-    alt: 'bryan',
+    alt: 'Bryan Laboratory Equipment',
     src: 'images/graphic-design-work/bryan-lab/bryan-collage.png',
   };
 
   const legacy = {
-    alt: 'legacy',
+    alt: 'Legacy Leader Group',
     src: 'images/graphic-design-work/legacy/legacy-collage.svg',
   };
 
@@ -468,28 +463,29 @@ const webPageContent = (function () {
 
   const willmoreImages = {
     draft1: {
-      alt: 'Willmore Draft 1',
+      alt: 'Willmore Wine Bar Logo Draft - Classic Style',
       src: 'images/graphic-design-work/willmore/willmore-draft-1.jpg',
+      href: 'images/graphic-design-work/willmore/willmore-draft-1.jpg',
     },
     draft2: {
-      alt: 'Willmore Draft 2',
+      alt: 'Willmore Wine Bar Logo Draft - New Style',
       src: 'images/graphic-design-work/willmore/willmore-draft-2.jpg',
     },
     draft3: {
-      alt: 'Willmore Draft 3',
+      alt: 'Willmore Wine Bar Logo Draft - Modern Style 1',
       src: 'images/graphic-design-work/willmore/willmore-draft-3.jpg',
     },
     draft4: {
-      alt: 'Willmore Draft 4',
+      alt: 'Willmore Wine Bar Logo Draft - Modern Style 2',
       src: 'images/graphic-design-work/willmore/willmore-draft-4.jpg',
     },
     flyer: {
-      alt: 'Willmore Flyer',
+      alt: 'Sabor Latino, One Of The First Events Held For Willmore Wine Bar',
       id: 'willmore-flyer',
       src: 'images/graphic-design-work/willmore/willmore-flyer.jpg',
     },
     outdoor: {
-      alt: 'Willmore Outdoor',
+      alt: 'WIllmore Wine Bar Location in Long Beach, CA',
       id: 'willmore-outdoor',
       src: 'images/graphic-design-work/willmore/willmore-outdoor.jpg',
     },
@@ -497,20 +493,39 @@ const webPageContent = (function () {
 
   const bryanImages = {
     draft1: {
-      alt: 'Bryan Lab Draft 1',
+      alt: 'Bryan Laboratory Equipment Logo Draft - Centered Stacked',
       src: 'images/graphic-design-work/bryan-lab/bryan-draft-1.png',
     },
     draft2: {
-      alt: 'Bryan Lab Draft 2',
+      alt: 'Bryan Laboratory Equipment Logo Draft - Landscape',
       src: 'images/graphic-design-work/bryan-lab/bryan-draft-2.png',
     },
     draft3: {
-      alt: 'Bryan Lab Draft 3',
+      alt: 'Bryan Laboratory Equipment Logo Draft - Centered',
       src: 'images/graphic-design-work/bryan-lab/bryan-draft-3.png',
     },
     draft4: {
-      alt: 'Bryan Lab Draft 4',
+      alt: 'Bryan Laboratory Equipment Logo Draft - Color Variants',
       src: 'images/graphic-design-work/bryan-lab/bryan-draft-4.png',
+    },
+  };
+
+  const legacyImages = {
+    draft1: {
+      alt: 'Legacy Leader Group Tree Draft 1',
+      src: 'images/graphic-design-work/legacy/llg-tree-bw1.svg',
+    },
+    draft2: {
+      alt: 'Legacy Leader Group Tree Draft 1',
+      src: 'images/graphic-design-work/legacy/llg-tree-bw2.svg',
+    },
+    draft3: {
+      alt: 'Legacy Leader Group Tree Draft 1',
+      src: 'images/graphic-design-work/legacy/llg-tree-color1.svg',
+    },
+    draft4: {
+      alt: 'Legacy Leader Group Tree Draft 1',
+      src: 'images/graphic-design-work/legacy/llg-tree-color2.svg',
     },
   };
 
@@ -644,6 +659,8 @@ const webPageContent = (function () {
     const legacyContainer = document.getElementById('legacy-container');
     legacyContainer.appendChild(legacyLink);
 
+    createDrafts('drafts-container', legacyImages, 'legacy-drafts');
+
     createBtn('< Design', 'nav-btn design-btn', showGraphicDes);
 
     createBottomBorder();
@@ -740,16 +757,6 @@ const webPageContent = (function () {
   };
 
   /******************** Annual Report ********************/
-
-  const showAnnualReport = () => {
-    clearMainContainer();
-    fadeInAnimation();
-    workContainerRelative();
-    createHeader('Annual Report', 'content-header');
-    createContentContainer('report-container');
-
-    createBottomBorder();
-  };
 
   const createFigCaption = (className, text) => {
     const fig = document.createElement('h3');

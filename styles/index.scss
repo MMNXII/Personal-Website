@@ -779,6 +779,14 @@ body {
   margin: 0.5em;
 }
 
+/******************** Legacy Drafts ********************/
+
+.legacy-drafts {
+  width: 220px;
+  height: auto;
+  margin: 0.5em;
+}
+
 /******************** Willmore ********************/
 
 .final {
@@ -835,6 +843,10 @@ body {
     width: 325px;
   }
 
+  .legacy-drafts {
+    width: 350px;
+  }
+
   .final {
     width: 470px;
   }
@@ -856,6 +868,10 @@ body {
 
   .drafts {
     width: 425px;
+  }
+
+  .legacy-drafts {
+    width: 420px;
   }
 
   .final {
