@@ -648,6 +648,7 @@ const webPageContent = (function () {
     legacyLink.href = 'http://legacyleadergroup.com/';
     legacyLink.target = '_blank';
     legacyLink.style.textDecoration = 'none';
+    legacyLink.style.display = 'inline-block';
 
     const legacyBtn = document.createElement('button');
     legacyBtn.textContent = 'Visit legacyleadergroup.com';
