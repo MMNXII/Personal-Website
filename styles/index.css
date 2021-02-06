@@ -643,7 +643,7 @@ body {
 .content-para {
   margin: 2em auto 2em auto;
   font-family: header;
-  font-size: 1.3em;
+  font-size: 1.4em;
   width: 75%;
   max-width: 650px;
   min-width: 372px;
@@ -661,7 +661,7 @@ body {
 /******************** Elements ********************/
 .intro-content-para {
   color: #b88a78;
-  font-size: 1.2em;
+  font-size: 1.4em;
   max-width: 650px;
   min-width: 320px;
   padding-bottom: 2em;
@@ -682,7 +682,7 @@ body {
 .element-para {
   margin: 3em 1em 1em 1em;
   font-family: header;
-  font-size: 1.2em;
+  font-size: 1.4em;
   max-width: 650px;
   min-width: 372px;
   color: #b88a78;

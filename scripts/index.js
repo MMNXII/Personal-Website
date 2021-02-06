@@ -640,7 +640,7 @@ const webPageContent = (function () {
     createHeader('Legacy Leader Group', 'content-header');
     createContentContainer('legacy-container');
     createIntroContentPara(
-      'I was approached by a Las Vegas based investment group with ideas for a logo. Through the discovery process, I was able to convert those ideas in a fully rendered professional brand with not just an identity, but an online presence.'
+      'I was approached by a Las Vegas based investment group with ideas for a logo. Through the discovery process, I was able to convert those ideas into a fully rendered professional brand with not just an identity, but an online presence.'
     );
 
     /******************** create LLG Link ********************/
@@ -661,6 +661,36 @@ const webPageContent = (function () {
     legacyContainer.appendChild(legacyLink);
 
     createDrafts('drafts-container', legacyImages, 'legacy-drafts');
+    createContentPara(
+      "I was given initial input for the direction for the logo design: a flourishing tree meant to symbolize and represent a client's financial future, or legacy. For color scheme I found it fitting to use colors synonymous with investing and finances: green and gold."
+    );
+    const div = document.createElement('div');
+    div.className = 'drafts-container';
+
+    const img1 = document.createElement('img');
+    img1.className = 'legacy-drafts';
+    img1.src = 'images/graphic-design-work/legacy/llg-logo-color1.svg';
+
+    const img2 = document.createElement('img');
+    img2.className = 'legacy-drafts';
+    img2.src = 'images/graphic-design-work/legacy/llg-logo-color2.svg';
+
+    div.appendChild(img1);
+    div.appendChild(img2);
+    legacyContainer.appendChild(div);
+
+    const paraFinal = document.createElement('p');
+    paraFinal.textContent =
+      'Working with the typface, we cycled through a few serif and sans-serif types landing on the final that you see below. As well, the 2 leaves act as a great element to round out the design, and work as a favicon as well for the website';
+    paraFinal.className = 'content-para';
+
+    legacyContainer.appendChild(paraFinal);
+
+    const img3 = document.createElement('img');
+    img3.className = 'legacy-drafts';
+    img3.src = 'images/graphic-design-work/legacy/llg-logo-color3.svg';
+
+    legacyContainer.appendChild(img3);
 
     createBtn('< Design', 'nav-btn design-btn', showGraphicDes);
 
