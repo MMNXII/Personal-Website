@@ -643,7 +643,33 @@ const webPageContent = (function () {
       'I was approached by a Las Vegas based investment group with ideas for a logo. Through the discovery process, I was able to convert those ideas into a fully rendered professional brand with not just an identity, but an online presence.'
     );
 
-    /******************** create LLG Link ********************/
+    const legacyContainer = document.getElementById('legacy-container');
+
+    /******************** create LLG styleguide Link ********************/
+
+    const legacyStyleDiv = document.createElement('div');
+    legacyStyleDiv.style.marginTop = '1em';
+
+    const legacyStyleLink = document.createElement('a');
+    legacyStyleLink.href =
+      'images/graphic-design-work/legacy/llg-style-guide.pdf';
+    legacyStyleLink.target = '_blank';
+    legacyStyleLink.style.textDecoration = 'none';
+    legacyStyleLink.style.display = 'inline-block';
+
+    const legacyStyleBtn = document.createElement('button');
+    legacyStyleBtn.textContent = 'View the LLG Style Guide';
+    legacyStyleBtn.className = 'nav-btn';
+    legacyStyleBtn.style.margin = 'auto';
+    legacyStyleBtn.style.marginBottom = '1em';
+
+    legacyStyleLink.appendChild(legacyStyleBtn);
+    legacyStyleDiv.appendChild(legacyStyleLink);
+    legacyContainer.appendChild(legacyStyleDiv);
+
+    /******************** create LLG website Link ********************/
+    const legacyLinkDiv = document.createElement('div');
+
     const legacyLink = document.createElement('a');
     legacyLink.href = 'http://legacyleadergroup.com/';
     legacyLink.target = '_blank';
@@ -656,9 +682,10 @@ const webPageContent = (function () {
     legacyBtn.style.margin = 'auto';
 
     legacyLink.appendChild(legacyBtn);
+    legacyLinkDiv.appendChild(legacyLink);
+    legacyContainer.appendChild(legacyLinkDiv);
 
-    const legacyContainer = document.getElementById('legacy-container');
-    legacyContainer.appendChild(legacyLink);
+    /****************************************/
 
     createDrafts('drafts-container', legacyImages, 'legacy-drafts');
     createContentPara(
